@@ -3,7 +3,6 @@ name: Run Bot Every Hour
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
-
 jobs:
  run-bot:    
    runs-on: ubuntu-latest
