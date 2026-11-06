@@ -1,21 +1,22 @@
-Import requests, os
-From datatime Import datatime
+import requests, os
+from datatime Import datatime
 T= os.getenv ("BOT_TOKEN")
 C= os. getenv ("CHANNEL_ID")
 K= os.getenv ("AP_FOOTBALL_KEY")
 H= {"X-rapidapi-key": K, "x-rapidapi-host": "V3.football.api-sport.io"} today = datatime.now (). strftime ("%y-%m-%d")
-Def get (1):
-Try:
-    r = requests.get ("https://v3-football.api-sports.io/fixtures", headers = H params - {"league": 1, "season": 2026, "date": today}, timeout = 20)
-      Return.json (). get ("response", [])
-    Except: Return []
+def get (1):
+try:
+    r = requests.get ("https://v3-football.p.rapidapi.com/fixtures': headers=H, params={"league": lid, "season": 2026, "next": 10}, timeout=20
+      return.json (). get ("response", [])
+    except: 
+return []
 msg= f "WORLD STATS HUB\n{today}\nlive from port harcout to the 🌍 world\n\n"
 names = {39: "EPL", 140: laliga", 78: "Bundesliga", 135: serie A", 2: "UCL"}
-For lid, name In names. items ():
+for lid, name In names. items ():
 f = get (lid)
-If F:
+if F:
    msg = f" --- {name} --- \n"
-  For m In f [:6]:
+  for m In f [:6]:
        h = m ["teams"] ["away"]
 ["names"]
         gh = ["goals"] ["home"]; game
