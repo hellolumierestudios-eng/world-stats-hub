@@ -7,7 +7,7 @@ H = {"X-rapidapi-key": K, "x-rapidapi-host": v3.football.api-sports.io} today = 
 def get(1):
 try:
     r = requests.get("https://v3-football.p.rapidapi.com/fixtures": headers=H, params={"league": lid, "season": 2026, "next": 10}, timeout=20)
-      return r.json ().get("response", [])
+      return r.json().get("response", [])
     except: 
 return []
 msg = f "WORLD STATS HUB\n{today}\nlive from port harcout to the 🌍 world\n\n"
