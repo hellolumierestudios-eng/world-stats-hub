@@ -1,5 +1,5 @@
 import requests, os
-from datatime Import datatime
+from datatime import datatime
 T= os.getenv ("BOT_TOKEN")
 C= os. getenv ("CHANNEL_ID")
 K= os.getenv ("AP_FOOTBALL_KEY")
@@ -12,11 +12,11 @@ try:
 return []
 msg= f "WORLD STATS HUB\n{today}\nlive from port harcout to the 🌍 world\n\n"
 names = {39: "EPL", 140: laliga", 78: "Bundesliga", 135: serie A", 2: "UCL"}
-for lid, name In names. items ():
+for lid, name in names. items ():
 f = get (lid)
-if F:
+if f:
    msg = f" --- {name} --- \n"
-  for m In f [:6]:
+  for m in f [:6]:
        h = m ["teams"] ["away"]
 ["names"]
         gh = ["goals"] ["home"]; game
