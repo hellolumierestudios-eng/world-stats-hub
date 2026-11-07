@@ -1,5 +1,5 @@
 import requests, os
-from datatime import datatime
+from datetime import datetime
 T = os.getenv ("BOT_TOKEN")
 C = os. getenv ("CHANNEL_ID")
 K = os.getenv ("AP_FOOTBALL_KEY")
