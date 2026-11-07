@@ -22,7 +22,7 @@ if f:
         gh = ["goals"] ["home"]; game
             [ga=m ["goals"] ["away"]
         t = m ["fixture"] ["date"] [11:16]
-i s = m ["fixture"] ["status"] ["short"]
+is = m ["fixture"] ["status"] ["short"]
         msg+ = f"{h} {gh} {a} ({s})\n" If s = FT" else" {t} | {h} vs {a} \n"
         msg+ ="\n"
 if "---" not in msg: msg+ = NO games today. back tomorrow! \n"
