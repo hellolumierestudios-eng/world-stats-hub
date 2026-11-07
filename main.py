@@ -12,8 +12,8 @@ try:
     p = {"league": lid, "season": 2026, "next": 10}
     r = request.get(url, headers=H, params=p timeout=20)
     return r.json().get("response", [])
-except: 
-   return []
+ except:
+    return []
 msg = WORLD STATS HUB\n
 msg += today + "\nlive\n"
 names = {39: "EPL", 140: LaLiga", 78: "Bundesliga", 
