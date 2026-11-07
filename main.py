@@ -25,7 +25,7 @@ for lid, name in names.items():
         msg += "--- " + name + " ---\n"
         for m in f[:6]:
             home = m["teams"]["home"]["name"]
-            away = m["teams"][away"]["name"]
+            away = m["teams"]["away"]["name"]
             msg += home + " vs " + away + "\n"
 u = "https://api.telegram.org/bot"  + T + "/sendmessage" 
 requests.get(u, params={"chat_id": C, "text": msg{)
