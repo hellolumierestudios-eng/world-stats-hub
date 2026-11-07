@@ -10,7 +10,7 @@ def get(lid):
 try:
     url = "https://v3-football.p.rapidapi.com/fixtures"
     p = {"league": lid, "season": 2026, "next": 10}
-    r = request.get(url, headers=H, params=p timeout=20)
+    r = requests.get(url, headers=H, params=p, timeout=20)
     return r.json().get("response", [])
  except:
     return []
