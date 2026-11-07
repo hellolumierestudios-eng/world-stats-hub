@@ -16,7 +16,7 @@ except:
    return []
 msg = WORLD STATS HUB\n
 msg += today + "\nlive\n"
-names = {39: "EPL", 140: laliga", 78: "Bundesliga", 
+names = {39: "EPL", 140: LaLiga", 78: "Bundesliga", 
 names[135] = serie A"
 names[61] = "laliga 1"
 for lid, name in names.items():
