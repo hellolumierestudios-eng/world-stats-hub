@@ -8,7 +8,7 @@ H["X-rapidapi-host"] = "v3.football.api-sports.io"
 today = datatime.now()strftime("%y-%m-%d")
 def get(lid):
 try:
-    url = https://v3-football.p.rapidapi.com/fixtures"
+    url = "https://v3-football.p.rapidapi.com/fixtures"
     p = {"league": lid, "season": 2026, "next": 10}
     r = request.get(url, headers=H, params=p timeout=20)
     return r.json().get("response", [])
