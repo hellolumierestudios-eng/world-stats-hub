@@ -5,7 +5,7 @@ C = os. getenv ("CHANNEL_ID")
 K = os.getenv ("AP_FOOTBALL_KEY")
 H = {"X-rapidapi-key": K} 
 H["X-rapidapi-host"] = "v3.football.api-sports.io" 
-today = datatime.now()strftime("%y-%m-%d")
+today = datetime.now().strftime("%y-%m-%d")
 def get(lid):
 try:
     url = "https://v3-football.p.rapidapi.com/fixtures"
