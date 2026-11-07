@@ -7,13 +7,13 @@ H = {"X-rapidapi-key": K}
 H["X-rapidapi-host"] = "v3.football.api-sports.io" 
 today = datetime.now().strftime("%y-%m-%d")
 def get(lid):
-try:
-    url = "https://v3-football.p.rapidapi.com/fixtures"
-    p = {"league": lid, "season": 2026, "next": 10}
-    r = requests.get(url, headers=H, params=p, timeout=20)
-    return r.json().get("response", [])
- except:
-    return []
+    try:
+        url = "https://v3-football.p.rapidapi.com/fixtures"
+        p = {"league": lid, "season": 2026, "next": 10}
+        r = requests.get(url, headers=H, params=p, timeout=20)
+        return r.json().get("response", [])
+    except:
+        return []
 msg = "WORLD STATS HUB\n"
 msg += today + "\nlive\n"
 names = {39: "EPL", 140: "LaLiga", 78: "Bundesliga"} 
