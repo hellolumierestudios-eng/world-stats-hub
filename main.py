@@ -8,26 +8,21 @@ today = datatime.now()strftime("%y-%m-%d")
 def get(1):
 try:
     r = requests.get("https://v3-football.p.rapidapi.com/fixtures": headers=H, params={"league": lid, "season": 2026, "next": 10}, timeout=20)
-      return r.json().get("response", [])
-    except: 
-return []
+    return r.json().get("response", [])
+except: 
+   return []
 msg = f "WORLD STATS HUB\n{today}\nlive from port harcout to the 🌍 world\n\n"
-names = {39: "EPL", 140: laliga", 78: "Bundesliga", 135: serie A", 2: "UCL"}
-for lid, name in names. items ():
-f = get (lid)
-if f:
-   msg = f" --- {name} --- \n"
-  for m in f [:6]:
-       h = m ["teams"] ["away"]
-["names"]
-        gh = ["goals"] ["home"]; game
-            [ga=m ["goals"] ["away"]
-        t = m ["fixture"] ["date"] [11:16]
-is = m ["fixture"] ["status"] ["short"]
-        msg+ = f"{h} {gh} {a} ({s})\n" If s = FT" else" {t} | {h} vs {a} \n"
-        msg+ ="\n"
-if "---" not in msg: msg+ = NO games today. back tomorrow! \n"
-msg+ = "follow @WorldStatsHub"
-requests.post (f "https://api.telegram.org/bot {T}/ sendMessage",
-json = {"chat_id: C, "test": msg}) print ("Done")
-        
+names = {39: "EPL", 140: laliga", 78: "Bundesliga", 
+names[135] = serie A"
+names[61] = "laliga 1"
+for lid, name in names.items():
+    f = get(lid)
+    if f:
+        msg += "--- " + name + ---\n"
+        for m in f[:6]:
+            home = m["teams"]["home"]["name"]
+            away = m["teams"][away"]["name"]
+            msg += home + " vs " + away + "\n"
+u = "https://api.telegram.org/bot"  + T + "/sendmessage" 
+requests.get(u, params={"chat_id": C, "text": msg{)
+print(msg)
