@@ -3,15 +3,19 @@ from datatime import datatime
 T = os.getenv ("BOT_TOKEN")
 C = os. getenv ("CHANNEL_ID")
 K = os.getenv ("AP_FOOTBALL_KEY")
-H = {"X-rapidapi-key": K, "x-rapidapi-host": v3.football.api-sports.io} 
+H = {"X-rapidapi-key": K, 
+H["X-rapidapi-host"] = "v3.football.api-sports.io} 
 today = datatime.now()strftime("%y-%m-%d")
 def get(1):
 try:
-    r = requests.get("https://v3-football.p.rapidapi.com/fixtures": headers=H, params={"league": lid, "season": 2026, "next": 10}, timeout=20)
+    url = https://v3-football.p.rapidapi.com/fixtures"
+    p = {"league": lid, "season": 2026, "next": 10}
+    r = request.get(url, headers=H, params=p timeout=20)
     return r.json().get("response", [])
 except: 
    return []
-msg = f "WORLD STATS HUB\n{today}\nlive from port harcout to the 🌍 world\n\n"
+msg = WORLD STATS HUB\n
+msg += today + "\nlive\n"
 names = {39: "EPL", 140: laliga", 78: "Bundesliga", 
 names[135] = serie A"
 names[61] = "laliga 1"
