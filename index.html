@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORLD STATS HUB - Live From Port Harcourt To The World</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0f1e;color:white}
+header{background:linear-gradient(90deg,#00c853,#00b0ff);padding:20px;text-align:center}
+header h1{font-size:28px;letter-spacing:1px}
+header p{font-size:14px;opacity:.9;margin-top:5px}
+.nav{display:flex;gap:8px;overflow-x:auto;padding:12px;background:#111832;position:sticky;top:0}
+.nav button{white-space:nowrap;border:0;padding:10px 16px;border-radius:20px;background:#1e2a4a;color:white;font-weight:bold;cursor:pointer}
+.nav button.active{background:#00c853;color:#000}
+.container{padding:16px;max-width:900px;margin:auto}
+.hero{background:#161f3d;border-radius:16px;padding:20px;text-align:center;margin-bottom:16px}
+.hero h2{font-size:22px;margin-bottom:8px}
+.hero p{color:#aab3cc;font-size:14px;line-height:1.5}
+.btn{display:inline-block;margin-top:12px;background:#0088cc;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:bold}
+.card{background:#161f3d;border-radius:14px;padding:16px;margin-bottom:12px;border-left:4px solid #00c853}
+.card h3{font-size:16px;margin-bottom:4px}
+.card p{font-size:13px;color:#aab3cc}
+.badge{display:inline-block;background:#00c853;color:#000;font-size:11px;padding:3px 8px;border-radius:10px;font-weight:bold;margin-bottom:6px}
+.score{font-size:20px;font-weight:bold;margin:8px 0}
+footer{text-align:center;padding:20px;color:#777;font-size:12px}
+#loading{text-align:center;padding:20px;color:#aab3cc}
+</style>
+</head>
+<body>
+<header>
+<h1>🌍 WORLD STATS HUB</h1>
+<p>Live From Port Harcourt To The World • EPL • LaLiga • Bundesliga • Serie A • UCL</p>
+</header>
+<div class="nav">
+<button class="active" onclick="filterLeague('all',this)">All</button>
+<button onclick="filterLeague('EPL',this)">🏴󐁧󐁢󐁥󐁮󐁧󐁿 EPL</button>
+<button onclick="filterLeague('LaLiga',this)">🇪🇸 LaLiga</button>
+<button onclick="filterLeague('Bundesliga',this)">🇩🇪 Bundesliga</button>
+<button onclick="filterLeague('Serie A',this)">🇮🇹 Serie A</button>
+<button onclick="filterLeague('UCL',this)">⭐ UCL</button>
+</div>
+<div class="container">
+<div class="hero">
+<h2>⚽ Daily Fixtures, Live Scores & Stats</h2>
+<p>Automated Telegram Bot • Python + Telegram + API-Football<br>Updated automatically by your bot</p>
+<a class="btn" href="https://t.me/WorldStatsHubBot" target="_blank">Join Telegram Bot 📲</a>
+<p style="margin-top:10px;font-size:12px">If your bot username is different, tell me and I will change it.</p>
+</div>
+<h3 style="margin-bottom:12px">🔥 Latest Matches</h3>
+<div id="loading">Loading scores...</div>
+<div id="matches"></div>
+<div class="card">
+<h3>ℹ️ About</h3>
+<p>WORLD STATS HUB posts daily EPL, LaLiga, Bundesliga, Serie A & UCL fixtures & stats automatically. Built with Python + Telegram + API-Football.</p>
+</div>
+</div>
+<footer>© 2026 WORLD STATS HUB • Hello Lumiere Studios • Port Harcourt, Nigeria</footer>
+<script>
+let allData=[];
+let current='all';
+async function load(){
+ try{
+  const res=await fetch('scores.json?t='+Date.now());
+  const data=await res.json();
+  // Support different formats: array, or {matches:[]}, or {fixtures:[]}
+  if(Array.isArray(data)) allData=data;
+  else if(data.matches) allData=data.matches;
+  else if(data.fixtures) allData=data.fixtures;
+  else if(data.games) allData=data.games;
+  else allData=[data];
+  render();
+ }catch(e){
+  document.getElementById('loading').innerHTML='No live data yet. Your bot will update scores.json automatically.<br><br>Showing sample fixtures below.';
+  allData=[
+   {league:'EPL',home:'Arsenal',away:'Chelsea',score:'2 - 1',status:'FT',date:'Today'},
+   {league:'LaLiga',home:'Real Madrid',away:'Barcelona',score:'1 - 1',status:'LIVE 67\'',date:'Today'},
+   {league:'Bundesliga',home:'Bayern Munich',away:'Dortmund',score:'3 - 2',status:'FT',date:'Today'},
+   {league:'Serie A',home:'Inter',away:'AC Milan',score:'0 - 0',status:'Tomorrow 20:45',date:'Tomorrow'},
+   {league:'UCL',home:'Man City',away:'PSG',score:'2 - 0',status:'FT',date:'Today'}
+  ];
+  render();
+ }
+}
+function filterLeague(l,btn){
+ current=l;
+ document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');
+ render();
+}
+function render(){
+ const box=document.getElementById('matches');
+ document.getElementById('loading').style.display='none';
+ const list=allData.filter(m=>{
+  if(current==='all') return true;
+  const txt=JSON.stringify(m).toLowerCase();
+  return txt.includes(current.toLowerCase());
+ });
+ if(!list.length){box.innerHTML='<p>No matches for this league yet.</p>';return;}
+ box.innerHTML=list.map(m=>{
+  const league=m.league||m.competition||m.league_name||'Football';
+  const home=m.home||m.home_team||m.team1||m.homeTeam||'Home';
+  const away=m.away||m.away_team||m.team2||m.awayTeam||'Away';
+  const score=m.score||m.result||((m.home_score!==undefined)?m.home_score+' - '+m.away_score:'VS');
+  const status=m.status||m.time||m.date||'';
+  const date=m.date||m.fixture_date||'';
+  return `<div class="card"><span class="badge">${league}</span><h3>${home} vs ${away}</h3><div class="score">${score}</div><p>${status} • ${date}</p></div>`;
+ }).join('');
+}
+load();
+</script>
+</body>
+</html>
