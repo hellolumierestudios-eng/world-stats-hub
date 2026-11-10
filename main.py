@@ -1,32 +1,44 @@
 import requests, os
 from datetime import datetime
-T = os.getenv ("BOT_TOKEN")
-C = os. getenv ("CHANNEL_ID")
-K = os.getenv ("AP_FOOTBALL_KEY")
-H = {"X-rapidapi-key": K} 
-H["X-rapidapi-host"] = "v3.football.api-sports.io" 
+
+T = os.getenv("BOT_TOKEN")
+C = os.getenv("CHANNEL_ID")
+K = os.getenv("API_FOOTBALL_KEY")
+
+H = {"x-rapidapi-key": K, "x-rapidapi-host": "v3.football.api-sports.io"}
 today = datetime.now().strftime("%y-%m-%d")
+
 def get(lid):
     try:
-        url = "https://v3-football.p.rapidapi.com/fixtures"
-        p = {"league": lid, "season": 2026, "next": 10}
+        url = "https://v3.football.api-sports.io/fixtures"
+        p = {"league": lid, "season": 2026, "next": 5}
         r = requests.get(url, headers=H, params=p, timeout=20)
+        print("API", lid, r.status_code)
         return r.json().get("response", [])
-    except:
+    except Exception as e:
+        print("API error", e)
         return []
+
 msg = "WORLD STATS HUB\n"
-msg += today + "\nlive\n"
-names = {39: "EPL", 140: "LaLiga", 78: "Bundesliga"} 
-names[135] = "serie A"
-names[61] = "laliga 1"
+msg += today + "\nlive\n\n"
+names = {39: "EPL", 140: "LaLiga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1"}
+
 for lid, name in names.items():
     f = get(lid)
     if f:
-        msg += "--- " + name + " ---\n"
+        msg += f"--- {name} ---\n"
         for m in f[:6]:
             home = m["teams"]["home"]["name"]
             away = m["teams"]["away"]["name"]
             msg += home + " vs " + away + "\n"
-u = "https://api.telegram.org/bot"  + T + "/sendmessage" 
-requests.get(u, params={"chat_id": C, "text": msg})
+        msg += "\n"
+
+if "---" not in msg:
+    msg += "No games found today\n"
+
+msg += "Follow @WorldStatsHub"
 print(msg)
+
+u = "https://api.telegram.org/bot" + T + "/sendMessage"
+res = requests.get(u, params={"chat_id": C, "text": msg})
+print("TELEGRAM:", res.status_code, res.text[:500])
