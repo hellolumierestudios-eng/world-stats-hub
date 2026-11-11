@@ -1,0 +1,27 @@
+name: Daily Facts - World Stats Hub
+
+on:
+  schedule:
+    - cron: '0 5,11,17 * * *'
+  workflow_dispatch:
+
+jobs:
+  post-fact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Post Fact to Telegram
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+        run: python facts.py
