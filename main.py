@@ -34,7 +34,8 @@ for lid, name in names.items():
         msg += "\n"
 
 if "---" not in msg:
-    msg += "No games found today\n"
+    print("No games - skipping Telegram")
+    exit()
 
 msg += "Follow @WorldStatsHub"
 print(msg)
