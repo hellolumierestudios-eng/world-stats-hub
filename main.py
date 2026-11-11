@@ -5,7 +5,7 @@ T = os.getenv("BOT_TOKEN")
 C = os.getenv("CHANNEL_ID")
 K = os.getenv("API_FOOTBALL_KEY")
 
-H = {"x-rapidapi-key": K, "x-rapidapi-host": "v3.football.api-sports.io"}
+H = {"x-apisports-key": K}
 today = datetime.now().strftime("%y-%m-%d")
 
 def get(lid):
