@@ -13,7 +13,7 @@ today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 LEAGUES = [39, 140, 135, 78, 61, 2, 3, 88, 94, 71]
 
 def get(lid):
-    url = f"https://v3.football.api-sports.io/fixtures?date={today}&league={lid}&season=2025"
+    url = f"https://v3.football.api-sports.io/fixtures?date={today}&league={lid}&season=2026"
     r = requests.get(url, headers=H, timeout=30)
     return r.json().get("response", [])
 
