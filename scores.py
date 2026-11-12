@@ -5,7 +5,7 @@ K = os.getenv("API_FOOTBALL_KEY")
 H = {"x-apisports-key": K}
 now = datetime.now()
 today = now.strftime("%Y-%m-%d")
-dates = [(now + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(-7, 8)]
+dates = [(now + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(0, 11)]
 
 def get(lid, date):
     try:
