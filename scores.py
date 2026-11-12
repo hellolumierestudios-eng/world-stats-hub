@@ -14,12 +14,26 @@ LEAGUES = {
     "uefa.champions": "Champions League",
     "uefa.europa": "Europa League",
     "uefa.europa.conf": "Conference League",
+    "fifa.world": "World Cup",
+    "fifa.worldq": "World Cup Qualifiers",
+    "uefa.nations": "Nations League",
+    "fifa.friendly": "Friendlies",
+    "conmebol.worldq": "South America Qualifiers",
+    "caf.worldq": "Africa Qualifiers",
+    "afc.worldq": "Asia Qualifiers",
+    "concacaf.worldq": "CONCACAF Qualifiers",
+    "uefa.euroq": "Euro Qualifiers",
+    "eng.fa": "FA Cup",
+    "esp.copa-del-rey": "Copa del Rey",
+    "ita.coppa-italia": "Coppa Italia",
+    "ger.dfb-pokal": "DFB Pokal",
+    "fra.coupe-de-france": "Coupe de France",
 }
 
 matches = []
 today = date.today()
 
-for offset in range(-1, 8):  # yesterday to +7 days
+for offset in range(-10, 8):  # last 10 days to +7 days
     d = today + timedelta(days=offset)
     datestr = d.strftime("%Y%m%d")
     for slug, league_name in LEAGUES.items():
