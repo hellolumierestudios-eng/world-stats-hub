@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Stats Hub - Live Scores</title>
+<title>World Stats Hub</title>
 <style>
-body{font-family:Arial;background:#0a0f1e;color:white;margin:0;padding:15px}
-h1{text-align:center} .card{background:#141b33;padding:15px;border-radius:12px;margin:10px 0}
-.badge{background:green;padding:3px 8px;border-radius:20px;font-size:12px}
-.score{font-size:20px;font-weight:bold} .small{color:#aaa;font-size:13px}
-button{background:#0088cc;color:white;border:none;padding:10px 20px;border-radius:20px;width:100%}
+body{background:#0f1226;color:white;font-family:Arial;padding:16px;margin:0}
+h1{text-align:center}
+.badge{background:#16a34a;display:inline-block;padding:5px 12px;border-radius:20px;font-size:13px}
+.card{background:#1a1e3f;padding:14px;border-radius:12px;margin:12px 0}
+.score{font-size:22px;font-weight:bold;margin:6px 0}
+.small{color:#aaa;font-size:13px}
 </style>
 </head>
 <body>
 <h1>🌍 WORLD STATS HUB</h1>
-<p style="text-align:center"><span class="badge">● LIVE</span> <span id="updated">Loading...</span></p>
-
-<div class="card">
-<h2>⚽ Latest Matches</h2>
-<div id="matches">Loading live scores...</div>
-</div>
-
-<div class="card">
-<h2>🚨 Transfer News</h2>
-<div id="transfers">Loading transfers...</div>
-</div>
-
-<div class="card">
-<h2>🌟 Player Life</h2>
-<div id="player">Loading player story...</div>
-</div>
-
-<p style="text-align:center"><a href="https://t.me/worldstatshub" style="color:#4fc3f7">Follow @WorldStatsHub on Telegram</a></p>
-<button onclick="loadData()">🔄 Refresh Scores</button>
+<center><span class="badge">● LIVE</span> <span id="updated"></span></center>
+<div id="list">Loading...</div>
 
 <script>
-async function loadData(){
+async function load(){
   try{
-    const r = await fetch('scores.json?v=' + Date.now());
-    const d = await r.json();
-    document.getElementById('updated').innerText = 'Updated: ' + d.updated;
-    let mHtml = '';
-    d.matches.forEach(m=>{
-      mHtml += `<p><b>${m.home}</b> <span class="score">${m.score}</span> <b>${m.away}</b><br><span class="small">${m.league} • ${m.status}</span></p><hr>`;
+    const r = await fetch('scores.json?v='+Date.now());
+    const data = await r.json();
+    const matches = data.matches || data.events || data || [];
+    document.getElementById('updated').textContent = 'Updated: ' + (data.updated || data.date || '');
+    let html = '';
+    matches.forEach(m=>{
+      // Try EVERY possible name for teams and score
+      let home = m.home || m.homeTeam || m.home_team || (m.teams && m.teams.home) || (m.competitors && m.competitors[0]) || '';
+      let away = m.away || m.awayTeam || m.away_team || (m.teams && m.teams.away) || (m.competitors && m.competitors[1]) || '';
+      if(typeof home==='object') home = home.name || home.displayName || home.team?.displayName || '';
+      if(typeof away==='object') away = away.name || away.displayName || away.team?.displayName || '';
+
+      // Try EVERY possible name for score
+      let hs = m.homeScore ?? m.home_score ?? m.homeGoals ?? m.score_home ?? m.home_goals ?? m.homeResult ?? '';
+      let as = m.awayScore ?? m.away_score ?? m.awayGoals ?? m.score_away ?? m.away_goals ?? m.awayResult ?? '';
+      // If score is in one string like "2 - 1" or "2-1"
+      if((hs===''||hs===undefined) && m.score) {
+        let parts = String(m.score).split(/[-:]/);
+        if(parts.length>=2){ hs=parts[0].trim(); as=parts[1].trim(); }
+      }
+      if((hs===''||hs===undefined) && m.result) {
+        let parts = String(m.result).split(/[-:]/);
+        if(parts.length>=2){ hs=parts[0].trim(); as=parts[1].trim(); }
+      }
+      // ESPN raw format: competitors[0].score
+      if((hs===''||hs===undefined) && m.competitions){
+        try{
+          let comps = m.competitions[0].competitors;
+          let h = comps.find(c=>c.homeAway==='home');
+          let a = comps.find(c=>c.homeAway==='away');
+          hs = h?.score; as = a?.score;
+          home = home || h?.team?.displayName;
+          away = away || a?.team?.displayName;
+        }catch(e){}
+      }
+      if(hs===undefined||hs===null||hs==='') hs='-';
+      if(as===undefined||as===null||as==='') as='-';
+
+      let league = m.league || m.competition || m.leagueName || m.tournament || '';
+      let status = m.status || m.state || m.statusText || 'Full Time';
+      if(typeof status==='object') status = status.type?.detail || status.displayName || 'Full Time';
+
+      html += `<div class="card"><div class="score">${home} ${hs} - ${as} ${away}</div><div class="small">${league} • ${status}</div></div>`;
     });
-    document.getElementById('matches').innerHTML = mHtml || 'No games today';
-    document.getElementById('transfers').innerHTML = d.transfers || 'No transfer news yet';
-    document.getElementById('player').innerHTML = d.player_life || 'Player story coming soon';
+    document.getElementById('list').innerHTML = html || 'No matches found';
   }catch(e){
-    document.getElementById('matches').innerHTML = 'No internet - showing last saved scores. Please refresh.';
+    document.getElementById('list').innerHTML = 'Error loading scores: '+e;
   }
 }
-loadData();
-setInterval(loadData, 60000);
+load();
 </script>
 </body>
 </html>
