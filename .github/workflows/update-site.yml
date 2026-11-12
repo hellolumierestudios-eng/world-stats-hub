@@ -2,7 +2,9 @@ name: Update Live Scores
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -15,17 +17,19 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       - name: Install requests
         run: pip install requests
       - name: Update scores
         env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: python scores.py
       - name: Save new scores
         run: |
-          git config user.name "WorldStatsHub Bot"
-          git config user.email "bot@worldstatshub.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add scores.json
-          git commit -m "Live scores update" || echo "No change"
+          git commit -m "Update scores" || echo "No changes"
           git push
