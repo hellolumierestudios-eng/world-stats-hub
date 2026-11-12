@@ -16,7 +16,7 @@ def get(lid, date):
         x = r.json().get("response", [])
         e = r.json().get"(errors")
         print("COUNT", lid, date, len(x))
-        print("ERR", e)
+        print("ERR", err)
         return r.json().get("response", [])
     except Exception as e:
         print("API error", e)
