@@ -14,7 +14,7 @@ def get(lid, date):
         r = requests.get(url, headers=H, params=p, timeout=20)
         print("API", lid, date, r.status_code)
         x = r.json().get("response", [])
-        e = r.json().get"(errors")
+        err = r.json().get("errors")
         print("COUNT", lid, date, len(x))
         print("ERR", err)
         return r.json().get("response", [])
