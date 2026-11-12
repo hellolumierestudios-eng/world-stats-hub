@@ -7,22 +7,33 @@ T = os.environ.get("BOT_TOKEN")
 C = os.environ.get("CHANNEL_ID")
 K = os.environ.get("API_FOOTBALL_KEY")
 
+print("Has BOT_TOKEN:", bool(T))
+print("Has CHANNEL_ID:", bool(C))
+print("Has API_KEY:", bool(K))
+
 H = {"x-apisports-key": K}
 today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+print("Date used:", today)
 
-LEAGUES = [39, 140, 135, 78, 61, 2, 3, 88, 94, 71]
+# Try 1: all fixtures today, no league, no season
+url1 = f"https://v3.football.api-sports.io/fixtures?date={today}"
+r = requests.get(url1, headers=H, timeout=30)
+print("Try1 status:", r.status_code)
+data = r.json()
+print("Try1 keys:", list(data.keys()))
+print("Try1 errors:", data.get("errors"))
+print("Try1 results:", data.get("results"))
+all_matches = data.get("response", [])
 
-def get(lid):
-    url = f"https://v3.football.api-sports.io/fixtures?date={today}&league={lid}&season=2026"
-    r = requests.get(url, headers=H, timeout=30)
-    return r.json().get("response", [])
-
-all_matches = []
-for lid in LEAGUES:
-    try:
-        all_matches.extend(get(lid))
-    except Exception as e:
-        print(f"League {lid} failed: {e}")
+# Try 2: if 0, try with season 2026 for Premier League only
+if len(all_matches) == 0:
+    url2 = f"https://v3.football.api-sports.io/fixtures?date={today}&league=39&season=2026"
+    r2 = requests.get(url2, headers=H, timeout=30)
+    print("Try2 status:", r2.status_code)
+    d2 = r2.json()
+    print("Try2 errors:", d2.get("errors"))
+    print("Try2 results:", d2.get("results"))
+    all_matches = d2.get("response", [])
 
 matches = []
 for m in all_matches:
@@ -42,7 +53,6 @@ with open("scores.json", "w") as f:
 
 print(f"Saved scores.json with {len(matches)} matches")
 
-# Telegram
 if T and C and matches:
     lines = ["⚽ LIVE SCORES UPDATE"]
     for m in matches[:20]:
@@ -51,6 +61,6 @@ if T and C and matches:
     text = "\n".join(lines)
     url = f"https://api.telegram.org/bot{T}/sendMessage"
     r = requests.post(url, json={"chat_id": C, "text": text}, timeout=30)
-    print("Telegram:", r.status_code, r.text[:200])
+    print("Telegram:", r.status_code, r.text[:300])
 else:
     print("Telegram skipped - no token/channel or no matches")
