@@ -26,6 +26,6 @@ jobs:
         run: |
           git config user.name "WorldStatsHub Bot"
           git config user.email "bot@worldstatshub.com"
-          git add scores.json world-stats-hub/scores.json || true
+          git add scores.json
           git commit -m "Live scores update" || echo "No change"
           git push
