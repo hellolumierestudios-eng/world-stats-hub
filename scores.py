@@ -1,48 +1,41 @@
-import os, json, requests
-from datetime import date
+import requests, os, json
+from datetime import datetime
 
-API_KEY = os.environ.get("API_FOOTBALL_KEY")
-today = date.today().isoformat()
+K = os.getenv("API_FOOTBALL_KEY")
+H = {"x-apisports-key": K}
+today = datetime.now().strftime("%Y-%m-%d")
 
-headers = {"x-rapidapi-key": API_KEY, "x-rapidapi-host": "v3.football.api-sports.io"}
-url = f"https://v3.football.api-sports.io/fixtures?date={today}"
+def get(lid):
+    try:
+        url = "https://v3.football.api-sports.io/fixtures"
+        p = {"league": lid, "season": 2026, "date": today}
+        r = requests.get(url, headers=H, params=p, timeout=20)
+        print("API", lid, r.status_code)
+        return r.json().get("response", [])
+    except Exception as e:
+        print("API error", e)
+        return []
+
+names = {39: "Premier League", 140: "La Liga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1"}
 
 matches = []
-try:
-    r = requests.get(url, headers=headers, timeout=20)
-    data = r.json().get("response", [])
-    for m in data[:15]:
-        matches.append({
-            "home": m["teams"]["home"]["name"],
-            "away": m["teams"]["away"]["name"],
-            "score": f"{m['goals']['home']} - {m['goals']['away']}" if m['goals']['home'] is not None else "vs",
-            "league": m["league"]["name"],
-            "status": m["fixture"]["status"]["long"]
-        })
-except Exception as e:
-    print("Error:", e)
+for lid, name in names.items():
+    f = get(lid)
+    for m in f[:6]:
+        home = m["teams"]["home"]["name"]
+        away = m["teams"]["away"]["name"]
+        gh = m["goals"]["home"]
+        ga = m["goals"]["away"]
+        status = m["fixture"]["status"]["short"]
+        if gh is None or ga is None:
+            score = "vs"
+            time = m["fixture"]["date"][11:16]
+        else:
+            score = f"{gh} - {ga}"
+            time = status
+        matches.append({"home": home, "away": away, "score": score, "time": time, "league": name, "status": status})
 
-players = [
-    "Victor Osimhen - Born in Lagos, sold pure water on the street as a boy, now one of the best strikers in the world. From grass to grace.",
-    "Sadio Mane - From a small village in Senegal, he walked 400km to try out for football. Now a legend.",
-    "Cristiano Ronaldo - Grew up poor in Madeira, shared one room with his family. Now 5x Ballon d'Or winner.",
-    "N'Golo Kante - Used to pick up trash to survive in Paris. Now World Cup winner.",
-    "Mohamed Salah - From a small village in Egypt, travelled 4 hours daily to training. Now King of Liverpool."
-]
-player_life = players[date.today().day % len(players)]
-
-output = {
-    "updated": today,
-    "matches": matches,
-    "transfers": "Check Telegram @WorldStatsHub for latest transfer news!",
-    "player_life": player_life
-}
-
-# Save to BOTH places - root for bot, and folder for website
-for path in ["scores.json", "world-stats-hub/scores.json"]:
-    try:
-        with open(path, "w") as f:
-            json.dump(output, f, indent=2)
-        print("Saved", path)
-    except Exception as e:
-        print("Skip", path, e)
+output = {"updated": today, "matches": matches}
+with open("scores.json", "w") as f:
+    json.dump(output, f, indent=2)
+print("Saved:", output)
