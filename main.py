@@ -52,7 +52,7 @@ with open("scores.json", "w") as f:
 print("Saved scores.json:", output)
 
 # 2. Send to TELEGRAM
-if "---" not in msg:
+if not matches:
     print("No games - skipping Telegram")
 else:
     msg += "Follow @WorldStatsHub"
