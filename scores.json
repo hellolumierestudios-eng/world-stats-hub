@@ -845,8 +845,8 @@
     "away": "Central African Republic",
     "home_goals": 4,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 84,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -855,8 +855,8 @@
     "away": "Namibia",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 87,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -865,18 +865,18 @@
     "away": "Gambia",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 84,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
     "league": "Africa Cup of Nations - Qualification",
     "home": "Senegal",
     "away": "Sudan",
-    "home_goals": 3,
+    "home_goals": 4,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 85,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -885,8 +885,8 @@
     "away": "Guadeloupe",
     "home_goals": 0,
     "away_goals": 3,
-    "status": "2H",
-    "minute": 85,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -895,8 +895,8 @@
     "away": "Guyana",
     "home_goals": 0,
     "away_goals": 6,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -904,29 +904,29 @@
     "home": "CE Europa W",
     "away": "Deportivo de La Coru\u00f1a W",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "2H",
-    "minute": 89,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
     "league": "U20 Elite League",
     "home": "England U20",
     "away": "Czechia U20",
-    "home_goals": 4,
-    "away_goals": 0,
-    "status": "2H",
-    "minute": 56,
+    "home_goals": 6,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
     "league": "Segunda Divisi\u00f3n",
     "home": "Atenas",
     "away": "Oriental",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 59,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
@@ -935,8 +935,8 @@
     "away": "Col\u00f3n",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 53,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
@@ -945,18 +945,18 @@
     "away": "Rentistas",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 51,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "Italy",
     "away": "France",
-    "home_goals": 1,
+    "home_goals": 3,
     "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
@@ -964,29 +964,29 @@
     "home": "Czech Republic",
     "away": "Spain",
     "home_goals": 0,
-    "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "England",
     "away": "Croatia",
-    "home_goals": 1,
-    "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "Albania",
     "away": "Finland",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
@@ -995,28 +995,28 @@
     "away": "Belarus",
     "home_goals": 0,
     "away_goals": 2,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "Montenegro",
     "away": "Latvia",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
     "league": "UEFA Champions League Women",
     "home": "SL Benfica W",
     "away": "Austria Wien W",
-    "home_goals": 1,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 44,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 85,
     "time": "2026-11-12T20:00:00+00:00"
   },
   {
@@ -1025,8 +1025,8 @@
     "away": "Cuba",
     "home_goals": 1,
     "away_goals": 7,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T20:00:00+00:00"
   },
   {
@@ -1043,20 +1043,20 @@
     "league": "Primera Division",
     "home": "\u00c1guila",
     "away": "Municipal Lime\u00f1o",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-12T21:00:00+00:00"
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 9,
+    "time": "2026-11-12T21:30:00+00:00"
   },
   {
     "league": "Primera Division",
     "home": "Atletico Balboa",
     "away": "Inca Aruba",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 11,
     "time": "2026-11-12T21:30:00+00:00"
   },
   {
