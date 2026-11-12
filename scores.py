@@ -1,83 +1,56 @@
-import json, requests
-from datetime import date, timedelta
+import requests
+import os
+import json
+from datetime import datetime, timezone
 
-# ESPN leagues - free, no key needed
-LEAGUES = {
-    "eng.1": "Premier League",
-    "esp.1": "La Liga",
-    "ita.1": "Serie A",
-    "ger.1": "Bundesliga",
-    "fra.1": "Ligue 1",
-    "ned.1": "Eredivisie",
-    "por.1": "Primeira Liga",
-    "eng.2": "Championship",
-    "uefa.champions": "Champions League",
-    "uefa.europa": "Europa League",
-    "uefa.europa.conf": "Conference League",
-    "fifa.world": "World Cup",
-    "fifa.worldq": "World Cup Qualifiers",
-    "uefa.nations": "Nations League",
-    "fifa.friendly": "Friendlies",
-    "conmebol.worldq": "South America Qualifiers",
-    "caf.worldq": "Africa Qualifiers",
-    "afc.worldq": "Asia Qualifiers",
-    "concacaf.worldq": "CONCACAF Qualifiers",
-    "uefa.euroq": "Euro Qualifiers",
-    "eng.fa": "FA Cup",
-    "esp.copa-del-rey": "Copa del Rey",
-    "ita.coppa-italia": "Coppa Italia",
-    "ger.dfb-pokal": "DFB Pokal",
-    "fra.coupe-de-france": "Coupe de France",
-}
+T = os.environ.get("BOT_TOKEN")
+C = os.environ.get("CHANNEL_ID")
+K = os.environ.get("API_FOOTBALL_KEY")
+
+H = {"x-apisports-key": K}
+today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+LEAGUES = [39, 140, 135, 78, 61, 2, 3, 88, 94, 71]
+
+def get(lid):
+    url = f"https://v3.football.api-sports.io/fixtures?date={today}&league={lid}&season=2025"
+    r = requests.get(url, headers=H, timeout=30)
+    return r.json().get("response", [])
+
+all_matches = []
+for lid in LEAGUES:
+    try:
+        all_matches.extend(get(lid))
+    except Exception as e:
+        print(f"League {lid} failed: {e}")
 
 matches = []
-today = date.today()
+for m in all_matches:
+    matches.append({
+        "league": m["league"]["name"],
+        "home": m["teams"]["home"]["name"],
+        "away": m["teams"]["away"]["name"],
+        "home_goals": m["goals"]["home"],
+        "away_goals": m["goals"]["away"],
+        "status": m["fixture"]["status"]["short"],
+        "minute": m["fixture"]["status"]["elapsed"],
+        "time": m["fixture"]["date"]
+    })
 
-for offset in range(-10, 8):  # last 10 days to +7 days
-    d = today + timedelta(days=offset)
-    datestr = d.strftime("%Y%m%d")
-    for slug, league_name in LEAGUES.items():
-        try:
-            url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={datestr}"
-            r = requests.get(url, timeout=20)
-            data = r.json()
-            for ev in data.get("events", []):
-                comp = ev.get("competitions", [{}])[0]
-                teams = comp.get("competitors", [])
-                if len(teams) < 2:
-                    continue
-                home = next((t for t in teams if t.get("homeAway") == "home"), teams[0])
-                away = next((t for t in teams if t.get("homeAway") == "away"), teams[1])
-                hs = home.get("score")
-                as_ = away.get("score")
-                try: hs = int(hs) if hs is not None else None
-                except: hs = None
-                try: as_ = int(as_) if as_ is not None else None
-                except: as_ = None
-                status = ev.get("status", {})
-                st = status.get("type", {})
-                m = {
-                    "league": league_name,
-                    "home": home.get("team", {}).get("displayName", "?"),
-                    "away": away.get("team", {}).get("displayName", "?"),
-                    "home_team": home.get("team", {}).get("displayName", "?"),
-                    "away_team": away.get("team", {}).get("displayName", "?"),
-                    "homeScore": hs, "awayScore": as_,
-                    "home_score": hs, "away_score": as_,
-                    "score_home": hs, "score_away": as_,
-                    "status": st.get("description", ""),
-                    "state": st.get("state", ""),
-                    "minute": status.get("displayClock", ""),
-                    "date": d.isoformat(),
-                    "time": ev.get("date", "")[11:16] if ev.get("date") else "",
-                    "datetime": ev.get("date", ""),
-                }
-                matches.append(m)
-            print("OK", slug, datestr, len(data.get("events", [])))
-        except Exception as e:
-            print("FAIL", slug, datestr, e)
-
-out = {"updated": today.isoformat(), "matches": matches}
 with open("scores.json", "w") as f:
-    json.dump(out, f, indent=2)
-print(f"Saved: {len(matches)} matches")
+    json.dump(matches, f, indent=2)
+
+print(f"Saved scores.json with {len(matches)} matches")
+
+# Telegram
+if T and C and matches:
+    lines = ["⚽ LIVE SCORES UPDATE"]
+    for m in matches[:20]:
+        score = f"{m['home_goals']}-{m['away_goals']}" if m['home_goals'] is not None else "vs"
+        lines.append(f"{m['home']} {score} {m['away']} ({m['status']})")
+    text = "\n".join(lines)
+    url = f"https://api.telegram.org/bot{T}/sendMessage"
+    r = requests.post(url, json={"chat_id": C, "text": text}, timeout=30)
+    print("Telegram:", r.status_code, r.text[:200])
+else:
+    print("Telegram skipped - no token/channel or no matches")
