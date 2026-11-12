@@ -705,7 +705,7 @@
     "away": "Argentinos Juniors Res.",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
@@ -715,7 +715,7 @@
     "away": "Central C\u00f3rdoba SdE Res.",
     "home_goals": 0,
     "away_goals": 2,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
@@ -725,7 +725,7 @@
     "away": "Gimnasia La Plata Res.",
     "home_goals": 3,
     "away_goals": 1,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
@@ -735,7 +735,7 @@
     "away": "Estudiantes Rio Cuarto 2",
     "home_goals": 1,
     "away_goals": 1,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
@@ -745,8 +745,8 @@
     "away": "River Plate Res.",
     "home_goals": 1,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
   {
@@ -755,7 +755,7 @@
     "away": "Uniclinic Atletico Clube",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
@@ -764,9 +764,9 @@
     "home": "Navalcarnero",
     "away": "Real Betis",
     "home_goals": 2,
-    "away_goals": 1,
-    "status": "2H",
-    "minute": 90,
+    "away_goals": 3,
+    "status": "AET",
+    "minute": 120,
     "time": "2026-11-12T18:00:00+00:00"
   },
   {
@@ -774,9 +774,9 @@
     "home": "Taranc\u00f3n",
     "away": "Levante",
     "home_goals": 1,
-    "away_goals": 1,
-    "status": "2H",
-    "minute": 90,
+    "away_goals": 2,
+    "status": "AET",
+    "minute": 120,
     "time": "2026-11-12T18:00:00+00:00"
   },
   {
@@ -785,7 +785,7 @@
     "away": "Edf Logrono W",
     "home_goals": 2,
     "away_goals": 3,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
@@ -794,8 +794,8 @@
     "home": "Chamb\u00e9ry",
     "away": "Grenoble",
     "home_goals": 0,
-    "away_goals": 1,
-    "status": "2H",
+    "away_goals": 2,
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-12T18:00:00+00:00"
   },
@@ -815,8 +815,8 @@
     "away": "Corinthians U20",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 90,
+    "status": "PEN",
+    "minute": 120,
     "time": "2026-11-12T18:00:00+00:00"
   },
   {
@@ -843,10 +843,10 @@
     "league": "Africa Cup of Nations - Qualification",
     "home": "Benin",
     "away": "Central African Republic",
-    "home_goals": 3,
+    "home_goals": 4,
     "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 84,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -855,8 +855,8 @@
     "away": "Namibia",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 87,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -865,18 +865,18 @@
     "away": "Gambia",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 84,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
     "league": "Africa Cup of Nations - Qualification",
     "home": "Senegal",
     "away": "Sudan",
-    "home_goals": 1,
+    "home_goals": 3,
     "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 85,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -884,9 +884,9 @@
     "home": "Barbados",
     "away": "Guadeloupe",
     "home_goals": 0,
-    "away_goals": 2,
-    "status": "HT",
-    "minute": 45,
+    "away_goals": 3,
+    "status": "2H",
+    "minute": 85,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -894,9 +894,9 @@
     "home": "Cayman Islands",
     "away": "Guyana",
     "home_goals": 0,
-    "away_goals": 4,
-    "status": "HT",
-    "minute": 45,
+    "away_goals": 6,
+    "status": "2H",
+    "minute": 89,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
@@ -905,18 +905,18 @@
     "away": "Deportivo de La Coru\u00f1a W",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 89,
     "time": "2026-11-12T19:00:00+00:00"
   },
   {
     "league": "U20 Elite League",
     "home": "England U20",
     "away": "Czechia U20",
-    "home_goals": 2,
+    "home_goals": 4,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 21,
+    "status": "2H",
+    "minute": 56,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
@@ -925,8 +925,8 @@
     "away": "Oriental",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 21,
+    "status": "2H",
+    "minute": 59,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
@@ -935,8 +935,8 @@
     "away": "Col\u00f3n",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 15,
+    "status": "2H",
+    "minute": 53,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
@@ -944,19 +944,19 @@
     "home": "Plaza Colonia",
     "away": "Rentistas",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 51,
     "time": "2026-11-12T19:30:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "Italy",
     "away": "France",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 4,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
@@ -964,29 +964,29 @@
     "home": "Czech Republic",
     "away": "Spain",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 5,
+    "away_goals": 1,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "England",
     "away": "Croatia",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 5,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "Albania",
     "away": "Finland",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 5,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
@@ -994,9 +994,9 @@
     "home": "San Marino",
     "away": "Belarus",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 7,
+    "away_goals": 2,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
@@ -1005,28 +1005,28 @@
     "away": "Latvia",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 5,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-12T19:45:00+00:00"
   },
   {
     "league": "UEFA Champions League Women",
     "home": "SL Benfica W",
     "away": "Austria Wien W",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 44,
     "time": "2026-11-12T20:00:00+00:00"
   },
   {
     "league": "CONCACAF Nations League",
     "home": "Bonaire",
     "away": "Cuba",
-    "home_goals": 0,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 21,
+    "home_goals": 1,
+    "away_goals": 7,
+    "status": "2H",
+    "minute": 88,
     "time": "2026-11-12T20:00:00+00:00"
   },
   {
@@ -1063,16 +1063,6 @@
     "league": "Serie B",
     "home": "Ponte Preta",
     "away": "Operario-PR",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-12T22:00:00+00:00"
-  },
-  {
-    "league": "Primera A",
-    "home": "Deportivo Pasto",
-    "away": "Junior",
     "home_goals": null,
     "away_goals": null,
     "status": "NS",
@@ -1123,6 +1113,16 @@
     "league": "Serie B",
     "home": "S\u00e3o Bernardo",
     "away": "Athletic Club",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "league": "Primera A",
+    "home": "Deportivo Pasto",
+    "away": "Junior",
     "home_goals": null,
     "away_goals": null,
     "status": "NS",
