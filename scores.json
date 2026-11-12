@@ -1,1 +1,1172 @@
-[]
+[
+  {
+    "league": "USL Super League",
+    "home": "DC Power W",
+    "away": "Brooklyn W",
+    "home_goals": 4,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T00:00:00+00:00"
+  },
+  {
+    "league": "Primera Division",
+    "home": "FAS",
+    "away": "Inter",
+    "home_goals": 2,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T01:00:00+00:00"
+  },
+  {
+    "league": "Liga MX Femenil",
+    "home": "Am\u00e9rica W",
+    "away": "Toluca W",
+    "home_goals": 3,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T01:00:00+00:00"
+  },
+  {
+    "league": "Primera B",
+    "home": "Quindio",
+    "away": "Tigres FC",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T01:10:00+00:00"
+  },
+  {
+    "league": "Liga de Expansi\u00f3n MX",
+    "home": "Piratas",
+    "away": "CA La Paz",
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T02:00:00+00:00"
+  },
+  {
+    "league": "Liga MX Femenil",
+    "home": "Pachuca W",
+    "away": "Monterrey W",
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T03:00:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "New Zealand",
+    "away": "India",
+    "home_goals": 5,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T06:10:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "Thailand U23",
+    "away": "Qatar U23",
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T08:00:00+00:00"
+  },
+  {
+    "league": "Australian Championship",
+    "home": "Wests APIA",
+    "away": "Adelaide City",
+    "home_goals": 3,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T08:30:00+00:00"
+  },
+  {
+    "league": "\u00ddokary Liga",
+    "home": "Arkadag",
+    "away": "Altyn Asyr",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "PST",
+    "minute": null,
+    "time": "2026-11-12T10:00:00+00:00"
+  },
+  {
+    "league": "WK-League",
+    "home": "Hwacheon KSPO W",
+    "away": "Gyeongju W",
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T10:00:00+00:00"
+  },
+  {
+    "league": "Ligue 1",
+    "home": "Tanganyika",
+    "away": "AS New Soger",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T10:30:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Genk",
+    "away": "AS Eupen",
+    "home_goals": 1,
+    "away_goals": 3,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T11:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Hannover 96",
+    "away": "Havelse",
+    "home_goals": 6,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T11:00:00+00:00"
+  },
+  {
+    "league": "Ligue 1",
+    "home": "C\u00e9leste",
+    "away": "Maniema Union",
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:00:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "Singapore U23",
+    "away": "Vietnam U23",
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Arminia Bielefeld",
+    "away": "SV Meppen",
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Karpaty",
+    "away": "Veres Rivne",
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Pogon Szczecin",
+    "away": "Warta Pozna\u0144",
+    "home_goals": 3,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:00:00+00:00"
+  },
+  {
+    "league": "Second League",
+    "home": "AL Nasr SC",
+    "away": "Pharco",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:30:00+00:00"
+  },
+  {
+    "league": "Second League",
+    "home": "Dayrout",
+    "away": "Proxy",
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:30:00+00:00"
+  },
+  {
+    "league": "Second League",
+    "home": "El Entag EL Harby",
+    "away": "Baladiyyat Al Mehalla",
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:30:00+00:00"
+  },
+  {
+    "league": "Second League",
+    "home": "Masar",
+    "away": "Tersana",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:30:00+00:00"
+  },
+  {
+    "league": "Second League",
+    "home": "Mega Sport",
+    "away": "El Seka El Hadid",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T12:30:00+00:00"
+  },
+  {
+    "league": "Regionalliga - West",
+    "home": "Paderborn II",
+    "away": "Bochum II",
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Premier League",
+    "home": "Kigezi HomeBoyz",
+    "away": "Vipers",
+    "home_goals": 1,
+    "away_goals": 4,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "UEFA U19 Championship - Qualification",
+    "home": "Germany U19",
+    "away": "Sweden U19",
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "CAF U23 Cup of Nations",
+    "home": "Ethiopia U23",
+    "away": "Morocco U23",
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "UEFA U21 Championship - Qualification",
+    "home": "Iceland U21",
+    "away": "Greece U21",
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Ligue 1",
+    "home": "Dauphins Noirs",
+    "away": "Novakin",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Ligue 1",
+    "home": "Etoile de Kivu",
+    "away": "FC Renaissance",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "Scotland U21",
+    "away": "Ukraine U21",
+    "home_goals": 4,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Borussia M\u00f6nchengladbach",
+    "away": "Standard Liege",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "SpVgg Greuther F\u00fcrth",
+    "away": "W\u00fcrzburger Kickers",
+    "home_goals": 3,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Holstein Kiel",
+    "away": "Odense",
+    "home_goals": 4,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "FC Ingolstadt 04",
+    "away": "Wacker Innsbruck",
+    "home_goals": 3,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Sarpsborg 08 FF",
+    "away": "IFK Goteborg",
+    "home_goals": 4,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Rapid Vienna",
+    "away": "Dunajska Streda",
+    "home_goals": 3,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "FC ST. Gallen",
+    "away": "FC WIL 1900",
+    "home_goals": 3,
+    "away_goals": 3,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "VfL Wolfsburg",
+    "away": "Union Berlin",
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:30:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "BSC Young Boys",
+    "away": "Stade Lausanne-Ouchy",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:30:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "FC Zurich",
+    "away": "Austria Lustenau",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T13:30:00+00:00"
+  },
+  {
+    "league": "FA Cup",
+    "home": "Oman Club",
+    "away": "Al Nasr",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T13:50:00+00:00"
+  },
+  {
+    "league": "FA Cup",
+    "home": "Sur",
+    "away": "Dhofar",
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:50:00+00:00"
+  },
+  {
+    "league": "FA Cup",
+    "home": "Smail",
+    "away": "Bahla",
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
+    "time": "2026-11-12T13:55:00+00:00"
+  },
+  {
+    "league": "Ligue 1",
+    "home": "Anges Verts",
+    "away": "\u00c9toile du Congo",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T14:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Ghana",
+    "away": "Somalia",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
+    "time": "2026-11-12T15:00:00+00:00"
+  },
+  {
+    "league": "UEFA U17 Championship - Qualification",
+    "home": "Bulgaria U17",
+    "away": "Serbia U17",
+    "home_goals": 0,
+    "away_goals": 2,
+    "status": "HT",
+    "minute": 45,
+    "time": "2026-11-12T15:00:00+00:00"
+  },
+  {
+    "league": "UEFA U17 Championship - Qualification",
+    "home": "Portugal U17",
+    "away": "Andorra U17",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
+    "time": "2026-11-12T15:00:00+00:00"
+  },
+  {
+    "league": "UEFA U19 Championship - Qualification",
+    "home": "Portugal U19",
+    "away": "Lithuania U19",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
+    "time": "2026-11-12T15:00:00+00:00"
+  },
+  {
+    "league": "CAF U23 Cup of Nations",
+    "home": "Angola U23",
+    "away": "Congo U23",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
+    "time": "2026-11-12T15:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "BK Hacken",
+    "away": "Fredrikstad",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "CANC",
+    "minute": null,
+    "time": "2026-11-12T15:00:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "Uzbekistan",
+    "away": "Russia",
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
+    "time": "2026-11-12T15:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Congo DR",
+    "away": "Sierra Leone",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 1,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Equatorial Guinea",
+    "away": "Zimbabwe",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Guinea",
+    "away": "Eritrea",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Madagascar",
+    "away": "Guinea-Bissau",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 3,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "U20 Elite League",
+    "home": "Italy U20",
+    "away": "Portugal U20",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "France U20",
+    "away": "Denmark U20",
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 4,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "LFA First Division",
+    "home": "Black Man Warrior",
+    "away": "Heaven Eleven",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "LFA First Division",
+    "home": "District 17",
+    "away": "Borough",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "LFA First Division",
+    "home": "Fassell",
+    "away": "Discoveries",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T16:00:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "T\u00fcrkiye",
+    "away": "Belgium",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:00:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "Armenia",
+    "away": "Cyprus",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:00:00+00:00"
+  },
+  {
+    "league": "UEFA Europa Cup - Women",
+    "home": "Torreense W",
+    "away": "Sparta Praha W",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:00:00+00:00"
+  },
+  {
+    "league": "CAF U23 Cup of Nations",
+    "home": "Tunisia U23",
+    "away": "Gabon U23",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:00:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "Lithuania",
+    "away": "Suriname",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:00:00+00:00"
+  },
+  {
+    "league": "Copa del Rey",
+    "home": "Calvo Sotelo",
+    "away": "Albacete",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:30:00+00:00"
+  },
+  {
+    "league": "Friendlies",
+    "home": "Malta",
+    "away": "Eswatini",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:30:00+00:00"
+  },
+  {
+    "league": "UEFA Champions League Women",
+    "home": "Barcelona W",
+    "away": "Arsenal W",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T17:45:00+00:00"
+  },
+  {
+    "league": "Reserve League",
+    "home": "Barracas Central Res.",
+    "away": "Argentinos Juniors Res.",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Reserve League",
+    "home": "Col\u00f3n Res.",
+    "away": "Central C\u00f3rdoba SdE Res.",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Reserve League",
+    "home": "Godoy Cruz Res.",
+    "away": "Gimnasia La Plata Res.",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Reserve League",
+    "home": "Hurac\u00e1n Res.",
+    "away": "Estudiantes Rio Cuarto 2",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Reserve League",
+    "home": "Rosario Central Res.",
+    "away": "River Plate Res.",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Copa Fares Lopes",
+    "home": "Ceara B",
+    "away": "Uniclinic Atletico Clube",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Copa del Rey",
+    "home": "Navalcarnero",
+    "away": "Real Betis",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Copa del Rey",
+    "home": "Taranc\u00f3n",
+    "away": "Levante",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Copa de la Reina",
+    "home": "Osasuna W",
+    "away": "Edf Logrono W",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Coupe de France",
+    "home": "Chamb\u00e9ry",
+    "away": "Grenoble",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Torneo Federal A",
+    "home": "Kimberley Mar del Plata",
+    "away": "Olimpo Bahia Blanca",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "PST",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Paulista - U20",
+    "home": "RB Bragantino U20",
+    "away": "Corinthians U20",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:00:00+00:00"
+  },
+  {
+    "league": "Paraense U20",
+    "home": "Curumins U20",
+    "away": "Paysandu PA U20",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:30:00+00:00"
+  },
+  {
+    "league": "Paraense U20",
+    "home": "\u00c1guia de Marab\u00e1 U20",
+    "away": "Mec Maraba U20",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T18:30:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Benin",
+    "away": "Central African Republic",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Cameroon",
+    "away": "Namibia",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Ivory Coast",
+    "away": "Gambia",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:00:00+00:00"
+  },
+  {
+    "league": "Africa Cup of Nations - Qualification",
+    "home": "Senegal",
+    "away": "Sudan",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:00:00+00:00"
+  },
+  {
+    "league": "CONCACAF Nations League",
+    "home": "Barbados",
+    "away": "Guadeloupe",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:00:00+00:00"
+  },
+  {
+    "league": "CONCACAF Nations League",
+    "home": "Cayman Islands",
+    "away": "Guyana",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:00:00+00:00"
+  },
+  {
+    "league": "Copa de la Reina",
+    "home": "CE Europa W",
+    "away": "Deportivo de La Coru\u00f1a W",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:00:00+00:00"
+  },
+  {
+    "league": "U20 Elite League",
+    "home": "England U20",
+    "away": "Czechia U20",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:30:00+00:00"
+  },
+  {
+    "league": "Segunda Divisi\u00f3n",
+    "home": "Atenas",
+    "away": "Oriental",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:30:00+00:00"
+  },
+  {
+    "league": "Segunda Divisi\u00f3n",
+    "home": "Cerrito",
+    "away": "Col\u00f3n",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:30:00+00:00"
+  },
+  {
+    "league": "Segunda Divisi\u00f3n",
+    "home": "Plaza Colonia",
+    "away": "Rentistas",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:30:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "Italy",
+    "away": "France",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:45:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "Czech Republic",
+    "away": "Spain",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:45:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "England",
+    "away": "Croatia",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:45:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "Albania",
+    "away": "Finland",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:45:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "San Marino",
+    "away": "Belarus",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:45:00+00:00"
+  },
+  {
+    "league": "UEFA Nations League",
+    "home": "Montenegro",
+    "away": "Latvia",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T19:45:00+00:00"
+  },
+  {
+    "league": "UEFA Champions League Women",
+    "home": "SL Benfica W",
+    "away": "Austria Wien W",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T20:00:00+00:00"
+  },
+  {
+    "league": "CONCACAF Nations League",
+    "home": "Bonaire",
+    "away": "Cuba",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T20:00:00+00:00"
+  },
+  {
+    "league": "Premier League",
+    "home": "Mount Pleasant Academy",
+    "away": "Portmore United",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T20:00:00+00:00"
+  },
+  {
+    "league": "Primera Division",
+    "home": "\u00c1guila",
+    "away": "Municipal Lime\u00f1o",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T21:00:00+00:00"
+  },
+  {
+    "league": "Primera Division",
+    "home": "Atletico Balboa",
+    "away": "Inca Aruba",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T21:30:00+00:00"
+  },
+  {
+    "league": "Serie B",
+    "home": "Ponte Preta",
+    "away": "Operario-PR",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T22:00:00+00:00"
+  },
+  {
+    "league": "Primera A",
+    "home": "Deportivo Pasto",
+    "away": "Junior",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T22:00:00+00:00"
+  },
+  {
+    "league": "Liga Nacional",
+    "home": "Aurora",
+    "away": "Mixco",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T22:00:00+00:00"
+  },
+  {
+    "league": "Reserve League",
+    "home": "Boca Juniors Res.",
+    "away": "Newell's Old Boys Res.",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T22:00:00+00:00"
+  },
+  {
+    "league": "Primera Divisi\u00f3n",
+    "home": "Puerto Cabello",
+    "away": "Monagas SC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T22:00:00+00:00"
+  },
+  {
+    "league": "CONCACAF Nations League",
+    "home": "Aruba",
+    "away": "Martinique",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T22:00:00+00:00"
+  },
+  {
+    "league": "Serie B",
+    "home": "S\u00e3o Bernardo",
+    "away": "Athletic Club",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "league": "Super Copa",
+    "home": "Estudiantes L.P.",
+    "away": "Independ. Rivadavia",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "league": "CONCACAF Nations League",
+    "home": "Antigua and Barbuda",
+    "away": "Trinidad and Tobago",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "league": "Primera Divisi\u00f3n",
+    "home": "Cerro Largo",
+    "away": "Progreso",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T23:00:00+00:00"
+  },
+  {
+    "league": "Copa de la Divisi\u00f3n Profesional",
+    "home": "Real Potos\u00ed",
+    "away": "Nacional Potos\u00ed",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-12T23:00:00+00:00"
+  }
+]
