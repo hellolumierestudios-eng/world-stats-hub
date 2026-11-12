@@ -18,7 +18,7 @@ def get(lid, date):
         print("API error", e)
         return []
 
-names = {39: "Premier League", 140: "La Liga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1"}
+names = {39: "Premier League", 140: "Laliga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1", 40: "Championship", 88: "Eredivisie", 94: "Primeira Liga"}
 
 matches = []
 for date in dates:
