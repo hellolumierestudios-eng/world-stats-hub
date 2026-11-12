@@ -13,6 +13,7 @@ def get(lid, date):
         p = {"league": lid, "season": 2026, "date": date}
         r = requests.get(url, headers=H, params=p, timeout=20)
         print("API", lid, date, r.status_code)
+        print("COUNT", lid, date, len(r json().get("response", [])), r.json().get("errors"))
         return r.json().get("response", [])
     except Exception as e:
         print("API error", e)
