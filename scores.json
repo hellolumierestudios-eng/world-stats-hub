@@ -5,8 +5,8 @@
     "away": "Chico",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-13T00:00:00+00:00"
   },
   {
@@ -491,16 +491,6 @@
   },
   {
     "league": "Division 2",
-    "home": "Al Baten",
-    "away": "Baish",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-13T12:05:00+00:00"
-  },
-  {
-    "league": "Division 2",
     "home": "Arar",
     "away": "Al Gottah",
     "home_goals": null,
@@ -858,16 +848,6 @@
     "status": "NS",
     "minute": null,
     "time": "2026-11-13T15:00:00+00:00"
-  },
-  {
-    "league": "Ligue 1",
-    "home": "Salitas",
-    "away": "Maya",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-13T15:30:00+00:00"
   },
   {
     "league": "Africa Cup of Nations - Qualification",
