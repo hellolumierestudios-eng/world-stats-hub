@@ -55,28 +55,28 @@
     "away": "Marconi Stallions",
     "home_goals": 2,
     "away_goals": 2,
-    "status": "2H",
-    "minute": 65,
+    "status": "PEN",
+    "minute": 120,
     "time": "2026-11-13T08:30:00+00:00"
   },
   {
     "league": "Australian Championship",
     "home": "Preston Lions",
     "away": "Lions",
-    "home_goals": 2,
+    "home_goals": 3,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 60,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-13T08:30:00+00:00"
   },
   {
     "league": "Persha Liga",
     "home": "Prykarpattia",
     "away": "Kolos Kovalivka II",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-13T10:00:00+00:00"
   },
   {
@@ -103,10 +103,10 @@
     "league": "Druha Liga",
     "home": "Karbon Cherkasy",
     "away": "Atlet",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 7,
     "time": "2026-11-13T10:30:00+00:00"
   },
   {
@@ -490,6 +490,26 @@
     "time": "2026-11-13T12:00:00+00:00"
   },
   {
+    "league": "Liga E Pare",
+    "home": "Rilindja 1974",
+    "away": "Mitrovica",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-13T12:00:00+00:00"
+  },
+  {
+    "league": "Liga E Pare",
+    "home": "Tefik Canga",
+    "away": "Vjosa",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-13T12:00:00+00:00"
+  },
+  {
     "league": "Division 2",
     "home": "Arar",
     "away": "Al Gottah",
@@ -695,7 +715,7 @@
     "away": "TP Mazembe",
     "home_goals": null,
     "away_goals": null,
-    "status": "NS",
+    "status": "PST",
     "minute": null,
     "time": "2026-11-13T13:00:00+00:00"
   },
@@ -797,7 +817,7 @@
     "away_goals": null,
     "status": "NS",
     "minute": null,
-    "time": "2026-11-13T14:10:00+00:00"
+    "time": "2026-11-13T14:15:00+00:00"
   },
   {
     "league": "Friendlies",
@@ -1260,6 +1280,16 @@
     "time": "2026-11-13T17:30:00+00:00"
   },
   {
+    "league": "Friendlies",
+    "home": "Chile U20",
+    "away": "Mexico U20",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-13T17:30:00+00:00"
+  },
+  {
     "league": "Oberliga - Hamburg",
     "home": "Vorw\u00e4rts-Wacker 04",
     "away": "Harksheide",
@@ -1673,16 +1703,6 @@
     "league": "Coupe de France",
     "home": "St-Philbert Gd Lieu",
     "away": "La Roche VF",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-13T19:00:00+00:00"
-  },
-  {
-    "league": "Friendlies",
-    "home": "Chile U20",
-    "away": "Mexico U20",
     "home_goals": null,
     "away_goals": null,
     "status": "NS",
