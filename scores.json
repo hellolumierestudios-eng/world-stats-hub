@@ -43,30 +43,30 @@
     "league": "Premier League",
     "home": "Deren",
     "away": "Central Stallions",
-    "home_goals": 2,
-    "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 4,
+    "away_goals": 3,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-13T08:00:00+00:00"
   },
   {
     "league": "Australian Championship",
     "home": "Oakleigh Cannons",
     "away": "Marconi Stallions",
-    "home_goals": 0,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 19,
+    "home_goals": 2,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 65,
     "time": "2026-11-13T08:30:00+00:00"
   },
   {
     "league": "Australian Championship",
     "home": "Preston Lions",
     "away": "Lions",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 17,
+    "status": "2H",
+    "minute": 60,
     "time": "2026-11-13T08:30:00+00:00"
   },
   {
@@ -1505,7 +1505,7 @@
     "away": "ETSV Hamburg",
     "home_goals": null,
     "away_goals": null,
-    "status": "NS",
+    "status": "PST",
     "minute": null,
     "time": "2026-11-13T18:30:00+00:00"
   },
@@ -2178,16 +2178,6 @@
     "status": "NS",
     "minute": null,
     "time": "2026-11-13T22:00:00+00:00"
-  },
-  {
-    "league": "First League",
-    "home": "Chelyabinsk",
-    "away": "Veles",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-13T23:00:00+00:00"
   },
   {
     "league": "Friendlies",
