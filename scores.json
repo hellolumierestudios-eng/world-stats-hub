@@ -74,9 +74,9 @@
     "home": "Prykarpattia",
     "away": "Kolos Kovalivka II",
     "home_goals": 1,
-    "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-13T10:00:00+00:00"
   },
   {
@@ -103,10 +103,10 @@
     "league": "Druha Liga",
     "home": "Karbon Cherkasy",
     "away": "Atlet",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 7,
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 47,
     "time": "2026-11-13T10:30:00+00:00"
   },
   {
@@ -123,10 +123,10 @@
     "league": "Friendlies Clubs",
     "home": "Vasteras SK FK",
     "away": "IF Brommapojkarna",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-13T11:00:00+00:00"
   },
   {
@@ -153,30 +153,30 @@
     "league": "Friendlies Clubs",
     "home": "Turku PS",
     "away": "Ilves",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 22,
     "time": "2026-11-13T11:30:00+00:00"
   },
   {
     "league": "Friendlies Clubs",
     "home": "VfL Bochum",
     "away": "Verl",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 23,
     "time": "2026-11-13T11:30:00+00:00"
   },
   {
     "league": "Friendlies Clubs",
     "home": "TSV Hartberg",
     "away": "Floridsdorfer AC",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 22,
     "time": "2026-11-13T11:30:00+00:00"
   },
   {
@@ -580,16 +580,6 @@
     "time": "2026-11-13T12:30:00+00:00"
   },
   {
-    "league": "Division 2",
-    "home": "Hetten FC",
-    "away": "Mudhar Club",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-13T12:30:00+00:00"
-  },
-  {
     "league": "Paraense U20",
     "home": "Comercial PA U20",
     "away": "Tapajos U20",
@@ -618,16 +608,6 @@
     "status": "NS",
     "minute": null,
     "time": "2026-11-13T12:30:00+00:00"
-  },
-  {
-    "league": "Division 2",
-    "home": "Al-Ain",
-    "away": "Al Taraji",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-13T12:35:00+00:00"
   },
   {
     "league": "FA Cup",
