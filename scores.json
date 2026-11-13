@@ -33,10 +33,10 @@
     "league": "Premier League",
     "home": "Ulaanbaatar",
     "away": "Hunters",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-13T05:00:00+00:00"
   },
   {
