@@ -45,7 +45,7 @@
     "away": "Caiquetio",
     "home_goals": null,
     "away_goals": null,
-    "status": "NS",
+    "status": "PST",
     "minute": null,
     "time": "2026-11-14T00:30:00+00:00"
   },
@@ -333,10 +333,10 @@
     "league": "League Cup",
     "home": "North District",
     "away": "Hong Kong FC",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 3,
+    "away_goals": 3,
+    "status": "2H",
+    "minute": 90,
     "time": "2026-11-14T07:00:00+00:00"
   },
   {
@@ -344,9 +344,9 @@
     "home": "Kowloon City",
     "away": "Kitchee",
     "home_goals": 0,
-    "away_goals": 2,
-    "status": "HT",
-    "minute": 45,
+    "away_goals": 5,
+    "status": "2H",
+    "minute": 90,
     "time": "2026-11-14T07:00:00+00:00"
   },
   {
@@ -373,10 +373,10 @@
     "league": "UEFA U17 Championship - Qualification",
     "home": "France U17",
     "away": "Luxembourg U17",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 45,
     "time": "2026-11-14T08:00:00+00:00"
   },
   {
@@ -403,20 +403,20 @@
     "league": "Diski Challenge",
     "home": "Polokwane City U23",
     "away": "Chippa United U23",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T08:00:00+00:00"
   },
   {
     "league": "Diski Challenge",
     "home": "Marumo Gallants U23",
     "away": "TS Galaxy U23",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T08:00:00+00:00"
   },
   {
@@ -443,10 +443,10 @@
     "league": "Friendlies",
     "home": "Thailand U23",
     "away": "Singapore U23",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T08:00:00+00:00"
   },
   {
@@ -473,10 +473,10 @@
     "league": "Australian Championship",
     "home": "Bayswater City",
     "away": "Sydney Olympic",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 14,
     "time": "2026-11-14T08:30:00+00:00"
   },
   {
@@ -973,6 +973,16 @@
     "league": "League Cup",
     "home": "Southern District",
     "away": "Shatin",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-14T10:00:00+00:00"
+  },
+  {
+    "league": "Friendlies Clubs",
+    "home": "Zorya Luhansk",
+    "away": "FC Kharkiv",
     "home_goals": null,
     "away_goals": null,
     "status": "NS",
@@ -4480,6 +4490,16 @@
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
+    "league": "Friendlies",
+    "home": "Palestine",
+    "away": "Iran",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "NS",
+    "minute": null,
+    "time": "2026-11-14T13:00:00+00:00"
+  },
+  {
     "league": "Carioca U20",
     "home": "Bangu U20",
     "away": "Nova Igua\u00e7u U20",
@@ -4530,9 +4550,9 @@
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
-    "league": "Primera Divisi\u00f3n",
-    "home": "Central Espanol",
-    "away": "Boston River",
+    "league": "Friendlies",
+    "home": "Turkey U18",
+    "away": "Germany U18",
     "home_goals": null,
     "away_goals": null,
     "status": "NS",
@@ -4540,9 +4560,9 @@
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
-    "league": "Friendlies Clubs",
-    "home": "Zorya Luhansk",
-    "away": "FC Kharkiv",
+    "league": "Primera Divisi\u00f3n",
+    "home": "Central Espanol",
+    "away": "Boston River",
     "home_goals": null,
     "away_goals": null,
     "status": "NS",
@@ -7573,26 +7593,6 @@
     "league": "Coupe de France",
     "home": "Vend\u00e9e Fontenay",
     "away": "Clermont Foot",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-14T15:00:00+00:00"
-  },
-  {
-    "league": "Friendlies",
-    "home": "Palestine",
-    "away": "Iran",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-14T15:00:00+00:00"
-  },
-  {
-    "league": "Friendlies",
-    "home": "Turkey U18",
-    "away": "Germany U18",
     "home_goals": null,
     "away_goals": null,
     "status": "NS",
