@@ -5,8 +5,8 @@
     "away": "Chile",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T00:00:00+00:00"
   },
   {
@@ -15,8 +15,8 @@
     "away": "Costa Rica",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 87,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T00:00:00+00:00"
   },
   {
@@ -33,10 +33,10 @@
     "league": "USL Super League",
     "home": "Lexington W",
     "away": "Fort Lauderdale United W",
-    "home_goals": 2,
+    "home_goals": 4,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 61,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T00:30:00+00:00"
   },
   {
@@ -55,8 +55,8 @@
     "away": "FC Santiago",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T01:00:00+00:00"
   },
   {
@@ -65,8 +65,8 @@
     "away": "Auckland City",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 90,
     "time": "2026-11-14T01:00:00+00:00"
   },
   {
@@ -75,8 +75,8 @@
     "away": "Bolivia",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 85,
     "time": "2026-11-14T01:00:00+00:00"
   },
   {
@@ -84,9 +84,9 @@
     "home": "Internacional de Bogota",
     "away": "Santa Fe",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 27,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 60,
     "time": "2026-11-14T01:30:00+00:00"
   },
   {
@@ -94,19 +94,19 @@
     "home": "Sporting San Miguelito",
     "away": "CD Arabe Unido",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 27,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 59,
     "time": "2026-11-14T01:30:00+00:00"
   },
   {
     "league": "Liga Paname\u00f1a de F\u00fatbol",
     "home": "Tauro FC",
     "away": "Alianza FC",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 27,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 52,
     "time": "2026-11-14T01:30:00+00:00"
   },
   {
@@ -114,39 +114,39 @@
     "home": "UMECIT",
     "away": "Plaza Amador",
     "home_goals": 1,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 27,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 59,
     "time": "2026-11-14T01:30:00+00:00"
   },
   {
     "league": "Primera Premier",
     "home": "Tigres de Alica",
     "away": "Jaguares de Chiapas",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 14,
     "time": "2026-11-14T01:30:00+00:00"
   },
   {
     "league": "Primera Premier",
     "home": "Reboceros La Piedad",
     "away": "Racing de Veracruz",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 45,
     "time": "2026-11-14T02:00:00+00:00"
   },
   {
     "league": "CONCACAF Nations League",
     "home": "Guatemala",
     "away": "Canada",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 3,
+    "status": "1H",
+    "minute": 45,
     "time": "2026-11-14T02:00:00+00:00"
   },
   {
