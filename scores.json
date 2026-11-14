@@ -195,7 +195,7 @@
     "away": "Sagamihara",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -205,7 +205,7 @@
     "away": "Matsumoto Yamaga",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -215,7 +215,7 @@
     "away": "Thespakusatsu Gunma",
     "home_goals": 4,
     "away_goals": 3,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -233,9 +233,9 @@
     "league": "WE League",
     "home": "Sanfrecce Hiroshima W",
     "away": "JEF United W",
-    "home_goals": 2,
+    "home_goals": 3,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -245,7 +245,7 @@
     "away": "Tochigi City",
     "home_goals": 1,
     "away_goals": 6,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -255,7 +255,7 @@
     "away": "Yokohama FC",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -265,7 +265,7 @@
     "away": "Tegevajaro Miyazaki",
     "home_goals": 1,
     "away_goals": 3,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -275,7 +275,7 @@
     "away": "Montedio Yamagata",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -285,7 +285,7 @@
     "away": "Ventforet Kofu",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T05:00:00+00:00"
   },
@@ -293,20 +293,20 @@
     "league": "WE League",
     "home": "Tokyo Verdy Beleza W",
     "away": "Albirex Niigata W",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T06:00:00+00:00"
   },
   {
     "league": "WE League",
     "home": "Urawa Reds W",
     "away": "Elfen Saitama W",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T06:00:00+00:00"
   },
   {
@@ -323,30 +323,30 @@
     "league": "Friendlies",
     "home": "Bahrain",
     "away": "Yemen",
-    "home_goals": 2,
+    "home_goals": 3,
     "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T06:00:00+00:00"
   },
   {
     "league": "League Cup",
     "home": "North District",
     "away": "Hong Kong FC",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T07:00:00+00:00"
   },
   {
     "league": "League Cup",
     "home": "Kowloon City",
     "away": "Kitchee",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 2,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T07:00:00+00:00"
   },
   {
