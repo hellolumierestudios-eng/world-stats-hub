@@ -503,10 +503,10 @@
     "league": "AFC U17 Asian Cup",
     "home": "IR Iran U17",
     "away": "Sri Lanka U17",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 11,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T09:00:00+00:00"
   },
   {
@@ -794,7 +794,7 @@
     "home": "SK Poltava",
     "away": "Ahrobiznes Volochysk",
     "home_goals": 1,
-    "away_goals": 2,
+    "away_goals": 4,
     "status": "INT",
     "minute": null,
     "time": "2026-11-14T10:00:00+00:00"
@@ -903,10 +903,10 @@
     "league": "Druha Liga",
     "home": "Rebel",
     "away": "Oleksandria II",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T10:00:00+00:00"
   },
   {
@@ -1043,10 +1043,10 @@
     "league": "Friendlies Clubs",
     "home": "Legia Warszawa",
     "away": "Pogo\u0144 Grod. Mazowiecki",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 4,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T10:30:00+00:00"
   },
   {
@@ -1213,10 +1213,10 @@
     "league": "Druha Liga",
     "home": "Dnister Zalishchyky",
     "away": "Vilkhivtsi",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 3,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:00:00+00:00"
   },
   {
@@ -1253,10 +1253,10 @@
     "league": "Central Youth League",
     "home": "Legia Warszawa U19",
     "away": "Arka Gdynia U19",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:00:00+00:00"
   },
   {
@@ -1383,20 +1383,20 @@
     "league": "Friendlies Clubs",
     "home": "CSKA Moscow",
     "away": "Arsenal Tula",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 4,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:00:00+00:00"
   },
   {
     "league": "Friendlies Clubs",
     "home": "Obolon'-Brovar",
     "away": "Nyva Vinnytsya",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 3,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:00:00+00:00"
   },
   {
@@ -1413,10 +1413,10 @@
     "league": "AFC U17 Asian Cup",
     "home": "United Arab Emirates U17",
     "away": "Macau U17",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 3,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:20:00+00:00"
   },
   {
@@ -1443,10 +1443,10 @@
     "league": "Oberliga - Hamburg",
     "home": "HT16",
     "away": "Norderstedt II",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 4,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:30:00+00:00"
   },
   {
@@ -1483,20 +1483,20 @@
     "league": "Division 2",
     "home": "Al Jubail",
     "away": "Al Qous",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:50:00+00:00"
   },
   {
     "league": "Division 2",
     "home": "Al Najoom",
     "away": "Jubbah",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T11:55:00+00:00"
   },
   {
@@ -1505,7 +1505,7 @@
     "away": "Sandviken W",
     "home_goals": 3,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1515,7 +1515,7 @@
     "away": "Husqvarna W",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1525,8 +1525,8 @@
     "away": "Ume\u00e5 W",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1535,7 +1535,7 @@
     "away": "KIF \u00d6rebro W",
     "home_goals": 1,
     "away_goals": 3,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1543,10 +1543,10 @@
     "league": "Elitettan",
     "home": "Link\u00f6ping W",
     "away": "Gamla Upsala W",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1555,8 +1555,8 @@
     "away": "Jitex W",
     "home_goals": 3,
     "away_goals": 3,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1565,8 +1565,8 @@
     "away": "\u00d6rebro SK W",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1575,8 +1575,8 @@
     "away": "Zvezda Perm W",
     "home_goals": 3,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1585,18 +1585,18 @@
     "away": "Krylya Sovetov W",
     "home_goals": 0,
     "away_goals": 4,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
     "league": "Prva Liga",
     "home": "Teleoptik",
     "away": "FK Spartak Zdrepceva KRV",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 83,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1605,8 +1605,8 @@
     "away": "Berane",
     "home_goals": 4,
     "away_goals": 2,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1625,7 +1625,7 @@
     "away": "Lov\u0107en",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1635,7 +1635,7 @@
     "away": "Hungary U17",
     "home_goals": 4,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1655,7 +1655,7 @@
     "away": "Liptovsk\u00fd Mikul\u00e1\u0161",
     "home_goals": 1,
     "away_goals": 1,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1665,7 +1665,7 @@
     "away": "Zlat\u00e9 Moravce",
     "home_goals": 2,
     "away_goals": 2,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1675,7 +1675,7 @@
     "away": "Petr\u017ealka",
     "home_goals": 1,
     "away_goals": 2,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1685,7 +1685,7 @@
     "away": "Pohronie",
     "home_goals": 4,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1695,8 +1695,8 @@
     "away": "Lechia Zielona G\u00f3ra",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1765,18 +1765,18 @@
     "away": "KSZO 1929",
     "home_goals": 1,
     "away_goals": 2,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
     "league": "III Liga - Group 4",
     "home": "Sok\u00f3\u0142 Kolb.",
     "away": "Busko-Zdroj",
-    "home_goals": 3,
+    "home_goals": 4,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 87,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1785,8 +1785,8 @@
     "away": "Karkonosze Jelenia G\u00f3ra",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1805,8 +1805,8 @@
     "away": "Victoria Wrze\u015bnia",
     "home_goals": 1,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1823,10 +1823,10 @@
     "league": "III Liga - Group 2",
     "home": "Unia Swarz\u0119dz",
     "away": "Gedania Gdansk",
-    "home_goals": 3,
+    "home_goals": 4,
     "away_goals": 3,
-    "status": "2H",
-    "minute": 85,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1835,7 +1835,7 @@
     "away": "Warta Sieradz",
     "home_goals": 2,
     "away_goals": 2,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1855,8 +1855,8 @@
     "away": "Olimpia Elbl\u0105g",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 87,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1885,8 +1885,8 @@
     "away": "Racing Ferrol",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 86,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1895,7 +1895,7 @@
     "away": "Sundby",
     "home_goals": 6,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1905,7 +1905,7 @@
     "away": "Frem",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1913,10 +1913,10 @@
     "league": "4. liga - Divizie F",
     "home": "Stonava",
     "away": "Pust\u00e1 Polom",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 3,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1935,8 +1935,8 @@
     "away": "Fortuna Hj\u00f8rring W",
     "home_goals": 1,
     "away_goals": 4,
-    "status": "2H",
-    "minute": 87,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1945,7 +1945,7 @@
     "away": "Nordsj\u00e6lland W",
     "home_goals": 1,
     "away_goals": 2,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -1955,8 +1955,8 @@
     "away": "K\u00f8ge W",
     "home_goals": 1,
     "away_goals": 4,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1964,9 +1964,9 @@
     "home": "Beyo\u011flu Yeni \u00c7ar\u015f\u0131",
     "away": "Serik Spor",
     "home_goals": 1,
-    "away_goals": 0,
-    "status": "2H",
-    "minute": 89,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -1975,8 +1975,8 @@
     "away": "\u0130neg\u00f6lspor",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 73,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2083,20 +2083,20 @@
     "league": "Oberliga - Bremen",
     "home": "Blumenthaler SV",
     "away": "OSC Bremerhaven",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 3,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
     "league": "Oberliga - Bremen",
     "home": "BTS Neustadt",
     "away": "Hemelingen",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 5,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2115,8 +2115,8 @@
     "away": "FC Koln II W",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 88,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2175,8 +2175,8 @@
     "away": "San Bartolom\u00e9",
     "home_goals": 3,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 83,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2185,18 +2185,18 @@
     "away": "Lanzarote",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 78,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
     "league": "Tercera Divisi\u00f3n RFEF - Group 12",
     "home": "Uni\u00f3n Sur Yaiza",
     "away": "Estrella",
-    "home_goals": 2,
+    "home_goals": 5,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 78,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2285,8 +2285,8 @@
     "away": "Bandari",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 87,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2565,8 +2565,8 @@
     "away": "Belarus U19",
     "home_goals": 5,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 86,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2575,7 +2575,7 @@
     "away": "Malta U19",
     "home_goals": 3,
     "away_goals": 1,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -2585,7 +2585,7 @@
     "away": "North Macedonia U19",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -2593,9 +2593,9 @@
     "league": "Super League 2",
     "home": "Ellas Syros",
     "away": "Panthrakikos",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -2605,8 +2605,8 @@
     "away": "Osterbro W",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2643,10 +2643,10 @@
     "league": "Cup",
     "home": "Bsk Bijelo Brdo",
     "away": "HNK Gorica",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "2H",
-    "minute": 90,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "AET",
+    "minute": 120,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2655,8 +2655,8 @@
     "away": "Palmacia",
     "home_goals": 4,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 84,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2665,8 +2665,8 @@
     "away": "Spartak Trnava",
     "home_goals": 0,
     "away_goals": 3,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2674,9 +2674,9 @@
     "home": "Chinese Taipei",
     "away": "Kyrgyzstan",
     "home_goals": 0,
-    "away_goals": 2,
-    "status": "2H",
-    "minute": 89,
+    "away_goals": 3,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2685,8 +2685,8 @@
     "away": "Malaysia",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 84,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2695,7 +2695,7 @@
     "away": "Bjarg",
     "home_goals": 2,
     "away_goals": 3,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -2705,18 +2705,18 @@
     "away": "Qatar U23",
     "home_goals": 1,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 89,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
     "league": "Friendlies Clubs",
     "home": "BFC Dynamo",
     "away": "Tasmania Berlin",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 4,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
   {
@@ -2735,7 +2735,7 @@
     "away": "Lekie W",
     "home_goals": 0,
     "away_goals": 5,
-    "status": "2H",
+    "status": "FT",
     "minute": 90,
     "time": "2026-11-14T12:00:00+00:00"
   },
@@ -2743,30 +2743,30 @@
     "league": "Division 2",
     "home": "Al Sharq",
     "away": "Al Rawdhah",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:05:00+00:00"
   },
   {
     "league": "Division 2",
     "home": "Al Shoalah",
     "away": "Qilwah",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:05:00+00:00"
   },
   {
     "league": "Division 2",
     "home": "Al Arabi SC",
     "away": "Al Hada",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:15:00+00:00"
   },
   {
@@ -2774,9 +2774,9 @@
     "home": "Zulte-Waregem W",
     "away": "Gent W",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "2H",
-    "minute": 59,
+    "away_goals": 1,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -2785,18 +2785,18 @@
     "away": "Cheltenham",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 60,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
     "league": "1. Liga U19",
     "home": "Teplice U19",
     "away": "Karvin\u00e1 U19",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 48,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -2825,8 +2825,8 @@
     "away": "Chernomorets 1919 Burgas",
     "home_goals": 1,
     "away_goals": 3,
-    "status": "2H",
-    "minute": 59,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -2834,9 +2834,9 @@
     "home": "VSK \u00c5rhus",
     "away": "Middelfart",
     "home_goals": 2,
-    "away_goals": 0,
-    "status": "2H",
-    "minute": 58,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -2854,19 +2854,19 @@
     "home": "Menemen FK",
     "away": "Isparta 32 Spor",
     "home_goals": 0,
-    "away_goals": 1,
-    "status": "2H",
-    "minute": 58,
+    "away_goals": 4,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
     "league": "2. Lig",
     "home": "Somaspor",
     "away": "Arnavutk\u00f6y Belediyespor",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 2,
-    "status": "2H",
-    "minute": 58,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -2875,8 +2875,8 @@
     "away": "12 Bing\u00f6lspor",
     "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 57,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -2884,19 +2884,19 @@
     "home": "Sakaryaspor",
     "away": "Ankara Demirspor",
     "home_goals": 1,
-    "away_goals": 1,
-    "status": "2H",
-    "minute": 54,
+    "away_goals": 2,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
     "league": "Central Youth League",
     "home": "Stal Rzesz\u00f3w U19",
     "away": "Talent Warszawa U19",
-    "home_goals": 1,
+    "home_goals": 3,
     "away_goals": 1,
-    "status": "2H",
-    "minute": 56,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -3004,29 +3004,29 @@
     "home": "Armenia U19",
     "away": "Albania U19",
     "home_goals": 0,
-    "away_goals": 2,
-    "status": "2H",
-    "minute": 59,
+    "away_goals": 4,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
     "league": "UEFA U19 Championship - Qualification",
     "home": "Moldova U19",
     "away": "Gibraltar U19",
-    "home_goals": 4,
+    "home_goals": 5,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 62,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
     "league": "UEFA U19 Championship - Qualification",
     "home": "Spain U19",
     "away": "Wales U19",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 58,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -3123,10 +3123,10 @@
     "league": "King's Cup",
     "home": "Thailand",
     "away": "Brunei",
-    "home_goals": 2,
+    "home_goals": 6,
     "away_goals": 0,
-    "status": "2H",
-    "minute": 59,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:30:00+00:00"
   },
   {
@@ -3143,50 +3143,50 @@
     "league": "FA WSL",
     "home": "Manchester United W",
     "away": "Crystal Palace W",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "FT",
+    "minute": 90,
     "time": "2026-11-14T12:45:00+00:00"
   },
   {
     "league": "Super League 2",
     "home": "Panserraikos",
     "away": "Anagennisi Karditsas",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 90,
     "time": "2026-11-14T12:45:00+00:00"
   },
   {
     "league": "League Cup",
     "home": "Al-Dhafra",
     "away": "Ajman",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 86,
     "time": "2026-11-14T12:50:00+00:00"
   },
   {
     "league": "Super League",
     "home": "Neftchi",
     "away": "Bunyodkor",
-    "home_goals": 2,
+    "home_goals": 4,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 77,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "2. SNL",
     "home": "Bistrica",
     "away": "Beltinci",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 84,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3195,18 +3195,18 @@
     "away": "Tabor Se\u017eana",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 44,
+    "status": "2H",
+    "minute": 80,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "UEFA U17 Championship - Qualification",
     "home": "Croatia U17",
     "away": "Kosovo U17",
-    "home_goals": 2,
+    "home_goals": 3,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3214,9 +3214,9 @@
     "home": "Scotland U17",
     "away": "Albania U17",
     "home_goals": 1,
-    "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3225,8 +3225,8 @@
     "away": "T\u0159inec",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 82,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3243,30 +3243,30 @@
     "league": "4. liga - Divizie A",
     "home": "Spartak Sob\u011bslav",
     "away": "Kom\u00e1rov",
-    "home_goals": 2,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "4. liga - Divizie B",
     "home": "Sokol Hostou\u0148",
     "away": "Hv\u011bzda Cheb",
-    "home_goals": 2,
+    "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "4. liga - Divizie B",
     "home": "Ostrov",
     "away": "\u00dast\u00ed nad Labem II",
-    "home_goals": 1,
+    "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 42,
+    "status": "2H",
+    "minute": 77,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3275,8 +3275,8 @@
     "away": "Meteor Praha",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3313,20 +3313,20 @@
     "league": "4. liga - Divizie C",
     "home": "Vysok\u00e9 M\u00fdto",
     "away": "Kol\u00edn",
-    "home_goals": 3,
-    "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - CFL A",
     "home": "P\u0159\u00edbram II",
     "away": "Motorlet Praha",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 77,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3334,19 +3334,19 @@
     "home": "Ben\u00e1tky nad Jizerou",
     "away": "Mlad\u00e1 Boleslav II",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - CFL B",
     "home": "Sokol Brozany",
     "away": "Slovan Liberec II",
-    "home_goals": 2,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "home_goals": 3,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 77,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3464,19 +3464,19 @@
     "home": "Valladolid",
     "away": "Castell\u00f3n",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 43,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 75,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Regionalliga - West",
     "home": "Hohenems",
     "away": "Lochau",
-    "home_goals": 1,
+    "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3494,9 +3494,9 @@
     "home": "Lustenau",
     "away": "Kitzb\u00fchel",
     "home_goals": 0,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "away_goals": 0,
+    "status": "2H",
+    "minute": 80,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3515,18 +3515,18 @@
     "away": "SK St. Johann",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Frauenliga",
     "home": "Kleinm\u00fcnchen / BW Linz W",
     "away": "S\u00fcdburgenland W",
-    "home_goals": 1,
+    "home_goals": 3,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 43,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3535,8 +3535,8 @@
     "away": "LASK W",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 82,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3553,40 +3553,40 @@
     "league": "3. Division",
     "home": "Br\u00f8nsh\u00f8j",
     "away": "Vanl\u00f8se",
-    "home_goals": 2,
+    "home_goals": 5,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 82,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. Division",
     "home": "H\u00f8rsholm-Usser\u00f8d",
     "away": "N\u00e6sby",
-    "home_goals": 0,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 82,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - MSFL",
     "home": "Unie Hlubina",
     "away": "Karvin\u00e1 II",
-    "home_goals": 1,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "home_goals": 2,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - MSFL",
     "home": "Fr\u00fddek-M\u00edstek",
     "away": "V\u00edtkovice",
-    "home_goals": 3,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "home_goals": 5,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3595,48 +3595,48 @@
     "away": "Hodon\u00edn",
     "home_goals": 0,
     "away_goals": 2,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 80,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - MSFL",
     "home": "Polanka nad Odrou",
     "away": "Slov\u00e1cko II",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 41,
+    "status": "2H",
+    "minute": 73,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - MSFL",
     "home": "Uhersk\u00fd Brod",
     "away": "L\u00ed\u0161e\u0148 II",
-    "home_goals": 2,
+    "home_goals": 3,
     "away_goals": 2,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - MSFL",
     "home": "Uni\u010dov",
     "away": "Zl\u00edn II",
-    "home_goals": 2,
+    "home_goals": 3,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "3. liga - MSFL",
     "home": "Vset\u00edn",
     "away": "Hranice",
-    "home_goals": 0,
+    "home_goals": 2,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 76,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3743,10 +3743,10 @@
     "league": "Tweede Divisie",
     "home": "Kozakken Boys",
     "away": "Sparta Rotterdam II",
-    "home_goals": 1,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 28,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 59,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3844,9 +3844,9 @@
     "home": "Aubstadt",
     "away": "Eltersdorf",
     "home_goals": 1,
-    "away_goals": 2,
-    "status": "1H",
-    "minute": 45,
+    "away_goals": 3,
+    "status": "2H",
+    "minute": 80,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3854,19 +3854,19 @@
     "home": "Wacker Burghausen",
     "away": "Illertissen",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 75,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Regionalliga - Bayern",
     "home": "Eichst\u00e4tt",
     "away": "Augsburg II",
-    "home_goals": 1,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 43,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3875,8 +3875,8 @@
     "away": "SpVgg Unterhaching",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 43,
+    "status": "2H",
+    "minute": 75,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3885,8 +3885,8 @@
     "away": "FC Schweinfurt 05",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 44,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3894,49 +3894,49 @@
     "home": "Hamburger SV II",
     "away": "Kickers Emden",
     "home_goals": 0,
-    "away_goals": 3,
-    "status": "1H",
-    "minute": 45,
+    "away_goals": 5,
+    "status": "2H",
+    "minute": 76,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Regionalliga - Nord",
     "home": "VfB L\u00fcbeck",
     "away": "Eintracht Norderstedt",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Regionalliga - Nord",
     "home": "Sch\u00f6ningen",
     "away": "HSC Hannover",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 80,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Regionalliga - Nord",
     "home": "Weiche Flensburg",
     "away": "Werder Bremen II",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 41,
+    "status": "2H",
+    "minute": 74,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Regionalliga - SudWest",
     "home": "SGV Freiberg",
     "away": "Eintracht Trier",
-    "home_goals": 0,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 40,
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 75,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3945,8 +3945,8 @@
     "away": "FC Astoria Walldorf",
     "home_goals": 0,
     "away_goals": 2,
-    "status": "1H",
-    "minute": 43,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3955,8 +3955,8 @@
     "away": "Kickers Offenbach",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 76,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3965,8 +3965,8 @@
     "away": "VfR Aalen",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 76,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3974,9 +3974,9 @@
     "home": "TSV Steinbach",
     "away": "SSV Ulm 1846",
     "home_goals": 1,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 43,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 74,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -3984,9 +3984,9 @@
     "home": "Stuttgarter Kickers",
     "away": "Hessen Kassel",
     "home_goals": 1,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 77,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4125,8 +4125,8 @@
     "away": "Union Berlin W",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4185,8 +4185,8 @@
     "away": "Hoffenheim II W",
     "home_goals": 2,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4263,10 +4263,10 @@
     "league": "UEFA U19 Championship - Qualification",
     "home": "Estonia U19",
     "away": "Turkey U19",
-    "home_goals": 1,
-    "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 80,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4275,28 +4275,28 @@
     "away": "Nestos Chrisoupolis",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Super League 2",
     "home": "Asteras Tripolis II",
     "away": "PAOK II",
-    "home_goals": 2,
+    "home_goals": 4,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 82,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "B-Liga Women",
     "home": "Thy ThistedQ W",
     "away": "AaB W",
-    "home_goals": 2,
-    "away_goals": 2,
-    "status": "1H",
-    "minute": 45,
+    "home_goals": 3,
+    "away_goals": 3,
+    "status": "2H",
+    "minute": 82,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4325,18 +4325,18 @@
     "away": "Segesta Sisak",
     "home_goals": 2,
     "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Diski Challenge",
     "home": "Richards Bay U23",
     "away": "Orlando Pirates U23",
-    "home_goals": 1,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "2H",
+    "minute": 79,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4455,8 +4455,8 @@
     "away": "Gokulam",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 42,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4485,28 +4485,28 @@
     "away": "Reims",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "HT",
-    "minute": 45,
+    "status": "2H",
+    "minute": 81,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Coupe de France",
     "home": "Versailles",
     "away": "Rodez",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 2,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 78,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Carioca U20",
     "home": "Bangu U20",
     "away": "Nova Igua\u00e7u U20",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 77,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4515,8 +4515,8 @@
     "away": "Botafogo U20",
     "home_goals": 1,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 43,
+    "status": "2H",
+    "minute": 67,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4525,8 +4525,8 @@
     "away": "Flamengo U20",
     "home_goals": 1,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 71,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4563,20 +4563,20 @@
     "league": "Primera Divisi\u00f3n",
     "home": "Central Espanol",
     "away": "Boston River",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 45,
+    "status": "2H",
+    "minute": 80,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
     "league": "Friendlies Clubs",
     "home": "Ried",
     "away": "First Vienna",
-    "home_goals": 0,
-    "away_goals": 1,
-    "status": "HT",
-    "minute": 45,
+    "home_goals": 2,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 83,
     "time": "2026-11-14T13:00:00+00:00"
   },
   {
@@ -4584,19 +4584,19 @@
     "home": "Arkonia U19",
     "away": "Lech Pozna\u0144 U19",
     "home_goals": 2,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 21,
+    "away_goals": 3,
+    "status": "2H",
+    "minute": 56,
     "time": "2026-11-14T13:15:00+00:00"
   },
   {
     "league": "UEFA U17 Championship - Qualification",
     "home": "Norway U17",
     "away": "Malta U17",
-    "home_goals": 1,
+    "home_goals": 6,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "status": "2H",
+    "minute": 49,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4605,8 +4605,8 @@
     "away": "R\u00f6this",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 18,
+    "status": "2H",
+    "minute": 51,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4615,18 +4615,18 @@
     "away": "Torpedo Moskva",
     "home_goals": 0,
     "away_goals": 1,
-    "status": "1H",
-    "minute": 16,
+    "status": "2H",
+    "minute": 49,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Tweede Divisie",
     "home": "GVVV Veenendaal",
     "away": "Spakenburg",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 13,
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4635,18 +4635,18 @@
     "away": "RKAV Volendam",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "status": "2H",
+    "minute": 49,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Tweede Divisie",
     "home": "Rijnsburgse Boys",
     "away": "Koninklijke HFC",
-    "home_goals": 0,
-    "away_goals": 1,
-    "status": "1H",
-    "minute": 15,
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "2H",
+    "minute": 47,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4733,10 +4733,10 @@
     "league": "FA WSL",
     "home": "Chelsea W",
     "away": "Manchester City W",
-    "home_goals": 0,
+    "home_goals": 1,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 18,
+    "status": "2H",
+    "minute": 47,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4744,29 +4744,29 @@
     "home": "Albinoleffe",
     "away": "Union Brescia",
     "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 50,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Serie C - Girone A",
     "home": "Arzignano Valchiampo",
     "away": "Alcione",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 46,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Serie C - Girone A",
     "home": "Renate",
     "away": "Desenzano Calvina",
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "status": "2H",
+    "minute": 51,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4775,28 +4775,28 @@
     "away": "Livorno",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 15,
+    "status": "2H",
+    "minute": 48,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Serie C - Girone B",
     "home": "Vis Pesaro",
     "away": "Pianese",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "home_goals": 3,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 50,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Serie C - Girone C",
     "home": "Casarano",
     "away": "AZ Picerno",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 16,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "2H",
+    "minute": 48,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4895,18 +4895,18 @@
     "away": "Sporting Ben Arous",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 15,
+    "status": "2H",
+    "minute": 47,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Ligue 2",
     "home": "BS Bouhajla",
     "away": "US Tataouine",
-    "home_goals": 0,
-    "away_goals": 0,
-    "status": "1H",
-    "minute": 4,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4915,8 +4915,8 @@
     "away": "Kerkennah",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 13,
+    "status": "HT",
+    "minute": 45,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4925,18 +4925,18 @@
     "away": "Stade Soussien",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "status": "2H",
+    "minute": 48,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "Ligue 2",
     "home": "M\u00e9grine",
     "away": "AS Agareb",
-    "home_goals": 0,
+    "home_goals": 3,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 16,
+    "status": "2H",
+    "minute": 47,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4945,8 +4945,8 @@
     "away": "AS Soliman",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 15,
+    "status": "2H",
+    "minute": 47,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
@@ -4955,38 +4955,38 @@
     "away": "EM Mahdia",
     "home_goals": 0,
     "away_goals": 0,
-    "status": "1H",
-    "minute": 17,
+    "status": "2H",
+    "minute": 49,
     "time": "2026-11-14T13:30:00+00:00"
   },
   {
     "league": "UEFA Nations League",
     "home": "Kosovo",
     "away": "Israel",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 38,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "UEFA U17 Championship - Qualification",
     "home": "Poland U17",
     "away": "England U17",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 36,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "UEFA U17 Championship - Qualification",
     "home": "Sweden U17",
     "away": "Finland U17",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 38,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5013,10 +5013,10 @@
     "league": "I Liga - Women",
     "home": "Ru\u017eomberok W",
     "away": "Z. Moravce-Vrable W",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 36,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5043,10 +5043,10 @@
     "league": "III Liga - Group 1",
     "home": "Weszlo",
     "away": "Wis\u0142a P\u0142ock II",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 39,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5063,10 +5063,10 @@
     "league": "1. Liga Promotion",
     "home": "Paradiso",
     "away": "Amical Saint-Prex",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 36,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5083,20 +5083,20 @@
     "league": "2. Division",
     "home": "Fremad Amager",
     "away": "Brabrand",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 39,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "3. Division",
     "home": "ASA Aarhus",
     "away": "Holb\u00e6k B&I",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 2,
+    "status": "1H",
+    "minute": 38,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5113,40 +5113,40 @@
     "league": "Tweede Divisie",
     "home": "Ijsselmeervogels",
     "away": "Barendrecht",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 36,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Tweede Divisie",
     "home": "Quick Boys",
     "away": "Almere City II",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 37,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Tweede Divisie",
     "home": "ROHDA Raalte",
     "away": "Katwijk",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 37,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "FAW Championship",
     "home": "Llanuwchllyn",
     "away": "Rhyl",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 39,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5163,10 +5163,10 @@
     "league": "Feminine Division 1",
     "home": "Le Havre W",
     "away": "Paris FC W",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 39,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5193,10 +5193,10 @@
     "league": "Serie A Women",
     "home": "Roma W",
     "away": "Parma W",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 2,
+    "status": "1H",
+    "minute": 36,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5273,110 +5273,110 @@
     "league": "Serie D - Girone C",
     "home": "Brian Lignano",
     "away": "Cjarlins Muzane",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 37,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "UEFA U19 Championship - Qualification",
     "home": "Bulgaria U19",
     "away": "Latvia U19",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 39,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "UEFA U19 Championship - Qualification",
     "home": "Greece U19",
     "away": "Norway U19",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 37,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "B-Liga Women",
     "home": "Viborg W",
     "away": "Naestved W",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 38,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Caerau (Ely)",
     "away": "Brickfield Rangers",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 35,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Colwyn Bay",
     "away": "Aberystwyth Town",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 38,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Haverfordwest County AFC",
     "away": "Ammanford AFC",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 37,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Holyhead Hotspur",
     "away": "Blaen-y-Maes",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 3,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 32,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Llandudno",
     "away": "Y Felinheli",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 1,
+    "status": "1H",
+    "minute": 32,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Llangennech",
     "away": "Newport City",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 32,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Newtown AFC",
     "away": "Caerphilly Athletic",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 2,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 35,
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
@@ -5390,63 +5390,53 @@
     "time": "2026-11-14T14:00:00+00:00"
   },
   {
-    "league": "1. Division Women",
-    "home": "\u00d8vrevoll Hosle W",
-    "away": "Kolbotn W",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
-    "time": "2026-11-14T14:00:00+00:00"
-  },
-  {
     "league": "Tweede Divisie",
     "home": "AFC Amsterdam",
     "away": "De Treffers",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 22,
     "time": "2026-11-14T14:15:00+00:00"
   },
   {
     "league": "Welsh Cup",
     "home": "Rockspur",
     "away": "Pontarddulais",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 1,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 17,
     "time": "2026-11-14T14:15:00+00:00"
   },
   {
     "league": "1. Division",
     "home": "Dinamo Minsk II",
     "away": "FC Energetik-Bgu Minsk",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 2,
+    "status": "1H",
+    "minute": 9,
     "time": "2026-11-14T14:30:00+00:00"
   },
   {
     "league": "III Liga - Group 3",
     "home": "Kluczbork",
     "away": "Carina Gubin",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 6,
     "time": "2026-11-14T14:30:00+00:00"
   },
   {
     "league": "Segunda Divisi\u00f3n RFEF - Group 1",
     "home": "Racing Santander II",
     "away": "Gimn\u00e1stica Torrelavega",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 8,
     "time": "2026-11-14T14:30:00+00:00"
   },
   {
@@ -5543,20 +5533,20 @@
     "league": "1. Liga Women",
     "home": "Slovan Liberec W",
     "away": "Prague Raptors W",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 7,
     "time": "2026-11-14T14:30:00+00:00"
   },
   {
     "league": "UEFA U19 Championship - Qualification",
     "home": "Italy U19",
     "away": "Ukraine U19",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 8,
     "time": "2026-11-14T14:30:00+00:00"
   },
   {
@@ -5573,10 +5563,10 @@
     "league": "SAFF Championship",
     "home": "Bangladesh",
     "away": "Pakistan",
-    "home_goals": null,
-    "away_goals": null,
-    "status": "NS",
-    "minute": null,
+    "home_goals": 0,
+    "away_goals": 0,
+    "status": "1H",
+    "minute": 8,
     "time": "2026-11-14T14:30:00+00:00"
   },
   {
