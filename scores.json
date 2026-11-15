@@ -5,11 +5,11 @@
       "home": "Cyprus",
       "away": "Montenegro",
       "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "away_score": 1,
+      "status": "18'",
+      "state": "in",
       "date": "2026-11-15",
-      "time": "Scheduled"
+      "time": "18'"
     },
     {
       "league": "UEFA Nations League",
@@ -17,10 +17,10 @@
       "away": "Armenia",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "17'",
+      "state": "in",
       "date": "2026-11-15",
-      "time": "Scheduled"
+      "time": "17'"
     },
     {
       "league": "UEFA Nations League",
@@ -100,5 +100,5 @@
       "time": "Scheduled"
     }
   ],
-  "updated": "15 Nov 2026, 01:27 PM"
+  "updated": "15 Nov 2026, 02:18 PM"
 }
