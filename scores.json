@@ -27,22 +27,22 @@
       "home": "Belarus",
       "away": "Albania",
       "home_score": 0,
-      "away_score": 1,
-      "status": "HT",
-      "state": "in",
+      "away_score": 2,
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-15",
-      "time": "HT"
+      "time": "FT"
     },
     {
       "league": "UEFA Nations League",
       "home": "Finland",
       "away": "San Marino",
-      "home_score": 5,
-      "away_score": 1,
-      "status": "HT",
-      "state": "in",
+      "home_score": 7,
+      "away_score": 2,
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-15",
-      "time": "HT"
+      "time": "FT"
     },
     {
       "league": "UEFA Nations League",
@@ -92,13 +92,13 @@
       "league": "International Friendlies",
       "home": "Suriname",
       "away": "Eswatini",
-      "home_score": 1,
+      "home_score": 4,
       "away_score": 0,
-      "status": "HT",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-15",
-      "time": "HT"
+      "time": "FT"
     }
   ],
-  "updated": "15 Nov 2026, 06:02 PM"
+  "updated": "15 Nov 2026, 07:16 PM"
 }
