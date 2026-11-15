@@ -21,6 +21,10 @@ today = datetime.date.today()
 date_str = today.strftime("%Y%m%d")
 print(f"Date used: {today}")
 
+# NEW: Create updated time for the site
+now_str = datetime.datetime.now().strftime("%d %b %Y, %I:%M %p")
+print(f"Updated: {now_str}")
+
 all_matches = []
 
 for league_id, league_name in LEAGUES:
@@ -64,7 +68,8 @@ for league_id, league_name in LEAGUES:
 
 print(f"Total matches: {len(all_matches)}")
 
+# FIXED: Now saves updated time too
 with open("scores.json", "w") as f:
-    json.dump({"matches": all_matches}, f, indent=2)
+    json.dump({"matches": all_matches, "updated": now_str}, f, indent=2)
 
 print(f"Saved scores.json with {len(all_matches)} matches")
