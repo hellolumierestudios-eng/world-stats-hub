@@ -48,23 +48,23 @@
       "league": "UEFA Nations League",
       "home": "Belgium",
       "away": "Italy",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "18'",
+      "state": "in",
       "date": "2026-11-15",
-      "time": "Scheduled"
+      "time": "18'"
     },
     {
       "league": "UEFA Nations League",
       "home": "Croatia",
       "away": "Czechia",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "19'",
+      "state": "in",
       "date": "2026-11-15",
-      "time": "Scheduled"
+      "time": "19'"
     },
     {
       "league": "UEFA Nations League",
@@ -72,10 +72,10 @@
       "away": "T\u00fcrkiye",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "19'",
+      "state": "in",
       "date": "2026-11-15",
-      "time": "Scheduled"
+      "time": "19'"
     },
     {
       "league": "UEFA Nations League",
@@ -83,10 +83,10 @@
       "away": "England",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "16'",
+      "state": "in",
       "date": "2026-11-15",
-      "time": "Scheduled"
+      "time": "16'"
     },
     {
       "league": "International Friendlies",
@@ -100,5 +100,5 @@
       "time": "FT"
     }
   ],
-  "updated": "15 Nov 2026, 07:16 PM"
+  "updated": "15 Nov 2026, 08:05 PM"
 }
