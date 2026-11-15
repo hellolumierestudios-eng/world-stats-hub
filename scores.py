@@ -1,66 +1,70 @@
-import requests
-import os
-import json
-from datetime import datetime, timezone
+import requests, json, datetime
 
-T = os.environ.get("BOT_TOKEN")
-C = os.environ.get("CHANNEL_ID")
-K = os.environ.get("API_FOOTBALL_KEY")
+# ESPN - No API key needed, never suspends
+LEAGUES = [
+    # CLUB LEAGUES
+    ("eng.1", "Premier League"),
+    ("esp.1", "La Liga"),
+    ("ita.1", "Serie A"),
+    ("ger.1", "Bundesliga"),
+    ("fra.1", "Ligue 1"),
+    ("ned.1", "Eredivisie"),
+    ("por.1", "Primeira Liga"),
+    ("eng.2", "Championship"),
+    # INTERNATIONAL - NATIONAL TEAMS
+    ("fifa.worldq.uefa", "World Cup Qualifiers - Europe"),
+    ("uefa.nations", "UEFA Nations League"),
+    ("fifa.friendly", "International Friendlies"),
+]
 
-print("Has BOT_TOKEN:", bool(T))
-print("Has CHANNEL_ID:", bool(C))
-print("Has API_KEY:", bool(K))
+today = datetime.date.today()
+date_str = today.strftime("%Y%m%d")
+print(f"Date used: {today}")
 
-H = {"x-apisports-key": K}
-today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-print("Date used:", today)
+all_matches = []
 
-# Try 1: all fixtures today, no league, no season
-url1 = f"https://v3.football.api-sports.io/fixtures?date={today}"
-r = requests.get(url1, headers=H, timeout=30)
-print("Try1 status:", r.status_code)
-data = r.json()
-print("Try1 keys:", list(data.keys()))
-print("Try1 errors:", data.get("errors"))
-print("Try1 results:", data.get("results"))
-all_matches = data.get("response", [])
+for league_id, league_name in LEAGUES:
+    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_id}/scoreboard?dates={date_str}"
+    try:
+        r = requests.get(url, timeout=15)
+        data = r.json()
+        events = data.get("events", [])
+        print(f"{league_name}: {len(events)} matches")
+        for ev in events:
+            comp = ev.get("competitions", [{}])[0]
+            competitors = comp.get("competitors", [])
+            if len(competitors) < 2:
+                continue
+            home = next((c for c in competitors if c.get("homeAway") == "home"), competitors[0])
+            away = next((c for c in competitors if c.get("homeAway") == "away"), competitors[1])
+            status = ev.get("status", {})
+            state = status.get("type", {}).get("state", "")
+            display = status.get("type", {}).get("shortDetail", "")
 
-# Try 2: if 0, try with season 2026 for Premier League only
-if len(all_matches) == 0:
-    url2 = f"https://v3.football.api-sports.io/fixtures?date={today}&league=39&season=2026"
-    r2 = requests.get(url2, headers=H, timeout=30)
-    print("Try2 status:", r2.status_code)
-    d2 = r2.json()
-    print("Try2 errors:", d2.get("errors"))
-    print("Try2 results:", d2.get("results"))
-    all_matches = d2.get("response", [])
+            home_score = home.get("score")
+            away_score = away.get("score")
+            try: home_score = int(home_score) if home_score is not None else None
+            except: pass
+            try: away_score = int(away_score) if away_score is not None else None
+            except: pass
 
-matches = []
-for m in all_matches:
-    matches.append({
-        "league": m["league"]["name"],
-        "home": m["teams"]["home"]["name"],
-        "away": m["teams"]["away"]["name"],
-        "home_goals": m["goals"]["home"],
-        "away_goals": m["goals"]["away"],
-        "status": m["fixture"]["status"]["short"],
-        "minute": m["fixture"]["status"]["elapsed"],
-        "time": m["fixture"]["date"]
-    })
+            all_matches.append({
+                "league": league_name,
+                "home": home.get("team", {}).get("displayName", "Home"),
+                "away": away.get("team", {}).get("displayName", "Away"),
+                "home_score": home_score,
+                "away_score": away_score,
+                "status": display,
+                "state": state,
+                "date": today.isoformat(),
+                "time": display
+            })
+    except Exception as e:
+        print(f"{league_name} error: {e}")
+
+print(f"Total matches: {len(all_matches)}")
 
 with open("scores.json", "w") as f:
-    json.dump(matches, f, indent=2)
+    json.dump({"matches": all_matches}, f, indent=2)
 
-print(f"Saved scores.json with {len(matches)} matches")
-
-if T and C and matches:
-    lines = ["⚽ LIVE SCORES UPDATE"]
-    for m in matches[:20]:
-        score = f"{m['home_goals']}-{m['away_goals']}" if m['home_goals'] is not None else "vs"
-        lines.append(f"{m['home']} {score} {m['away']} ({m['status']})")
-    text = "\n".join(lines)
-    url = f"https://api.telegram.org/bot{T}/sendMessage"
-    r = requests.post(url, json={"chat_id": C, "text": text}, timeout=30)
-    print("Telegram:", r.status_code, r.text[:300])
-else:
-    print("Telegram skipped - no token/channel or no matches")
+print(f"Saved scores.json with {len(all_matches)} matches")
