@@ -12,6 +12,7 @@ LEAGUES = [
     ("por.1", "Primeira Liga"),
     ("eng.2", "Championship"),
     ("uefa.champions", "Champions League"),
+    ("uefa.europa", "Europa League"),
     # INTERNATIONAL - NATIONAL TEAMS
     ("fifa.worldq.uefa", "World Cup Qualifiers - Europe"),
     ("uefa.nations", "UEFA Nations League"),
