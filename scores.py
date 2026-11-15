@@ -11,6 +11,7 @@ LEAGUES = [
     ("ned.1", "Eredivisie"),
     ("por.1", "Primeira Liga"),
     ("eng.2", "Championship"),
+    ("uefa.champions", "Champions League"),
     # INTERNATIONAL - NATIONAL TEAMS
     ("fifa.worldq.uefa", "World Cup Qualifiers - Europe"),
     ("uefa.nations", "UEFA Nations League"),
