@@ -18,7 +18,7 @@ def get(lid):
         print("API error", e)
         return []
 
-names = {39: "Premier League", 140: "La Liga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1"}
+names = {39: "Premier League", 140: "La Liga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1", 2: "Champions League"}
 
 matches = []
 msg = "⚽ WORLD STATS HUB\n" + today + "\nLive\n\n"
