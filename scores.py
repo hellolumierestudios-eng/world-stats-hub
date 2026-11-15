@@ -13,6 +13,7 @@ LEAGUES = [
     ("eng.2", "Championship"),
     ("uefa.champions", "Champions League"),
     ("uefa.europa", "Europa League"),
+    ("uefa.conference", "Conference League"),
     # INTERNATIONAL - NATIONAL TEAMS
     ("fifa.worldq.uefa", "World Cup Qualifiers - Europe"),
     ("uefa.nations", "UEFA Nations League"),
