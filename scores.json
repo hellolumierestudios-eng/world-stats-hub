@@ -1,1 +1,103 @@
-[]
+{
+  "matches": [
+    {
+      "league": "UEFA Nations League",
+      "home": "Cyprus",
+      "away": "Montenegro",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "UEFA Nations League",
+      "home": "Latvia",
+      "away": "Armenia",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "UEFA Nations League",
+      "home": "Belarus",
+      "away": "Albania",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "UEFA Nations League",
+      "home": "Finland",
+      "away": "San Marino",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "UEFA Nations League",
+      "home": "Belgium",
+      "away": "Italy",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "UEFA Nations League",
+      "home": "Croatia",
+      "away": "Czechia",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "UEFA Nations League",
+      "home": "France",
+      "away": "T\u00fcrkiye",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "UEFA Nations League",
+      "home": "Spain",
+      "away": "England",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    },
+    {
+      "league": "International Friendlies",
+      "home": "Suriname",
+      "away": "Eswatini",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-15",
+      "time": "Scheduled"
+    }
+  ]
+}
