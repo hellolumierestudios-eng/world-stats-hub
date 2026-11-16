@@ -28,10 +28,10 @@
       "away": "Bulgaria",
       "home_score": 2,
       "away_score": 1,
-      "status": "90'+1'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-16",
-      "time": "90'+1'"
+      "time": "FT"
     },
     {
       "league": "UEFA Nations League",
@@ -39,10 +39,10 @@
       "away": "Luxembourg",
       "home_score": 3,
       "away_score": 0,
-      "status": "89'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-16",
-      "time": "89'"
+      "time": "FT"
     },
     {
       "league": "UEFA Nations League",
@@ -50,10 +50,10 @@
       "away": "Liechtenstein",
       "home_score": 2,
       "away_score": 1,
-      "status": "88'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-16",
-      "time": "88'"
+      "time": "FT"
     },
     {
       "league": "UEFA Nations League",
@@ -61,10 +61,10 @@
       "away": "Netherlands",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "4'",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "4'"
     },
     {
       "league": "UEFA Nations League",
@@ -72,10 +72,10 @@
       "away": "Malta",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "4'",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "4'"
     },
     {
       "league": "UEFA Nations League",
@@ -83,10 +83,10 @@
       "away": "Serbia",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "5'",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "5'"
     },
     {
       "league": "UEFA Nations League",
@@ -94,10 +94,10 @@
       "away": "Slovenia",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "4'",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "4'"
     },
     {
       "league": "UEFA Nations League",
@@ -105,22 +105,22 @@
       "away": "Scotland",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "2'",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "2'"
     },
     {
       "league": "International Friendlies",
       "home": "Andorra",
       "away": "Azerbaijan",
-      "home_score": 0,
-      "away_score": 1,
-      "status": "HT",
-      "state": "in",
+      "home_score": 1,
+      "away_score": 3,
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-16",
-      "time": "HT"
+      "time": "FT"
     }
   ],
-  "updated": "16 Nov 2026, 06:48 PM"
+  "updated": "16 Nov 2026, 07:50 PM"
 }
