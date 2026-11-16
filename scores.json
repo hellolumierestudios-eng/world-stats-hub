@@ -26,34 +26,34 @@
       "league": "UEFA Nations League",
       "home": "Estonia",
       "away": "Bulgaria",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 1,
-      "status": "HT",
+      "status": "90'+1'",
       "state": "in",
       "date": "2026-11-16",
-      "time": "HT"
+      "time": "90'+1'"
     },
     {
       "league": "UEFA Nations League",
       "home": "Iceland",
       "away": "Luxembourg",
-      "home_score": 2,
+      "home_score": 3,
       "away_score": 0,
-      "status": "HT",
+      "status": "89'",
       "state": "in",
       "date": "2026-11-16",
-      "time": "HT"
+      "time": "89'"
     },
     {
       "league": "UEFA Nations League",
       "home": "Lithuania",
       "away": "Liechtenstein",
-      "home_score": 1,
-      "away_score": 0,
-      "status": "HT",
+      "home_score": 2,
+      "away_score": 1,
+      "status": "88'",
       "state": "in",
       "date": "2026-11-16",
-      "time": "HT"
+      "time": "88'"
     },
     {
       "league": "UEFA Nations League",
@@ -115,12 +115,12 @@
       "home": "Andorra",
       "away": "Azerbaijan",
       "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "away_score": 1,
+      "status": "HT",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "HT"
     }
   ],
-  "updated": "16 Nov 2026, 05:54 PM"
+  "updated": "16 Nov 2026, 06:48 PM"
 }
