@@ -4,23 +4,23 @@
       "league": "UEFA Nations League",
       "home": "Faroe Islands",
       "away": "Moldova",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "78'",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "78'"
     },
     {
       "league": "UEFA Nations League",
       "home": "Kazakhstan",
       "away": "Slovakia",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "home_score": 2,
+      "away_score": 1,
+      "status": "79'",
+      "state": "in",
       "date": "2026-11-16",
-      "time": "Scheduled"
+      "time": "79'"
     },
     {
       "league": "UEFA Nations League",
@@ -122,5 +122,5 @@
       "time": "Scheduled"
     }
   ],
-  "updated": "16 Nov 2026, 02:52 PM"
+  "updated": "16 Nov 2026, 04:36 PM"
 }
