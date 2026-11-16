@@ -59,23 +59,23 @@
       "league": "UEFA Nations League",
       "home": "Germany",
       "away": "Netherlands",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0,
-      "status": "4'",
+      "status": "HT",
       "state": "in",
       "date": "2026-11-16",
-      "time": "4'"
+      "time": "HT"
     },
     {
       "league": "UEFA Nations League",
       "home": "Gibraltar",
       "away": "Malta",
       "home_score": 0,
-      "away_score": 0,
-      "status": "4'",
+      "away_score": 1,
+      "status": "HT",
       "state": "in",
       "date": "2026-11-16",
-      "time": "4'"
+      "time": "HT"
     },
     {
       "league": "UEFA Nations League",
@@ -83,32 +83,32 @@
       "away": "Serbia",
       "home_score": 0,
       "away_score": 0,
-      "status": "5'",
+      "status": "HT",
       "state": "in",
       "date": "2026-11-16",
-      "time": "5'"
+      "time": "HT"
     },
     {
       "league": "UEFA Nations League",
       "home": "North Macedonia",
       "away": "Slovenia",
       "home_score": 0,
-      "away_score": 0,
-      "status": "4'",
+      "away_score": 1,
+      "status": "HT",
       "state": "in",
       "date": "2026-11-16",
-      "time": "4'"
+      "time": "HT"
     },
     {
       "league": "UEFA Nations League",
       "home": "Switzerland",
       "away": "Scotland",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0,
-      "status": "2'",
+      "status": "HT",
       "state": "in",
       "date": "2026-11-16",
-      "time": "2'"
+      "time": "HT"
     },
     {
       "league": "International Friendlies",
@@ -122,5 +122,5 @@
       "time": "FT"
     }
   ],
-  "updated": "16 Nov 2026, 07:50 PM"
+  "updated": "16 Nov 2026, 08:43 PM"
 }
