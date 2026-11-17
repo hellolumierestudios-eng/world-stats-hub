@@ -92,23 +92,23 @@
       "league": "International Friendlies",
       "home": "Tahiti",
       "away": "Cook Islands",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "home_score": 3,
+      "away_score": 3,
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
       "home": "Malaysia",
       "away": "Yemen",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "home_score": 2,
+      "away_score": 1,
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
@@ -125,12 +125,12 @@
       "league": "International Friendlies",
       "home": "China",
       "away": "Bahrain",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 2,
-      "status": "HT",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "HT"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
@@ -159,11 +159,11 @@
       "home": "Japan",
       "away": "Paraguay",
       "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "away_score": 2,
+      "status": "HT",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "HT"
     },
     {
       "league": "International Friendlies",
@@ -171,10 +171,10 @@
       "away": "South Korea",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "11'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "11'"
     },
     {
       "league": "International Friendlies",
@@ -287,5 +287,5 @@
       "time": "Scheduled"
     }
   ],
-  "updated": "17 Nov 2026, 12:53 PM"
+  "updated": "17 Nov 2026, 02:10 PM"
 }
