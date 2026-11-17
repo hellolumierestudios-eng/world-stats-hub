@@ -246,12 +246,12 @@
       "league": "International Friendlies",
       "home": "Argentina",
       "away": "Costa Rica",
-      "home_score": 0,
+      "home_score": 3,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "42'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "42'"
     },
     {
       "league": "International Friendlies",
@@ -259,10 +259,10 @@
       "away": "Colombia",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "36'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "36'"
     },
     {
       "league": "International Friendlies",
@@ -270,10 +270,10 @@
       "away": "Bolivia",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "7'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "7'"
     },
     {
       "league": "International Friendlies",
@@ -281,11 +281,11 @@
       "away": "Dominican Republic",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "13'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "13'"
     }
   ],
-  "updated": "17 Nov 2026, 10:47 PM"
+  "updated": "17 Nov 2026, 11:44 PM"
 }
