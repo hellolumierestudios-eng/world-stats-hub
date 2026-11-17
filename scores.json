@@ -116,21 +116,21 @@
       "away": "Brazil",
       "home_score": 0,
       "away_score": 7,
-      "status": "86'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "86'"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
       "home": "China",
       "away": "Bahrain",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "home_score": 1,
+      "away_score": 2,
+      "status": "HT",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "HT"
     },
     {
       "league": "International Friendlies",
@@ -287,5 +287,5 @@
       "time": "Scheduled"
     }
   ],
-  "updated": "17 Nov 2026, 11:44 AM"
+  "updated": "17 Nov 2026, 12:53 PM"
 }
