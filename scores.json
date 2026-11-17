@@ -202,34 +202,34 @@
       "league": "International Friendlies",
       "home": "Jordan",
       "away": "Australia",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 0,
-      "status": "75'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "75'"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
       "home": "Russia",
       "away": "Venezuela",
-      "home_score": 1,
+      "home_score": 2,
       "away_score": 0,
-      "status": "68'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "68'"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
       "home": "Iraq",
       "away": "Iran",
       "home_score": 1,
-      "away_score": 0,
-      "status": "57'",
-      "state": "in",
+      "away_score": 1,
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "57'"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
@@ -237,10 +237,10 @@
       "away": "Honduras",
       "home_score": 0,
       "away_score": 2,
-      "status": "46'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "46'"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
@@ -287,5 +287,5 @@
       "time": "Scheduled"
     }
   ],
-  "updated": "17 Nov 2026, 05:33 PM"
+  "updated": "17 Nov 2026, 06:52 PM"
 }
