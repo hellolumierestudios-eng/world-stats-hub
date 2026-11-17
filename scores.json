@@ -115,11 +115,11 @@
       "home": "Singapore",
       "away": "Brazil",
       "home_score": 0,
-      "away_score": 4,
-      "status": "HT",
+      "away_score": 7,
+      "status": "86'",
       "state": "in",
       "date": "2026-11-17",
-      "time": "HT"
+      "time": "86'"
     },
     {
       "league": "International Friendlies",
@@ -287,5 +287,5 @@
       "time": "Scheduled"
     }
   ],
-  "updated": "17 Nov 2026, 10:55 AM"
+  "updated": "17 Nov 2026, 11:44 AM"
 }
