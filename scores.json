@@ -149,10 +149,10 @@
       "away": "Palestine",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
@@ -171,32 +171,32 @@
       "away": "South Korea",
       "home_score": 0,
       "away_score": 1,
-      "status": "64'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "64'"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
       "home": "United Arab Emirates",
       "away": "Syria",
-      "home_score": 2,
-      "away_score": 1,
-      "status": "53'",
-      "state": "in",
+      "home_score": 4,
+      "away_score": 2,
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-17",
-      "time": "53'"
+      "time": "FT"
     },
     {
       "league": "International Friendlies",
       "home": "Saudi Arabia",
       "away": "Uzbekistan",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "home_score": 1,
+      "away_score": 2,
+      "status": "HT",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "HT"
     },
     {
       "league": "International Friendlies",
@@ -204,10 +204,10 @@
       "away": "Australia",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "28'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "28'"
     },
     {
       "league": "International Friendlies",
@@ -215,21 +215,21 @@
       "away": "Venezuela",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "21'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "21'"
     },
     {
       "league": "International Friendlies",
       "home": "Iraq",
       "away": "Iran",
-      "home_score": 0,
+      "home_score": 1,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "11'",
+      "state": "in",
       "date": "2026-11-17",
-      "time": "Scheduled"
+      "time": "11'"
     },
     {
       "league": "International Friendlies",
@@ -287,5 +287,5 @@
       "time": "Scheduled"
     }
   ],
-  "updated": "17 Nov 2026, 03:21 PM"
+  "updated": "17 Nov 2026, 04:28 PM"
 }
