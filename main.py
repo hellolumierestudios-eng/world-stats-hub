@@ -1,5 +1,6 @@
 import requests, os, json
 from datetime import datetime
+from predict import predict
 
 T = os.getenv("BOT_TOKEN")
 C = os.getenv("CHANNEL_ID")
@@ -18,7 +19,7 @@ def get(lid):
         print("API error", e)
         return []
 
-names = {39: "Premier League", 140: "La Liga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1", 2: "Champions League"}
+names = {39: "Premier League", 140: "La Liga", 78: "Bundesliga", 135: "Serie A", 61: "Ligue 1"}
 
 matches = []
 msg = "⚽ WORLD STATS HUB\n" + today + "\nLive\n\n"
@@ -27,23 +28,33 @@ for lid, name in names.items():
     f = get(lid)
     if f:
         msg += f"--- {name} ---\n"
-        for m in f[:6]:
-            home = m["teams"]["home"]["name"]
-            away = m["teams"]["away"]["name"]
-            gh = m["goals"]["home"]
-            ga = m["goals"]["away"]
-            status = m["fixture"]["status"]["short"]
-            # Build score and time
-            if gh is None or ga is None:
-                score = "vs"
-                time = m["fixture"]["date"][11:16]
-            else:
-                score = f"{gh} - {ga}"
-                time = status
 
-            # This is the fix for undefined - we now save league and status
-            matches.append({"home": home, "away": away, "score": score, "time": time, "league": name, "status": status})
-            msg += home + " vs " + away + "\n"
+    for m in f:
+        home = m["teams"]["home"]["name"]
+        away = m["teams"]["away"]["name"]
+        gh = m["goals"]["home"]
+        ga = m["goals"]["away"]
+        status = m["fixture"]["status"]
+
+        # Build score and time
+        if gh is None or ga is None:
+            score = "vs"
+            time = m["fixture"]["date"][11:16]
+        else:
+            score = f"{gh} - {ga}"
+            time = status["short"]
+
+        # This is the fix for undefined - we now save league and status
+        matches.append({"home": home, "away": away, "score": score, "time": time, "league": name, "status": status["short"]})
+        msg += home + " vs " + away + " " + score + " " + time + "\n"
+
+        # NEW: PREDICTION - only for matches that haven't started
+        if gh is None or ga is None:
+            try:
+                pred = predict(home, away, 1.4, 1.3)
+                msg += pred + "\n\n"
+            except Exception as e:
+                print("Predict error", e)
 
 # 1. Save for WEBSITE
 output = {"updated": today, "matches": matches}
