@@ -6,36 +6,36 @@
       "away": "Espanyol",
       "home_score": 0,
       "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "41'",
+      "state": "in",
       "date": "2026-11-20",
-      "time": "Scheduled",
-      "prediction": "\ud83d\udd25 Athletic Club vs Espanyol\nMost Likely Score: 1-1 (11.2%)\nHome Win: 45.5% | Draw: 24.1% | Away Win: 30.2%\nOver 2.5: 56.4%"
+      "time": "41'",
+      "prediction": ""
     },
     {
       "league": "Bundesliga",
       "home": "Bayern Munich",
       "away": "FC Cologne",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "2'",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "52'",
       "state": "in",
       "date": "2026-11-20",
-      "time": "2'",
+      "time": "52'",
       "prediction": ""
     },
     {
       "league": "Ligue 1",
       "home": "Troyes",
       "away": "Le Havre AC",
-      "home_score": 0,
-      "away_score": 0,
-      "status": "Scheduled",
-      "state": "pre",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "HT",
+      "state": "in",
       "date": "2026-11-20",
-      "time": "Scheduled",
-      "prediction": "\ud83d\udd25 Troyes vs Le Havre AC\nMost Likely Score: 1-1 (11.2%)\nHome Win: 45.5% | Draw: 24.1% | Away Win: 30.2%\nOver 2.5: 56.4%"
+      "time": "HT",
+      "prediction": ""
     }
   ],
-  "updated": "20 Nov 2026, 07:32 PM"
+  "updated": "20 Nov 2026, 08:43 PM"
 }
