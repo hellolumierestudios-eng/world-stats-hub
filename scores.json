@@ -6,10 +6,10 @@
       "away": "Espanyol",
       "home_score": 0,
       "away_score": 1,
-      "status": "81'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-20",
-      "time": "81'",
+      "time": "FT",
       "prediction": ""
     },
     {
@@ -28,14 +28,14 @@
       "league": "Ligue 1",
       "home": "Troyes",
       "away": "Le Havre AC",
-      "home_score": 2,
+      "home_score": 3,
       "away_score": 1,
-      "status": "90'+7'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-20",
-      "time": "90'+7'",
+      "time": "FT",
       "prediction": ""
     }
   ],
-  "updated": "20 Nov 2026, 09:41 PM"
+  "updated": "20 Nov 2026, 10:40 PM"
 }
