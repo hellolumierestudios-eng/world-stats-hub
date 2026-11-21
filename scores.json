@@ -76,10 +76,10 @@
       "league": "Premier League",
       "home": "Newcastle United",
       "away": "Arsenal",
-      "status": "6'",
+      "status": "50'",
       "state": "in",
       "date": "2026-11-21",
-      "time": "6'",
+      "time": "50'",
       "prediction": "\ud83d\udd25 Newcastle United vs Arsenal\nMost Likely Score: 1-1 (10.8%)\nHome Win: 49.4% | Draw: 23.3% | Away Win: 27.0%\nOver 2.5: 57.9%",
       "home_strength": 1.52,
       "away_strength": 1.25
@@ -112,10 +112,10 @@
       "league": "La Liga",
       "home": "Sevilla",
       "away": "Real Betis",
-      "status": "2'",
+      "status": "HT",
       "state": "in",
       "date": "2026-11-21",
-      "time": "2'",
+      "time": "HT",
       "prediction": "\ud83d\udd25 Sevilla vs Real Betis\nMost Likely Score: 2-1 (8.9%)\nHome Win: 57.8% | Draw: 19.1% | Away Win: 21.9%\nOver 2.5: 72.4%",
       "home_strength": 2.15,
       "away_strength": 1.43
@@ -160,10 +160,10 @@
       "league": "Serie A",
       "home": "Parma",
       "away": "AS Roma",
-      "status": "37'",
+      "status": "81'",
       "state": "in",
       "date": "2026-11-21",
-      "time": "37'",
+      "time": "81'",
       "prediction": "\ud83d\udd25 Parma vs AS Roma\nMost Likely Score: 1-1 (7.8%)\nHome Win: 39.3% | Draw: 21.1% | Away Win: 38.9%\nOver 2.5: 73.5%",
       "home_strength": 1.69,
       "away_strength": 1.93
@@ -244,10 +244,10 @@
       "league": "Bundesliga",
       "home": "Schalke 04",
       "away": "VfB Stuttgart",
-      "status": "6'",
+      "status": "49'",
       "state": "in",
       "date": "2026-11-21",
-      "time": "6'",
+      "time": "49'",
       "prediction": "\ud83d\udd25 Schalke 04 vs VfB Stuttgart\nMost Likely Score: 1-1 (7.8%)\nHome Win: 39.5% | Draw: 21.1% | Away Win: 38.7%\nOver 2.5: 73.3%",
       "home_strength": 1.69,
       "away_strength": 1.92
@@ -256,10 +256,10 @@
       "league": "Ligue 1",
       "home": "Nice",
       "away": "Paris Saint-Germain",
-      "status": "55'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-21",
-      "time": "55'",
+      "time": "FT",
       "prediction": "\ud83d\udd25 Nice vs Paris Saint-Germain\nMost Likely Score: 2-1 (7.2%)\nHome Win: 50.0% | Draw: 18.9% | Away Win: 29.3%\nOver 2.5: 80.1%",
       "home_strength": 2.27,
       "away_strength": 1.92
@@ -328,10 +328,10 @@
       "league": "Eredivisie",
       "home": "FC Utrecht",
       "away": "SC Cambuur",
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "17'",
+      "state": "in",
       "date": "2026-11-21",
-      "time": "Scheduled",
+      "time": "17'",
       "prediction": "\ud83d\udd25 FC Utrecht vs SC Cambuur\nMost Likely Score: 1-1 (9.7%)\nHome Win: 53.9% | Draw: 21.7% | Away Win: 23.9%\nOver 2.5: 62.6%",
       "home_strength": 1.74,
       "away_strength": 1.26
@@ -340,10 +340,10 @@
       "league": "Eredivisie",
       "home": "Feyenoord Rotterdam",
       "away": "Excelsior",
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "HT",
+      "state": "in",
       "date": "2026-11-21",
-      "time": "Scheduled",
+      "time": "HT",
       "prediction": "\ud83d\udd25 Feyenoord Rotterdam vs Excelsior\nMost Likely Score: 2-1 (9.5%)\nHome Win: 60.8% | Draw: 19.1% | Away Win: 19.1%\nOver 2.5: 67.8%",
       "home_strength": 2.07,
       "away_strength": 1.23
@@ -505,5 +505,5 @@
       "away_strength": 1.64
     }
   ],
-  "updated": "21 Nov 2026, 05:36 PM"
+  "updated": "21 Nov 2026, 06:37 PM"
 }
