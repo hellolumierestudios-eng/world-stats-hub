@@ -1,84 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Stats Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Stats Hub - Predictions</title>
 <style>
-body{background:#0f1226;color:white;font-family:Arial;padding:16px;margin:0}
-h1{text-align:center}
-.badge{background:#16a34a;display:inline-block;padding:5px 12px;border-radius:20px}
-.card{background:#1a1e3f;padding:14px;border-radius:12px;margin:12px 0}
-.score{font-size:22px;font-weight:bold;margin:6px 0}
-.small{color:#aaa;font-size:13px}
-.pred{background:#0f2a1a;border:1px solid #22c55e;padding:10px;border-radius:10px;margin-top:10px;font-size:14px;white-space:pre-line}
-.pred b{color:#4ade80}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#f1f5f9;padding:12px}
+.header{background:#0f172a;color:white;padding:20px 16px;border-radius:16px;text-align:center}
+.header h1{font-size:26px}
+.header p{font-size:13px;opacity:.8;margin-top:4px}
+.updated{background:white;padding:10px;border-radius:10px;margin:12px 0;text-align:center;font-size:13px;color:#475569}
+.vip-banner{background:linear-gradient(135deg,#f59e0b,#ef4444);color:white;padding:16px;border-radius:14px;text-align:center;margin-bottom:12px}
+.vip-banner h2{font-size:18px}
+.vip-banner p{font-size:13px;margin:6px 0}
+.vip-btn{display:inline-block;background:#25D366;color:white;padding:11px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:6px}
+.card{background:white;border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.league{font-size:11px;font-weight:bold;color:#2563eb;text-transform:uppercase}
+.teams{font-size:17px;font-weight:bold;margin:8px 0}
+.time{font-size:12px;color:#64748b}
+.pred{margin-top:10px;background:#f0f9ff;padding:10px;border-radius:10px;font-size:13px;line-height:1.5;white-space:pre-line}
+.lock{margin-top:10px;background:#fef3c7;padding:14px;border-radius:10px;text-align:center;border:1px solid #f59e0b}
+.lock b{font-size:15px}
+.lock span{font-size:12px;color:#475569}
+.lock a{display:inline-block;background:#25D366;color:white;padding:10px 18px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:10px}
+.footer{text-align:center;font-size:12px;color:#94a3b8;padding:16px}
 </style>
 </head>
 <body>
-<h1>🌍 WORLD STATS HUB</h1>
-<center><span class="badge">● LIVE</span> <span id="updated"></span></center>
-<div id="list">Loading...</div>
+
+<div class="header">
+  <h1>🌍 WORLD STATS HUB</h1>
+  <p>Real World Stats, No Fake News</p>
+  <p style="margin-top:8px;">⚽ Live Scores & Predictions</p>
+</div>
+
+<div class="updated" id="updated">Loading...</div>
+
+<div class="vip-banner">
+  <h2>🔥 VIP PREDICTIONS TODAY</h2>
+  <p>First 3 matches FREE below. Unlock all 40+ matches + Correct Score</p>
+  <a class="vip-btn" href="https://wa.me/2347037455955?text=Hi%2C%20I%20want%20VIP%20Predictions" target="_blank">👉 UNLOCK VIP ON WHATSAPP - ₦2,000/week</a>
+</div>
+
+<div id="list">Loading matches...</div>
+
+<div class="footer">© World Stats Hub • Follow @WorldStatsHub<br>Predictions are for entertainment. 18+</div>
 
 <script>
-async function load(){
-  try{
-    const r = await fetch('scores.json?v='+Date.now());
-    const data = await r.json();
-    const matches = data.matches || data.events || data || [];
-    document.getElementById('updated').textContent = 'Updated: ' + (data.updated || data.date || '');
-    let html = '';
-    matches.forEach(m=>{
-      // Try EVERY possible name for teams
-      let home = m.home || m.homeTeam || m.home_team || (m.teams && m.teams.home) || (m.competitors && m.competitors[0]) || '';
-      let away = m.away || m.awayTeam || m.away_team || (m.teams && m.teams.away) || (m.competitors && m.competitors[1]) || '';
-      if(typeof home==='object') home = home.name || home.displayName || home.team?.displayName || '';
-      if(typeof away==='object') away = away.name || away.displayName || away.team?.displayName || '';
+fetch('scores.json')
+.then(r => r.json())
+.then(data => {
+  const matches = data.matches || [];
+  document.getElementById('updated').innerHTML = '📅 Updated: ' + (data.updated || 'Today') + ' • ' + matches.length + ' matches today • 🔴 LIVE';
+  
+  let html = '';
+  matches.forEach((match, index) => {
+    html += `<div class="card">
+      <div class="league">${match.league || ''}</div>
+      <div class="teams">${match.home} vs ${match.away}</div>
+      <div class="time">🕐 ${match.time || match.status || ''} • ${match.date || ''}</div>`;
 
-      // Try EVERY possible name for score
-      let hs = m.homeScore ?? m.home_score ?? m.home_goals ?? m.homeResult ?? '';
-      let as = m.awayScore ?? m.away_score ?? m.away_goals ?? m.awayResult ?? '';
-      // If score is in one string like "2 - 1"
-      if((hs===''||hs===undefined) && m.score){
-        let parts = String(m.score).split(/[-:]/);
-        if(parts.length>=2){ hs=parts[0].trim(); as=parts[1].trim(); }
-      }
-      if((hs===''||hs===undefined) && m.result){
-        let parts = String(m.result).split(/[-:]/);
-        if(parts.length>=2){ hs=parts[0].trim(); as=parts[1].trim(); }
-      }
-      // ESPN raw format
-      if((hs===''||hs===undefined) && m.competitions){
-        try{
-          let comps = m.competitions[0].competitors;
-          let h = comps.find(c=>c.homeAway==='home');
-          let a = comps.find(c=>c.homeAway==='away');
-          hs = h?.score; as = a?.score;
-          home = home || h?.team?.displayName;
-          away = away || a?.team?.displayName;
-        }catch(e){}
-      }
-      if(hs===undefined||hs===null||hs==='') hs='-';
-      if(as===undefined||as===null||as==='') as='-';
+    if (index < 3) {
+      html += `<div class="pred"><b>🎯 FREE Prediction:</b><br>${match.prediction || 'Coming soon'}</div>`;
+    } else {
+      html += `<div class="lock">
+        <b>🔒 VIP LOCKED</b><br>
+        <span>Unlock this + all other VIP predictions</span><br>
+        <a href="https://wa.me/2347037455955?text=Hi%2C%20I%20want%20VIP%20Predictions%20for%20${encodeURIComponent(match.home + ' vs ' + match.away)}" target="_blank">👉 UNLOCK ON WHATSAPP</a><br>
+        <span>₦2,000 / week</span>
+      </div>`;
+    }
+    html += `</div>`;
+  });
 
-      let league = m.league || m.leagueName || m.tournament || '';
-      let status = m.status || m.state || m.statusText || 'Full Time';
-      if(typeof status==='object') status = status.type?.detail || status.displayName || 'Full Time';
-
-      // NEW: PREDICTION
-      let predHtml = '';
-      if(m.prediction){
-        predHtml = `<div class="pred">${m.prediction}</div>`;
-      }
-
-      html += `<div class="card"><div class="small">${league} • ${status}</div><div class="score">${home} ${hs} - ${as} ${away}</div>${predHtml}</div>`;
-    });
-    document.getElementById('list').innerHTML = html || 'No matches found';
-  }catch(e){
-    document.getElementById('list').innerHTML = 'Error loading scores: '+e;
+  if (matches.length === 0) {
+    html = '<div class="card" style="text-align:center;">No matches today. Check back tomorrow.</div>';
   }
-}
-load();
+
+  document.getElementById('list').innerHTML = html;
+})
+.catch(e => {
+  document.getElementById('list').innerHTML = '<div class="card">Could not load matches. Please refresh.</div>';
+});
 </script>
 </body>
 </html>
