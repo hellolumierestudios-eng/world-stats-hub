@@ -16,10 +16,10 @@
       "league": "Premier League",
       "home": "Liverpool",
       "away": "Manchester United",
-      "status": "9'",
+      "status": "47'",
       "state": "in",
       "date": "2026-11-22",
-      "time": "9'",
+      "time": "47'",
       "prediction": "\ud83d\udd25 Liverpool vs Manchester United\nMost Likely Score: 1-1 (10.8%)\nHome Win: 40.8% | Draw: 23.8% | Away Win: 35.2%\nOver 2.5: 59.4%",
       "home_strength": 1.36,
       "away_strength": 1.48
@@ -40,10 +40,10 @@
       "league": "La Liga",
       "home": "Racing Santander",
       "away": "Real Sociedad",
-      "status": "65'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-22",
-      "time": "65'",
+      "time": "FT",
       "prediction": "\ud83d\udd25 Racing Santander vs Real Sociedad\nMost Likely Score: 2-1 (8.8%)\nHome Win: 52.2% | Draw: 20.4% | Away Win: 26.6%\nOver 2.5: 71.4%",
       "home_strength": 1.96,
       "away_strength": 1.54
@@ -52,10 +52,10 @@
       "league": "La Liga",
       "home": "Osasuna",
       "away": "M\u00e1laga",
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "6'",
+      "state": "in",
       "date": "2026-11-22",
-      "time": "Scheduled",
+      "time": "6'",
       "prediction": "\ud83d\udd25 Osasuna vs M\u00e1laga\nMost Likely Score: 2-1 (9.5%)\nHome Win: 66.7% | Draw: 17.4% | Away Win: 14.5%\nOver 2.5: 67.0%",
       "home_strength": 2.21,
       "away_strength": 1.06
@@ -112,10 +112,10 @@
       "league": "Serie A",
       "home": "AC Milan",
       "away": "Frosinone",
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "35'",
+      "state": "in",
       "date": "2026-11-22",
-      "time": "Scheduled",
+      "time": "35'",
       "prediction": "\ud83d\udd25 AC Milan vs Frosinone\nMost Likely Score: 2-1 (8.3%)\nHome Win: 54.2% | Draw: 19.1% | Away Win: 25.3%\nOver 2.5: 75.9%",
       "home_strength": 2.19,
       "away_strength": 1.64
@@ -148,10 +148,10 @@
       "league": "Bundesliga",
       "home": "Werder Bremen",
       "away": "Hamburg SV",
-      "status": "7'",
+      "status": "HT",
       "state": "in",
       "date": "2026-11-22",
-      "time": "7'",
+      "time": "HT",
       "prediction": "\ud83d\udd25 Werder Bremen vs Hamburg SV\nMost Likely Score: 2-1 (7.7%)\nHome Win: 41.8% | Draw: 20.8% | Away Win: 36.6%\nOver 2.5: 74.7%",
       "home_strength": 1.8,
       "away_strength": 1.91
@@ -172,10 +172,10 @@
       "league": "Ligue 1",
       "home": "Lorient",
       "away": "Stade Rennais",
-      "status": "23'",
+      "status": "62'",
       "state": "in",
       "date": "2026-11-22",
-      "time": "23'",
+      "time": "62'",
       "prediction": "\ud83d\udd25 Lorient vs Stade Rennais\nMost Likely Score: 2-1 (9.3%)\nHome Win: 58.6% | Draw: 19.3% | Away Win: 21.1%\nOver 2.5: 69.9%",
       "home_strength": 2.08,
       "away_strength": 1.34
@@ -232,10 +232,10 @@
       "league": "Eredivisie",
       "home": "Go Ahead Eagles",
       "away": "Fortuna Sittard",
-      "status": "HT",
+      "status": "90'+2'",
       "state": "in",
       "date": "2026-11-22",
-      "time": "HT",
+      "time": "90'+2'",
       "prediction": "\ud83d\udd25 Go Ahead Eagles vs Fortuna Sittard\nMost Likely Score: 1-1 (11.9%)\nHome Win: 45.8% | Draw: 25.1% | Away Win: 29.0%\nOver 2.5: 51.2%",
       "home_strength": 1.3,
       "away_strength": 1.18
@@ -253,5 +253,5 @@
       "away_strength": 1.98
     }
   ],
-  "updated": "22 Nov 2026, 04:39 PM"
+  "updated": "22 Nov 2026, 05:36 PM"
 }
