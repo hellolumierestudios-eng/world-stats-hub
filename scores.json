@@ -52,10 +52,10 @@
       "league": "La Liga",
       "home": "Osasuna",
       "away": "M\u00e1laga",
-      "status": "51'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-22",
-      "time": "51'",
+      "time": "FT",
       "prediction": "\ud83d\udd25 Osasuna vs M\u00e1laga\nMost Likely Score: 2-1 (9.5%)\nHome Win: 66.7% | Draw: 17.4% | Away Win: 14.5%\nOver 2.5: 67.0%",
       "home_strength": 2.21,
       "away_strength": 1.06
@@ -112,10 +112,10 @@
       "league": "Serie A",
       "home": "AC Milan",
       "away": "Frosinone",
-      "status": "78'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-22",
-      "time": "78'",
+      "time": "FT",
       "prediction": "\ud83d\udd25 AC Milan vs Frosinone\nMost Likely Score: 2-1 (8.3%)\nHome Win: 54.2% | Draw: 19.1% | Away Win: 25.3%\nOver 2.5: 75.9%",
       "home_strength": 2.19,
       "away_strength": 1.64
@@ -253,5 +253,5 @@
       "away_strength": 1.98
     }
   ],
-  "updated": "22 Nov 2026, 06:38 PM"
+  "updated": "22 Nov 2026, 07:43 PM"
 }
