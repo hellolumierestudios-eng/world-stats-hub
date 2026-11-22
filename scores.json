@@ -64,10 +64,10 @@
       "league": "La Liga",
       "home": "Getafe",
       "away": "Atl\u00e9tico Madrid",
-      "status": "76'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-22",
-      "time": "76'",
+      "time": "FT",
       "prediction": "\ud83d\udd25 Getafe vs Atl\u00e9tico Madrid\nMost Likely Score: 2-1 (7.8%)\nHome Win: 54.2% | Draw: 18.7% | Away Win: 25.4%\nOver 2.5: 78.0%",
       "home_strength": 2.29,
       "away_strength": 1.72
@@ -124,10 +124,10 @@
       "league": "Serie A",
       "home": "Atalanta",
       "away": "Internazionale",
-      "status": "90'+2'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-22",
-      "time": "90'+2'",
+      "time": "FT",
       "prediction": "\ud83d\udd25 Atalanta vs Internazionale\nMost Likely Score: 2-1 (8.2%)\nHome Win: 50.9% | Draw: 19.8% | Away Win: 28.1%\nOver 2.5: 75.3%",
       "home_strength": 2.07,
       "away_strength": 1.7
@@ -184,10 +184,10 @@
       "league": "Ligue 1",
       "home": "Marseille",
       "away": "Le Mans",
-      "status": "90'+1'",
-      "state": "in",
+      "status": "FT",
+      "state": "post",
       "date": "2026-11-22",
-      "time": "90'+1'",
+      "time": "FT",
       "prediction": "\ud83d\udd25 Marseille vs Le Mans\nMost Likely Score: 2-1 (8.2%)\nHome Win: 45.6% | Draw: 20.8% | Away Win: 32.7%\nOver 2.5: 73.3%",
       "home_strength": 1.85,
       "away_strength": 1.76
@@ -253,5 +253,5 @@
       "away_strength": 1.98
     }
   ],
-  "updated": "22 Nov 2026, 09:36 PM"
+  "updated": "22 Nov 2026, 10:37 PM"
 }
