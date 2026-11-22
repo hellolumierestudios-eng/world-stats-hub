@@ -76,10 +76,10 @@
       "league": "Serie A",
       "home": "Juventus",
       "away": "Venezia",
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "7'",
+      "state": "in",
       "date": "2026-11-22",
-      "time": "Scheduled",
+      "time": "7'",
       "prediction": "\ud83d\udd25 Juventus vs Venezia\nMost Likely Score: 2-1 (9.8%)\nHome Win: 56.3% | Draw: 21.3% | Away Win: 21.9%\nOver 2.5: 61.9%",
       "home_strength": 1.78,
       "away_strength": 1.19
@@ -196,10 +196,10 @@
       "league": "Eredivisie",
       "home": "FC Twente",
       "away": "Willem II",
-      "status": "Scheduled",
-      "state": "pre",
+      "status": "20'",
+      "state": "in",
       "date": "2026-11-22",
-      "time": "Scheduled",
+      "time": "20'",
       "prediction": "\ud83d\udd25 FC Twente vs Willem II\nMost Likely Score: 1-1 (11.7%)\nHome Win: 44.2% | Draw: 24.9% | Away Win: 30.8%\nOver 2.5: 53.4%",
       "home_strength": 1.31,
       "away_strength": 1.26
@@ -253,5 +253,5 @@
       "away_strength": 1.98
     }
   ],
-  "updated": "22 Nov 2026, 10:41 AM"
+  "updated": "22 Nov 2026, 11:38 AM"
 }
