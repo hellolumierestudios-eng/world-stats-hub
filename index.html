@@ -1,91 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>World Stats Hub - Predictions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Stats Hub - Private</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
-body{background:#f1f5f9;padding:12px}
-.header{background:#0f172a;color:white;padding:20px 16px;border-radius:16px;text-align:center}
-.header h1{font-size:26px}
-.header p{font-size:13px;opacity:.8;margin-top:4px}
-.updated{background:white;padding:10px;border-radius:10px;margin:12px 0;text-align:center;font-size:13px;color:#475569}
-.vip-banner{background:linear-gradient(135deg,#f59e0b,#ef4444);color:white;padding:16px;border-radius:14px;text-align:center;margin-bottom:12px}
-.vip-banner h2{font-size:18px}
-.vip-banner p{font-size:13px;margin:6px 0}
-.vip-btn{display:inline-block;background:#25D366;color:white;padding:11px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:6px}
-.price-badge{display:inline-block;background:white;color:#111;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:bold;margin-top:6px}
-.card{background:white;border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.league{font-size:11px;font-weight:bold;color:#2563eb;text-transform:uppercase}
-.teams{font-size:17px;font-weight:bold;margin:8px 0}
-.time{font-size:12px;color:#64748b}
-.pred{margin-top:10px;background:#f0f9ff;padding:10px;border-radius:10px;font-size:13px;line-height:1.5;white-space:pre-line}
-.lock{margin-top:10px;background:#fef3c7;padding:14px;border-radius:10px;text-align:center;border:1px solid #f59e0b}
-.lock b{font-size:15px}
-.lock span{font-size:12px;color:#475569}
-.lock a{display:inline-block;background:#25D366;color:white;padding:10px 18px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:10px}
-.footer{text-align:center;font-size:12px;color:#94a3b8;padding:16px}
+body{font-family:Arial;background:#0f172a;color:white;text-align:center;padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:15px;margin:15px 0;text-align:left}
+button{background:#22c55e;color:white;border:none;padding:12px 25px;font-size:16px;border-radius:10px;margin:5px}
+input{padding:12px;width:85%;border-radius:10px;border:none;margin:5px;text-align:center;font-size:16px}
+#hub{display:none}
+table{width:100%;color:white;font-size:14px}
+td,th{padding:8px;border-bottom:1px solid #334155}
+.win{color:#22c55e;font-weight:bold}
+.lose{color:#f87171;font-weight:bold}
+.tomorrow{background:#0e3a2a;border:2px solid #22c55e}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>🌍 WORLD STATS HUB</h1>
-  <p>Real World Stats, No Fake News</p>
-  <p style="margin-top:8px;">⚽ Live Scores & Predictions</p>
+<div id="gate">
+  <h1>🌍 World Stats Hub</h1>
+  <p>Private Access Only</p>
+  <p>Enter Owner PIN</p>
+  <input id="pin" type="password" placeholder="Enter PIN">
+  <br>
+  <button onclick="enterHub()">Confirm</button>
+  <p id="error" style="color:#f87171"></p>
 </div>
 
-<div class="updated" id="updated">Loading...</div>
+<div id="hub">
+  <h1>🌍 World Stats Hub</h1>
+  <p>Welcome back, Owner</p>
 
-<div class="vip-banner">
-  <h2>🔥 VIP PREDICTIONS TODAY</h2>
-  <p>First 3 matches FREE below. Unlock all 40+ matches + Correct Score</p>
-  <div class="price-badge">🇳🇬 ₦2,000 (Nigeria) • 🌍 $2 (Rest of World) / week</div><br>
-  <a class="vip-btn" href="https://wa.me/2347037455955?text=Hi%2C%20I%20want%20VIP%20Predictions" target="_blank">👉 UNLOCK VIP ON WHATSAPP</a>
+  <div class="card">
+    <h2>💰 Money Stat</h2>
+    <p>Only 8% of world money is physical cash. 92% is numbers on screens.</p>
+  </div>
+
+  <div class="card">
+    <h2>⚽ Football Winner Tool</h2>
+    <input id="team1" placeholder="Team 1 e.g Chelsea">
+    <input id="team2" placeholder="Team 2 e.g Arsenal">
+    <input id="score" placeholder="Score like 2-1">
+    <br>
+    <button onclick="checkWinner()">Check Winner</button>
+    <h3 id="result"></h3>
+  </div>
+
+  <!-- YESTERDAY RESULTS -->
+  <div class="card">
+    <h2>✅ Real Results Check - 22 Nov 2026</h2>
+    <table>
+      <tr><th>Game</th><th>Prediction</th><th>Real</th><th>Check</th></tr>
+      <tr><td>Hull vs Brighton</td><td>2-1</td><td>2-0</td><td class="win">✅ WINNER</td></tr>
+      <tr><td>Liverpool vs Man Utd</td><td>1-1</td><td>4-0</td><td class="lose">❌ MISSED</td></tr>
+      <tr><td>Barcelona vs Villarreal</td><td>2-1</td><td>3-2</td><td class="win">✅ WINNER</td></tr>
+    </table>
+    <p><b>Score: 2 / 3 Correct</b></p>
+  </div>
+
+  <!-- TOMORROW PREDICTIONS -->
+  <div class="card tomorrow">
+    <h2>🔮 Tomorrow's Predictions - Mon 23 Nov 2026</h2>
+    <table>
+      <tr><th>Time</th><th>Game</th><th>Hub Prediction</th><th>Real Score</th></tr>
+      <tr><td>20:00</td><td>Brentford vs Everton<br><small>Premier League</small></td><td><b>Brentford 1-0</b><br>Home Win 42%</td><td><input id="real1" placeholder="___" style="width:60px"></td></tr>
+      <tr><td>20:00</td><td>Levante vs Elche<br><small>La Liga</small></td><td><b>Levante 2-1</b><br>Home Win 55%</td><td><input id="real2" placeholder="___" style="width:60px"></td></tr>
+      <tr><td>19:45</td><td>Monza vs Fiorentina<br><small>Serie A</small></td><td><b>Fiorentina 1-2</b><br>Away Win 70%</td><td><input id="real3" placeholder="___" style="width:60px"></td></tr>
+    </table>
+    <p style="font-size:13px">Tomorrow night, fill the Real Score boxes and press Check to see if Hub was right!</p>
+    <button onclick="checkTomorrow()">Check Tomorrow Results</button>
+    <h3 id="tomorrowResult"></h3>
+  </div>
+
+  <div class="card">
+    <h2>➕ Add New Check</h2>
+    <input id="newGame" placeholder="Game e.g Chelsea vs Arsenal">
+    <input id="newPred" placeholder="Your Prediction e.g 2-1">
+    <input id="newReal" placeholder="Real Score e.g 2-0">
+    <br>
+    <button onclick="addCheck()">Add Check</button>
+    <div id="newList"></div>
+  </div>
+
+  <button onclick="lockHub()">Lock Hub</button>
 </div>
-
-<div id="list">Loading matches...</div>
-
-<div class="footer">© World Stats Hub • Follow @WorldStatsHub<br>Predictions are for entertainment. 18+</div>
 
 <script>
-fetch('scores.json')
-.then(r => r.json())
-.then(data => {
-  const matches = data.matches || [];
-  document.getElementById('updated').innerHTML = '📅 Updated: ' + (data.updated || 'Today') + ' • ' + matches.length + ' matches today • 🔴 LIVE';
-  
-  let html = '';
-  matches.forEach((match, index) => {
-    html += `<div class="card">
-      <div class="league">${match.league || ''}</div>
-      <div class="teams">${match.home} vs ${match.away}</div>
-      <div class="time">🕐 ${match.time || match.status || ''} • ${match.date || ''}</div>`;
-
-    if (index < 3) {
-      html += `<div class="pred"><b>🎯 FREE Prediction:</b><br>${match.prediction || 'Coming soon'}</div>`;
-    } else {
-      html += `<div class="lock">
-        <b>🔒 VIP LOCKED</b><br>
-        <span>Unlock this + all other VIP predictions</span><br>
-        <span style="display:inline-block;background:white;padding:3px 8px;border-radius:12px;font-weight:bold;margin-top:6px;">🇳🇬 ₦2,000 • 🌍 $2 / week</span><br>
-        <a href="https://wa.me/2347037455955?text=Hi%2C%20I%20want%20VIP%20Predictions%20for%20${encodeURIComponent(match.home + ' vs ' + match.away)}" target="_blank">👉 UNLOCK ON WHATSAPP</a><br>
-        <span>Nigeria: ₦2,000 • Rest of World: $2</span>
-      </div>`;
-    }
-    html += `</div>`;
-  });
-
-  if (matches.length === 0) {
-    html = '<div class="card" style="text-align:center;">No matches today. Check back tomorrow.</div>';
+let OWNER_PIN = "3821";
+function enterHub(){
+  let e = document.getElementById('pin').value;
+  if(e === OWNER_PIN){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('hub').style.display='block';
+  } else {
+    document.getElementById('error').innerText = "Wrong PIN. Access denied.";
   }
-
-  document.getElementById('list').innerHTML = html;
-})
-.catch(e => {
-  document.getElementById('list').innerHTML = '<div class="card">Could not load matches. Please refresh.</div>';
-});
+}
+function lockHub(){
+  document.getElementById('hub').style.display='none';
+  document.getElementById('gate').style.display='block';
+  document.getElementById('pin').value = "";
+}
+function checkWinner(){
+  let t1 = document.getElementById('team1').value;
+  let t2 = document.getElementById('team2').value;
+  let s = document.getElementById('score').value;
+  if(!s.includes("-")){ document.getElementById('result').innerText = "Type score like 2-1"; return; }
+  let p = s.split("-"); let g1 = parseInt(p[0]); let g2 = parseInt(p[1]);
+  let res = t1 + " " + g1 + " - " + g2 + " " + t2 + " | ";
+  if(g1 > g2) res += t1 + " WINS!";
+  else if(g2 > g1) res += t2 + " WINS!";
+  else res += "It's a DRAW!";
+  document.getElementById('result').innerText = res;
+}
+function checkTomorrow(){
+  let r1 = document.getElementById('real1').value;
+  let r2 = document.getElementById('real2').value;
+  let r3 = document.getElementById('real3').value;
+  let msg = "Brentford vs Everton: Predicted 1-0, Real " + (r1||"___") + " | Levante vs Elche: Predicted 2-1, Real " + (r2||"___") + " | Monza vs Fiorentina: Predicted 1-2, Real " + (r3||"___");
+  document.getElementById('tomorrowResult').innerText = msg;
+}
+function addCheck(){
+  let g = document.getElementById('newGame').value;
+  let p = document.getElementById('newPred').value;
+  let r = document.getElementById('newReal').value;
+  if(!g || !p || !r){ alert("Fill all 3 boxes"); return; }
+  let v = (p === r) ? "✅ EXACT SCORE!" : "Check manually";
+  document.getElementById('newList').innerHTML += "<p><b>"+g+"</b>: Predicted "+p+" | Real "+r+" - "+v+"</p>";
+}
 </script>
 </body>
 </html>
