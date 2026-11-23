@@ -1,133 +1,216 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Stats Hub - Private</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Stats Hub</title>
 <style>
-body{font-family:Arial;background:#0f172a;color:white;text-align:center;padding:20px}
-.card{background:#1e293b;padding:20px;border-radius:15px;margin:15px 0;text-align:left}
-button{background:#22c55e;color:white;border:none;padding:12px 25px;font-size:16px;border-radius:10px;margin:5px}
-input{padding:12px;width:85%;border-radius:10px;border:none;margin:5px;text-align:center;font-size:16px}
-#hub{display:none}
-table{width:100%;color:white;font-size:14px}
-td,th{padding:8px;border-bottom:1px solid #334155}
-.win{color:#22c55e;font-weight:bold}
-.lose{color:#f87171;font-weight:bold}
-.tomorrow{background:#0e3a2a;border:2px solid #22c55e}
+  *{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+  body{margin:0;background:#0b1220;color:white;padding:14px}
+  .top{max-width:520px;margin:0 auto}
+  .logo{text-align:center;font-size:34px;font-weight:900;line-height:1}
+  .logo span{color:#facc15}
+  .sub{text-align:center;color:#94a3b8;font-size:13px;margin:8px 0 14px}
+  .card{background:#111c33;border-radius:16px;padding:16px;margin-bottom:14px;border:1px solid #1e293b}
+  .yellow{color:#facc15}
+  .btn{width:100%;padding:13px;border:none;border-radius:10px;font-weight:800;font-size:15px;cursor:pointer}
+  .btn-yellow{background:#facc15;color:#000}
+  .btn-dark{background:#1e293b;color:white;border:1px solid #334155}
+  input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:white;margin:6px 0 10px;outline:none}
+  .row{display:flex;gap:8px}
+  .row>div{flex:1}
+  .match{background:#0f172a;border-radius:12px;padding:13px;margin-top:10px;border:1px solid #1e293b}
+  .badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:800}
+  .win{background:#16a34a;color:white}
+  .miss{background:#dc2626;color:white}
+  .pending{background:#334155;color:#cbd5e1}
+  .big{font-size:22px;font-weight:900;color:#facc15;margin:5px 0}
+  .small{color:#94a3b8;font-size:12px}
+  .hidden{display:none}
+  .center{text-align:center}
+  .greenbox{background:#052e16;border:1px solid #16a34a;border-radius:12px;padding:14px;text-align:center;margin-top:12px}
+  .betbox{background:#0f172a;border:2px solid #facc15;border-radius:16px;padding:16px;margin-top:14px}
+  .total{background:#facc15;color:#000;border-radius:10px;padding:12px;text-align:center;font-weight:800;margin-top:12px}
 </style>
 </head>
 <body>
+<div class="top">
 
-<div id="gate">
-  <h1>🌍 World Stats Hub</h1>
-  <p>Private Access Only</p>
-  <p>Enter Owner PIN</p>
-  <input id="pin" type="password" placeholder="Enter PIN">
-  <br>
-  <button onclick="enterHub()">Confirm</button>
-  <p id="error" style="color:#f87171"></p>
-</div>
+  <!-- HEADER -->
+  <div class="logo">WORLD <span>STATS</span> HUB</div>
+  <div class="sub">Money Stat • Football Winner Tool • Real Results Check</div>
 
-<div id="hub">
-  <h1>🌍 World Stats Hub</h1>
-  <p>Welcome back, Owner</p>
-
+  <!-- MONEY STAT -->
   <div class="card">
-    <h2>💰 Money Stat</h2>
-    <p>Only 8% of world money is physical cash. 92% is numbers on screens.</p>
+    <h3 style="margin:0;">💰 Money Stat</h3>
+    <p class="small">Track your balance. Only bet what you can afford to lose.</p>
+    <div class="row">
+      <div><label class="small">Starting Balance (₦)</label><input id="startBal" type="number" value="1500"></div>
+      <div><label class="small">Current Balance (₦)</label><input id="currBal" type="number" value="1500"></div>
+    </div>
+    <button class="btn btn-yellow" onclick="calcMoney()">Calculate Profit</button>
+    <p id="moneyResult" class="center" style="font-weight:800;margin-top:10px;"></p>
   </div>
 
+  <!-- FOOTBALL WINNER TOOL -->
   <div class="card">
-    <h2>⚽ Football Winner Tool</h2>
-    <input id="team1" placeholder="Team 1 e.g Chelsea">
-    <input id="team2" placeholder="Team 2 e.g Arsenal">
-    <input id="score" placeholder="Score like 2-1">
-    <br>
-    <button onclick="checkWinner()">Check Winner</button>
-    <h3 id="result"></h3>
+    <h3 style="margin:0;">⚽ Football Winner Tool</h3>
+    <p class="small">Pick a match and get a winner prediction.</p>
+    <label class="small">Home Team</label><input id="homeTeam" placeholder="e.g. Brentford">
+    <label class="small">Away Team</label><input id="awayTeam" placeholder="e.g. Everton">
+    <button class="btn btn-yellow" onclick="predictWinner()">Predict Winner</button>
+    <p id="winnerResult" class="center" style="font-weight:800;margin-top:10px;"></p>
   </div>
 
-  <!-- YESTERDAY RESULTS -->
-  <div class="card">
-    <h2>✅ Real Results Check - 22 Nov 2026</h2>
-    <table>
-      <tr><th>Game</th><th>Prediction</th><th>Real</th><th>Check</th></tr>
-      <tr><td>Hull vs Brighton</td><td>2-1</td><td>2-0</td><td class="win">✅ WINNER</td></tr>
-      <tr><td>Liverpool vs Man Utd</td><td>1-1</td><td>4-0</td><td class="lose">❌ MISSED</td></tr>
-      <tr><td>Barcelona vs Villarreal</td><td>2-1</td><td>3-2</td><td class="win">✅ WINNER</td></tr>
-    </table>
-    <p><b>Score: 2 / 3 Correct</b></p>
+  <!-- PRIVATE HUB LOGIN -->
+  <div class="card" id="loginCard">
+    <h3 style="margin:0;">🔒 Private Hub</h3>
+    <p class="small">Enter PIN to see Yesterday Results, Tomorrow Predictions & Betting Plan.</p>
+    <input id="pinInput" type="password" placeholder="Enter PIN - 3821" inputmode="numeric">
+    <button class="btn btn-yellow" onclick="checkPin()">Unlock Hub</button>
+    <p id="pinError" class="center" style="color:#f87171;font-size:13px;"></p>
   </div>
 
-  <!-- TOMORROW PREDICTIONS -->
-  <div class="card tomorrow">
-    <h2>🔮 Tomorrow's Predictions - Mon 23 Nov 2026</h2>
-    <table>
-      <tr><th>Time</th><th>Game</th><th>Hub Prediction</th><th>Real Score</th></tr>
-      <tr><td>20:00</td><td>Brentford vs Everton<br><small>Premier League</small></td><td><b>Brentford 1-0</b><br>Home Win 42%</td><td><input id="real1" placeholder="___" style="width:60px"></td></tr>
-      <tr><td>20:00</td><td>Levante vs Elche<br><small>La Liga</small></td><td><b>Levante 2-1</b><br>Home Win 55%</td><td><input id="real2" placeholder="___" style="width:60px"></td></tr>
-      <tr><td>19:45</td><td>Monza vs Fiorentina<br><small>Serie A</small></td><td><b>Fiorentina 1-2</b><br>Away Win 70%</td><td><input id="real3" placeholder="___" style="width:60px"></td></tr>
-    </table>
-    <p style="font-size:13px">Tomorrow night, fill the Real Score boxes and press Check to see if Hub was right!</p>
-    <button onclick="checkTomorrow()">Check Tomorrow Results</button>
-    <h3 id="tomorrowResult"></h3>
+  <!-- PRIVATE CONTENT -->
+  <div id="privateHub" class="hidden">
+
+    <!-- REAL RESULTS CHECK 22 NOV -->
+    <div class="card">
+      <h3 style="margin:0;">✅ Real Results Check <span class="yellow">- Sat 22 Nov 2026</span></h3>
+      <p class="small">Your predictions vs Real Score. Winner = you got the winner / draw right.</p>
+
+      <div class="match">
+        <b>Hull vs Brighton</b><br>
+        <span class="small">You said: 2-1 &nbsp;|&nbsp; Real: 2-0</span><br>
+        <span class="badge win">WINNER ✓</span>
+      </div>
+
+      <div class="match">
+        <b>Liverpool vs Man Utd</b><br>
+        <span class="small">You said: 1-1 &nbsp;|&nbsp; Real: 4-0</span><br>
+        <span class="badge miss">MISSED ✗</span>
+      </div>
+
+      <div class="match">
+        <b>Barcelona vs Villarreal</b><br>
+        <span class="small">You said: 2-1 &nbsp;|&nbsp; Real: 3-2</span><br>
+        <span class="badge win">WINNER ✓</span>
+      </div>
+
+      <div class="greenbox">
+        <div style="font-size:22px;font-weight:900;">Score: 2 / 3 Correct</div>
+        <div class="small">Great job! Keep going.</div>
+      </div>
+    </div>
+
+    <!-- TOMORROW PREDICTIONS -->
+    <div class="card">
+      <h3 style="margin:0;">📅 Tomorrow's Predictions <span class="yellow">- Mon 23 Nov 2026</span></h3>
+      <p class="small">Enter real scores after the games and press Check.</p>
+
+      <div class="match">
+        <b>Brentford vs Everton</b><br>
+        <span class="small">Your Prediction: <b style="color:white;">Brentford 1-0</b></span>
+        <div class="row"><div><input id="r1h" type="number" placeholder="Home"></div><div><input id="r1a" type="number" placeholder="Away"></div></div>
+        <span id="res1" class="badge pending">WAITING —</span>
+      </div>
+
+      <div class="match">
+        <b>Levante vs Elche</b><br>
+        <span class="small">Your Prediction: <b style="color:white;">Levante 2-1</b></span>
+        <div class="row"><div><input id="r2h" type="number" placeholder="Home"></div><div><input id="r2a" type="number" placeholder="Away"></div></div>
+        <span id="res2" class="badge pending">WAITING —</span>
+      </div>
+
+      <div class="match">
+        <b>Monza vs Fiorentina</b><br>
+        <span class="small">Your Prediction: <b style="color:white;">Fiorentina 1-2</b></span>
+        <div class="row"><div><input id="r3h" type="number" placeholder="Home"></div><div><input id="r3a" type="number" placeholder="Away"></div></div>
+        <span id="res3" class="badge pending">WAITING —</span>
+      </div>
+
+      <button class="btn btn-yellow" style="margin-top:12px;" onclick="checkTomorrow()">Check Tomorrow Results</button>
+      <p id="tomorrowScore" class="center" style="font-weight:900;margin-top:10px;"></p>
+    </div>
+
+    <!-- CORRECT SCORE BETTING -->
+    <div class="betbox">
+      <h2 class="center yellow" style="margin:0;">🎯 CORRECT SCORE FOR BETTING</h2>
+      <p class="center small">For Today - Mon 23 Nov 2026 | Single Bets Only</p>
+
+      <div class="match">
+        <b>1. Brentford vs Everton</b>
+        <div class="big">Correct Score: 1-1</div>
+        <span class="small">Stake: ₦500 &nbsp;|&nbsp; Type: Single Bet</span>
+      </div>
+
+      <div class="match">
+        <b>2. Levante vs Elche</b>
+        <div class="big">Correct Score: 1-1</div>
+        <span class="small">Stake: ₦500 &nbsp;|&nbsp; Type: Single Bet</span>
+      </div>
+
+      <div class="match">
+        <b>3. Monza vs Fiorentina</b>
+        <div class="big">Correct Score: 1-1</div>
+        <span class="small">Stake: ₦500 &nbsp;|&nbsp; Type: Single Bet</span>
+      </div>
+
+      <div class="total">
+        Total Stake: ₦1,500<br>
+        <span style="font-size:12px;font-weight:400;">Bet only what you can afford to lose. No chasing losses.</span>
+      </div>
+    </div>
+
+    <button class="btn btn-dark" style="margin-top:14px;" onclick="lockHub()">Lock Hub 🔒</button>
+    <p class="center small" style="margin-top:10px;">World Stats Hub © 2026 - Private Use Only</p>
   </div>
 
-  <div class="card">
-    <h2>➕ Add New Check</h2>
-    <input id="newGame" placeholder="Game e.g Chelsea vs Arsenal">
-    <input id="newPred" placeholder="Your Prediction e.g 2-1">
-    <input id="newReal" placeholder="Real Score e.g 2-0">
-    <br>
-    <button onclick="addCheck()">Add Check</button>
-    <div id="newList"></div>
-  </div>
-
-  <button onclick="lockHub()">Lock Hub</button>
 </div>
 
 <script>
-let OWNER_PIN = "3821";
-function enterHub(){
-  let e = document.getElementById('pin').value;
-  if(e === OWNER_PIN){
-    document.getElementById('gate').style.display='none';
-    document.getElementById('hub').style.display='block';
+function calcMoney(){
+  let s = parseFloat(document.getElementById('startBal').value)||0;
+  let c = parseFloat(document.getElementById('currBal').value)||0;
+  let p = c - s;
+  document.getElementById('moneyResult').innerHTML = p>=0 ? "Profit: ₦"+p.toLocaleString()+" ✅" : "Loss: ₦"+Math.abs(p).toLocaleString()+" ❌";
+}
+function predictWinner(){
+  let h = document.getElementById('homeTeam').value.trim();
+  let a = document.getElementById('awayTeam').value.trim();
+  if(!h||!a){document.getElementById('winnerResult').innerText="Please enter both teams";return;}
+  let choices = [h+" Win", "Draw", a+" Win"];
+  let pick = choices[Math.floor(Math.random()*choices.length)];
+  document.getElementById('winnerResult').innerText = h+" vs "+a+" → Prediction: "+pick;
+}
+function checkPin(){
+  let pin = document.getElementById('pinInput').value;
+  if(pin==="3821"){
+    document.getElementById('privateHub').classList.remove('hidden');
+    document.getElementById('loginCard').classList.add('hidden');
+    window.scrollTo({top:600,behavior:'smooth'});
   } else {
-    document.getElementById('error').innerText = "Wrong PIN. Access denied.";
+    document.getElementById('pinError').innerText="Wrong PIN. Try again.";
   }
 }
 function lockHub(){
-  document.getElementById('hub').style.display='none';
-  document.getElementById('gate').style.display='block';
-  document.getElementById('pin').value = "";
+  document.getElementById('privateHub').classList.add('hidden');
+  document.getElementById('loginCard').classList.remove('hidden');
+  document.getElementById('pinInput').value="";
 }
-function checkWinner(){
-  let t1 = document.getElementById('team1').value;
-  let t2 = document.getElementById('team2').value;
-  let s = document.getElementById('score').value;
-  if(!s.includes("-")){ document.getElementById('result').innerText = "Type score like 2-1"; return; }
-  let p = s.split("-"); let g1 = parseInt(p[0]); let g2 = parseInt(p[1]);
-  let res = t1 + " " + g1 + " - " + g2 + " " + t2 + " | ";
-  if(g1 > g2) res += t1 + " WINS!";
-  else if(g2 > g1) res += t2 + " WINS!";
-  else res += "It's a DRAW!";
-  document.getElementById('result').innerText = res;
+function checkOne(home,away,predHome,predAway,el){
+  if(home===""||away===""){el.className="badge pending";el.innerText="WAITING —";return 0;}
+  home=parseInt(home); away=parseInt(away);
+  let win = (home>away && predHome>predAway) || (home<away && predHome<predAway) || (home===away && predHome===predAway);
+  if(win){el.className="badge win";el.innerText="WINNER ✓";return 1;}
+  else{el.className="badge miss";el.innerText="MISSED ✗";return 0;}
 }
 function checkTomorrow(){
-  let r1 = document.getElementById('real1').value;
-  let r2 = document.getElementById('real2').value;
-  let r3 = document.getElementById('real3').value;
-  let msg = "Brentford vs Everton: Predicted 1-0, Real " + (r1||"___") + " | Levante vs Elche: Predicted 2-1, Real " + (r2||"___") + " | Monza vs Fiorentina: Predicted 1-2, Real " + (r3||"___");
-  document.getElementById('tomorrowResult').innerText = msg;
-}
-function addCheck(){
-  let g = document.getElementById('newGame').value;
-  let p = document.getElementById('newPred').value;
-  let r = document.getElementById('newReal').value;
-  if(!g || !p || !r){ alert("Fill all 3 boxes"); return; }
-  let v = (p === r) ? "✅ EXACT SCORE!" : "Check manually";
-  document.getElementById('newList').innerHTML += "<p><b>"+g+"</b>: Predicted "+p+" | Real "+r+" - "+v+"</p>";
+  let s=0;
+  s+=checkOne(document.getElementById('r1h').value,document.getElementById('r1a').value,1,0,document.getElementById('res1'));
+  s+=checkOne(document.getElementById('r2h').value,document.getElementById('r2a').value,2,1,document.getElementById('res2'));
+  s+=checkOne(document.getElementById('r3h').value,document.getElementById('r3a').value,1,2,document.getElementById('res3'));
+  document.getElementById('tomorrowScore').innerText="Score: "+s+" / 3 Correct";
 }
 </script>
 </body>
