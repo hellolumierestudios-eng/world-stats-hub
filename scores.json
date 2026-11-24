@@ -1,41 +1,101 @@
 {
   "matches": [
     {
-      "league": "Premier League",
-      "home": "Brentford",
-      "away": "Everton",
-      "status": "FT",
-      "state": "post",
-      "date": "2026-11-23",
-      "time": "FT",
-      "prediction": "\ud83d\udd25 Brentford vs Everton\nMost Likely Score: 1-1 (11.7%)\nHome Win: 46.5% | Draw: 24.7% | Away Win: 28.6%\nOver 2.5: 52.9%",
-      "home_strength": 1.35,
-      "away_strength": 1.2
+      "league": "Championship",
+      "home": "Bristol City",
+      "away": "Wrexham",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Bristol City vs Wrexham\nMost Likely Score: 2-1 (7.5%)\nHome Win: 41.1% | Draw: 20.6% | Away Win: 37.4%\nOver 2.5: 75.5%",
+      "home_strength": 1.81,
+      "away_strength": 1.96
     },
     {
-      "league": "La Liga",
-      "home": "Levante",
-      "away": "Elche",
-      "status": "FT",
-      "state": "post",
-      "date": "2026-11-23",
-      "time": "FT",
-      "prediction": "\ud83d\udd25 Levante vs Elche\nMost Likely Score: 1-1 (11.0%)\nHome Win: 50.1% | Draw: 23.5% | Away Win: 26.2%\nOver 2.5: 56.3%",
-      "home_strength": 1.5,
-      "away_strength": 1.2
+      "league": "Championship",
+      "home": "Cardiff City",
+      "away": "Preston North End",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Cardiff City vs Preston North End\nMost Likely Score: 1-1 (10.8%)\nHome Win: 41.0% | Draw: 23.8% | Away Win: 35.0%\nOver 2.5: 59.7%",
+      "home_strength": 1.37,
+      "away_strength": 1.48
     },
     {
-      "league": "Serie A",
-      "home": "Monza",
-      "away": "Fiorentina",
-      "status": "FT",
-      "state": "post",
-      "date": "2026-11-23",
-      "time": "FT",
-      "prediction": "\ud83d\udd25 Monza vs Fiorentina\nMost Likely Score: 1-1 (11.6%)\nHome Win: 43.6% | Draw: 24.7% | Away Win: 31.6%\nOver 2.5: 54.5%",
-      "home_strength": 1.32,
-      "away_strength": 1.3
+      "league": "Championship",
+      "home": "Charlton Athletic",
+      "away": "Lincoln City",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Charlton Athletic vs Lincoln City\nMost Likely Score: 2-1 (9.7%)\nHome Win: 59.4% | Draw: 20.0% | Away Win: 19.9%\nOver 2.5: 64.9%",
+      "home_strength": 1.94,
+      "away_strength": 1.19
+    },
+    {
+      "league": "Championship",
+      "home": "Middlesbrough",
+      "away": "Swansea City",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Middlesbrough vs Swansea City\nMost Likely Score: 2-1 (7.2%)\nHome Win: 46.7% | Draw: 19.4% | Away Win: 32.3%\nOver 2.5: 79.4%",
+      "home_strength": 2.13,
+      "away_strength": 1.97
+    },
+    {
+      "league": "Championship",
+      "home": "Norwich City",
+      "away": "Queens Park Rangers",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Norwich City vs Queens Park Rangers\nMost Likely Score: 1-1 (8.9%)\nHome Win: 36.8% | Draw: 22.0% | Away Win: 40.8%\nOver 2.5: 68.9%",
+      "home_strength": 1.49,
+      "away_strength": 1.84
+    },
+    {
+      "league": "Championship",
+      "home": "Portsmouth",
+      "away": "West Ham United",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Portsmouth vs West Ham United\nMost Likely Score: 1-1 (9.6%)\nHome Win: 52.1% | Draw: 21.8% | Away Win: 25.6%\nOver 2.5: 63.8%",
+      "home_strength": 1.73,
+      "away_strength": 1.33
+    },
+    {
+      "league": "Championship",
+      "home": "Sheffield United",
+      "away": "Southampton",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Sheffield United vs Southampton\nMost Likely Score: 2-1 (8.0%)\nHome Win: 49.9% | Draw: 19.8% | Away Win: 29.1%\nOver 2.5: 76.3%",
+      "home_strength": 2.08,
+      "away_strength": 1.76
+    },
+    {
+      "league": "Championship",
+      "home": "Wolverhampton Wanderers",
+      "away": "Derby County",
+      "status": "Scheduled",
+      "state": "pre",
+      "date": "2026-11-24",
+      "time": "Scheduled",
+      "prediction": "\ud83d\udd25 Wolverhampton Wanderers vs Derby County\nMost Likely Score: 2-1 (8.0%)\nHome Win: 52.4% | Draw: 19.2% | Away Win: 27.0%\nOver 2.5: 77.1%",
+      "home_strength": 2.19,
+      "away_strength": 1.73
     }
   ],
-  "updated": "23 Nov 2026, 11:22 PM"
+  "updated": "24 Nov 2026, 12:17 AM"
 }
