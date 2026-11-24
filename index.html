@@ -3,200 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>World Stats Hub</title>
+<title>World Stats Hub - Live Football Predictions</title>
 <style>
-  *{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-  body{margin:0;background:#0b1220;color:white;padding:14px}
-  .top{max-width:520px;margin:0 auto}
-  .logo{text-align:center;font-size:34px;font-weight:900;line-height:1}
-  .logo span{color:#facc15}
-  .sub{text-align:center;color:#94a3b8;font-size:13px;margin:8px 0 14px}
-  .card{background:#111c33;border-radius:16px;padding:16px;margin-bottom:14px;border:1px solid #1e293b}
-  .yellow{color:#facc15}
-  .btn{width:100%;padding:13px;border:none;border-radius:10px;font-weight:800;font-size:15px;cursor:pointer}
-  .btn-yellow{background:#facc15;color:#000}
-  .btn-dark{background:#1e293b;color:white;border:1px solid #334155}
-  input{width:100%;padding:12px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:white;margin:6px 0 10px;outline:none}
-  .row{display:flex;gap:8px}
-  .row>div{flex:1}
-  .match{background:#0f172a;border-radius:12px;padding:13px;margin-top:10px;border:1px solid #1e293b}
-  .badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:800}
-  .win{background:#16a34a;color:white}
-  .miss{background:#dc2626;color:white}
-  .pending{background:#334155;color:#cbd5e1}
-  .big{font-size:22px;font-weight:900;color:#facc15;margin:5px 0}
-  .small{color:#94a3b8;font-size:12px}
-  .hidden{display:none}
-  .center{text-align:center}
-  .greenbox{background:#052e16;border:1px solid #16a34a;border-radius:12px;padding:14px;text-align:center;margin-top:12px}
-  .betbox{background:#0f172a;border:2px solid #facc15;border-radius:16px;padding:16px;margin-top:14px}
-  .total{background:#facc15;color:#000;border-radius:10px;padding:12px;text-align:center;font-weight:800;margin-top:12px}
-  .todayBadge{background:#facc15;color:#000;padding:5px 12px;border-radius:20px;font-weight:900;font-size:12px;display:inline-block}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f1f5f9;color:#111}
+header{background:#0f172a;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+header b{font-size:20px} header b span{color:#22c55e}
+nav a{color:#cbd5e1;text-decoration:none;margin-left:14px;font-size:13px}
+nav a.active{color:#fff;font-weight:700}
+.container{max-width:1000px;margin:auto;padding:16px}
+.card{background:#fff;border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.card h2{font-size:18px;margin-bottom:4px}
+.sub{color:#64748b;font-size:13px;margin-bottom:12px}
+.badge{display:inline-block;background:#dcfce7;color:#166534;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:700}
+.match{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #e2e8f0}
+.match:last-child{border:0}
+.match b{font-size:15px}
+.match span{font-size:12px;color:#64748b}
+.score{background:#0f172a;color:#fff;padding:8px 14px;border-radius:10px;font-weight:800;min-width:62px;text-align:center}
+.pred{font-size:12px;color:#166534;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:650px){.grid{grid-template-columns:1fr} nav{display:none}}
+input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;margin:6px 0;font-size:15px}
+button{width:100%;padding:13px;background:#22c55e;border:0;border-radius:10px;font-weight:800;font-size:15px;cursor:pointer}
+select{cursor:pointer}
+.result{margin-top:12px;padding:12px;background:#f0fdf4;border-radius:10px;text-align:center;font-weight:800}
+.small{font-size:12px;color:#64748b;text-align:center;margin-top:8px}
+.tool-box{background:#f8fafc;padding:14px;border-radius:12px}
 </style>
 </head>
 <body>
-<div class="top">
-  <div class="logo">WORLD <span>STATS</span> HUB</div>
-  <div class="sub">Money Stat • Football Winner Tool • Auto Daily - Real Fixtures</div>
-  <div class="card center"><span class="todayBadge" id="todayBadge">Loading...</span><p class="small" style="margin:8px 0 0;">Real fixtures - changes automatically every day.</p></div>
-  <div class="card"><h3 style="margin:0;">💰 Money Stat</h3><p class="small">Track your balance. Only bet what you can afford to lose.</p><div class="row"><div><label class="small">Starting (₦)</label><input id="startBal" type="number" value="1500"></div><div><label class="small">Current (₦)</label><input id="currBal" type="number" value="1500"></div></div><button class="btn btn-yellow" onclick="calcMoney()">Calculate Profit</button><p id="moneyResult" class="center" style="font-weight:800;margin-top:10px;"></p></div>
-  <div class="card"><h3 style="margin:0;">⚽ Football Winner Tool</h3><p class="small">Pick a match and get a winner prediction.</p><label class="small">Home Team</label><input id="homeTeam" placeholder="e.g. Brentford"><label class="small">Away Team</label><input id="awayTeam" placeholder="e.g. Everton"><button class="btn btn-yellow" onclick="predictWinner()">Predict Winner</button><p id="winnerResult" class="center" style="font-weight:800;margin-top:10px;"></p></div>
-  <div class="card" id="loginCard"><h3 style="margin:0;">🔒 Private Hub</h3><p class="small">Enter PIN to see Today's Predictions & Betting Plan.</p><input id="pinInput" type="password" placeholder="Enter PIN - 3821" inputmode="numeric"><button class="btn btn-yellow" onclick="checkPin()">Unlock Hub</button><p id="pinError" class="center" style="color:#f87171;font-size:13px;"></p></div>
-  <div id="privateHub" class="hidden">
-    <div class="card"><h3 style="margin:0;">✅ Yesterday's Results Check</h3><p class="small">Sat 22 Nov 2026</p><div class="match"><b>Hull vs Brighton</b><br><span class="small">You said: 2-1 | Real: 2-0</span><br><span class="badge win">WINNER ✓</span></div><div class="match"><b>Liverpool vs Man Utd</b><br><span class="small">You said: 1-1 | Real: 4-0</span><br><span class="badge miss">MISSED ✗</span></div><div class="match"><b>Barcelona vs Villarreal</b><br><span class="small">You said: 2-1 | Real: 3-2</span><br><span class="badge win">WINNER ✓</span></div><div class="greenbox"><div style="font-size:22px;font-weight:900;">Score: 2 / 3 Correct</div></div></div>
-    <div class="card"><h3 style="margin:0;">📅 Today's Predictions <span class="yellow" id="todayTitle"></span></h3><p class="small">Real fixtures. Enter real scores after games.</p><div id="todayMatches"></div><button class="btn btn-yellow" style="margin-top:12px;" onclick="checkToday()">Check Today's Results</button><p id="todayScore" class="center" style="font-weight:900;margin-top:10px;"></p></div>
-    <div class="betbox"><h2 class="center yellow" style="margin:0;">🎯 CORRECT SCORE FOR BETTING</h2><p class="center small" id="betDate">For Today | Single Bets Only</p><div id="betMatches"></div><div class="total">Total Stake: ₦1,500<br><span style="font-size:12px;font-weight:400;">Bet only what you can afford to lose. No chasing losses.</span></div></div>
-    <button class="btn btn-dark" style="margin-top:14px;" onclick="lockHub()">Lock Hub 🔒</button><p class="center small" style="margin-top:10px;">World Stats Hub © 2026 - Private Use Only</p>
-  </div>
+<header><b>World Stats Hub <span>● LIVE</span></b><nav><a href="#" class="active">Home</a><a href="#">Dashboard</a><a href="#">Private Hub</a><a href="#">Stats</a><a href="#">Betting Tools</a></nav></header>
+<div class="container">
+<div class="card">
+<h2>⚽ Matches - <span id="todayDate"></span></h2>
+<p class="sub">November & December 2026 Predictions • Pick any date to see predictions</p>
+<label>Choose Date:</label>
+<select id="dateSelect" onchange="renderSelected()"></select>
+<span class="badge" id="dateBadge">LIVE TODAY</span>
+<div id="matches"></div>
+</div>
+<div class="grid">
+<div class="card">
+<h2>🏆 Football Winner Tool</h2>
+<p class="sub">Pick any 2 teams - prediction based on form & strength, NOT random</p>
+<div class="tool-box">
+<label>Home Team</label><input id="homeTeam" value="Arsenal">
+<label>Away Team</label><input id="awayTeam" value="Dortmund">
+<button onclick="predictWinner()">Predict Winner</button>
+<div id="toolResult" class="result">Enter teams and predict</div>
+<div class="small">Uses Team Strength + Home Advantage (+4)</div>
+</div>
+</div>
+<div class="card">
+<h2>🔒 Private Hub</h2>
+<p class="sub">Enter PIN to unlock premium predictions</p>
+<input id="pinInput" type="password" placeholder="Enter PIN - e.g 3821">
+<button onclick="checkPin()">Unlock Private Hub</button>
+<div id="pinResult" class="result" style="display:none"></div>
+</div>
+</div>
+<div class="card"><h2>📊 World Club Index</h2><div id="indexList"></div></div>
 </div>
 <script>
-const DAILY = {
-  "2026-11-23": [
-    {home:"Brentford", away:"Everton", predH:1, predA:0, bet:"1-1"},
-    {home:"Levante", away:"Elche", predH:2, predA:1, bet:"1-1"},
-    {home:"Monza", away:"Fiorentina", predH:1, predA:2, bet:"1-1"}
-  ],
-  "2026-11-24": [
-    {home:"Chelsea", away:"Arsenal", predH:1, predA:1, bet:"1-1"},
-    {home:"Real Madrid", away:"Sevilla", predH:2, predA:0, bet:"2-1"},
-    {home:"Inter", away:"Napoli", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-11-25": [
-    {home:"Man City", away:"Tottenham", predH:2, predA:1, bet:"2-1"},
-    {home:"Atletico Madrid", away:"Valencia", predH:1, predA:0, bet:"1-0"},
-    {home:"AC Milan", away:"Juventus", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-11-26": [
-    {home:"Newcastle", away:"West Ham", predH:2, predA:0, bet:"2-0"},
-    {home:"Getafe", away:"Real Sociedad", predH:1, predA:1, bet:"1-1"},
-    {home:"Roma", away:"Lazio", predH:1, predA:0, bet:"1-0"}
-  ],
-  "2026-11-27": [
-    {home:"Nottingham Forest", away:"Chelsea", predH:1, predA:1, bet:"1-1"},
-    {home:"Venezia", away:"Bologna", predH:1, predA:1, bet:"1-1"},
-    {home:"Frosinone", away:"Parma", predH:1, predA:0, bet:"1-0"}
-  ],
-  "2026-11-28": [
-    {home:"Torino", away:"Lazio", predH:1, predA:1, bet:"1-1"},
-    {home:"Inter", away:"Genoa", predH:2, predA:0, bet:"2-0"},
-    {home:"Everton", away:"Leeds", predH:1, predA:0, bet:"1-0"}
-  ],
-  "2026-11-29": [
-    {home:"Everton", away:"Liverpool", predH:1, predA:2, bet:"1-2"},
-    {home:"Arsenal", away:"Man City", predH:1, predA:1, bet:"1-1"},
-    {home:"Roma", away:"Monza", predH:2, predA:0, bet:"2-0"}
-  ],
-  "2026-11-30": [
-    {home:"Lecce", away:"Atalanta", predH:1, predA:1, bet:"1-1"},
-    {home:"Cagliari", away:"AC Milan", predH:0, predA:2, bet:"0-2"},
-    {home:"Espanyol", away:"Getafe", predH:1, predA:0, bet:"1-0"}
-  ],
-  // ===== REAL DECEMBER FIXTURES =====
-  "2026-12-01": [
-    {home:"Coventry", away:"Ipswich", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-12-02": [
-    {home:"Chelsea", away:"Crystal Palace", predH:2, predA:1, bet:"2-1"},
-    {home:"Real Sociedad", away:"Real Madrid", predH:1, predA:2, bet:"1-2"},
-    {home:"Barcelona", away:"Atletico Madrid", predH:2, predA:1, bet:"2-1"}
-  ],
-  "2026-12-03": [
-    {home:"Tottenham", away:"Fulham", predH:2, predA:1, bet:"2-1"},
-    {home:"Brentford", away:"Arsenal", predH:1, predA:2, bet:"1-2"},
-    {home:"Newcastle", away:"Man Utd", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-12-04": [
-    {home:"Alaves", away:"Espanyol", predH:1, predA:0, bet:"1-0"},
-    {home:"Bologna", away:"Roma", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-12-05": [
-    {home:"Chelsea", away:"Liverpool", predH:1, predA:1, bet:"1-1"},
-    {home:"Barcelona", away:"Celta Vigo", predH:2, predA:0, bet:"2-0"},
-    {home:"Napoli", away:"Lecce", predH:2, predA:0, bet:"2-0"}
-  ],
-  "2026-12-06": [
-    {home:"Tottenham", away:"Arsenal", predH:1, predA:2, bet:"1-2"},
-    {home:"Athletic Club", away:"Real Madrid", predH:1, predA:2, bet:"1-2"},
-    {home:"Juventus", away:"Udinese", predH:2, predA:0, bet:"2-0"}
-  ],
-  "2026-12-07": [
-    {home:"Sevilla", away:"Malaga", predH:2, predA:0, bet:"2-0"},
-    {home:"Venezia", away:"Sassuolo", predH:1, predA:1, bet:"1-1"},
-    {home:"Fiorentina", away:"Cagliari", predH:2, predA:1, bet:"2-1"}
-  ],
-  "2026-12-11": [
-    {home:"Udinese", away:"Frosinone", predH:2, predA:0, bet:"2-0"}
-  ],
-  "2026-12-12": [
-    {home:"Man City", away:"Chelsea", predH:2, predA:1, bet:"2-1"},
-    {home:"Cagliari", away:"Venezia", predH:1, predA:0, bet:"1-0"},
-    {home:"Como", away:"Bologna", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-12-13": [
-    {home:"Lazio", away:"Roma", predH:1, predA:1, bet:"1-1"},
-    {home:"Napoli", away:"AC Milan", predH:1, predA:1, bet:"1-1"},
-    {home:"Malaga", away:"Barcelona", predH:0, predA:2, bet:"0-2"}
-  ],
-  "2026-12-14": [
-    {home:"Hull", away:"Tottenham", predH:1, predA:2, bet:"1-2"},
-    {home:"Juventus", away:"Monza", predH:2, predA:0, bet:"2-0"},
-    {home:"Atalanta", away:"Genoa", predH:2, predA:1, bet:"2-1"}
-  ],
-  "2026-12-19": [
-    {home:"Brentford", away:"Newcastle", predH:1, predA:1, bet:"1-1"},
-    {home:"Liverpool", away:"Tottenham", predH:2, predA:1, bet:"2-1"},
-    {home:"Roma", away:"Juventus", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-12-20": [
-    {home:"Arsenal", away:"Man Utd", predH:2, predA:1, bet:"2-1"},
-    {home:"Barcelona", away:"Real Sociedad", predH:2, predA:0, bet:"2-0"},
-    {home:"Fiorentina", away:"Bologna", predH:1, predA:1, bet:"1-1"}
-  ],
-  "2026-12-21": [
-    {home:"Chelsea", away:"Aston Villa", predH:2, predA:1, bet:"2-1"}
-  ],
-  "2026-12-26": [
-    {home:"Aston Villa", away:"Leeds", predH:2, predA:0, bet:"2-0"},
-    {home:"Hull", away:"Liverpool", predH:0, predA:2, bet:"0-2"},
-    {home:"Newcastle", away:"Man City", predH:1, predA:2, bet:"1-2"}
-  ],
-  "2026-12-27": [
-    {home:"Coventry", away:"Chelsea", predH:1, predA:2, bet:"1-2"},
-    {home:"Man Utd", away:"Nottingham Forest", predH:2, predA:1, bet:"2-1"},
-    {home:"Crystal Palace", away:"Arsenal", predH:1, predA:2, bet:"1-2"}
-  ],
-  "2026-12-29": [
-    {home:"Hull", away:"Leeds", predH:1, predA:0, bet:"1-0"},
-    {home:"Tottenham", away:"Brighton", predH:2, predA:1, bet:"2-1"},
-    {home:"Everton", away:"Man City", predH:0, predA:2, bet:"0-2"}
-  ],
-  "2026-12-30": [
-    {home:"Aston Villa", away:"Liverpool", predH:1, predA:2, bet:"1-2"},
-    {home:"Fulham", away:"Arsenal", predH:1, predA:2, bet:"1-2"},
-    {home:"Coventry", away:"Brentford", predH:1, predA:1, bet:"1-1"}
-  ]
-};
-function getTodayKey(){let d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,'0')+"-"+String(d.getDate()).padStart(2,'0');}
-function renderToday(){
-  let key=getTodayKey();let dateObj=new Date();let nice=dateObj.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
-  document.getElementById('todayBadge').innerText="Today: "+nice;
-  document.getElementById('todayTitle').innerText="- "+nice;
-  document.getElementById('betDate').innerText="For "+nice+" | Single Bets Only";
-  let games=DAILY[key];let box=document.getElementById('todayMatches');let betBox=document.getElementById('betMatches');
-  if(!games){box.innerHTML="<div class='match'><b>No top-flight games today.</b><br><span class='small'>No Premier League / La Liga / Serie A games scheduled for "+nice+". Check back tomorrow.</span></div>";betBox.innerHTML="<div class='match'><b>No betting plan today - no games.</b></div>";return;}
-  box.innerHTML="";betBox.innerHTML="";
-  games.forEach((g,i)=>{
-    box.innerHTML+=`<div class="match"><b>${g.home} vs ${g.away}</b><br><span class="small">Your Prediction: <b style="color:white;">${g.home} ${g.predH}-${g.predA} ${g.away}</b></span><div class="row"><div><input id="r${i}h" type="number" placeholder="Home"></div><div><input id="r${i}a" type="number" placeholder="Away"></div></div><span id="res${i}" class="badge pending">WAITING —</span></div>`;
-    betBox.innerHTML+=`<div class="match"><b>${i+1}. ${g.home} vs ${g.away}</b><div class="big">Correct Score: ${g.bet}</div><span class="small">Stake: ₦500 | Type: Single Bet</span></div>`;
-  });
-  window._todayGames=games;
+const CORRECT_PIN = "3821";
+const RATINGS = {"Arsenal":92,"Man City":93,"Real Madrid":91,"Aston Villa":84,"Galatasaray":80,"Dortmund":82,"PSV":78,"Napoli":81,"Chelsea":86,"Inter":85,"Sevilla":76,"Barcelona":90,"Bayern Munich":90,"Liverpool":89,"PSG":88,"Juventus":82,"AC Milan":83,"Atletico Madrid":84,"Tottenham":83,"Man United":80,"Newcastle":82,"Brighton":78,"West Ham":74,"Everton":73,"Fulham":75,"Brentford":74,"Nottingham Forest":76,"Bournemouth":75,"Crystal Palace":76,"Leeds":72,"Sunderland":71,"Wolves":70,"Burnley":69,"Benfica":82,"Porto":81,"Ajax":80,"Feyenoord":78,"Celtic":74,"Rangers":73,"Marseille":80,"Lyon":79,"Monaco":81,"Leverkusen":84,"Leipzig":83,"Stuttgart":80,"Frankfurt":79};
+function getRating(t){return RATINGS[t]||75;}
+function calcPrediction(home,away){
+  let h=getRating(home)+4, a=getRating(away), diff=h-a;
+  if(diff>=9) return{h:2,a:0,winner:home,conf:"High Confidence"};
+  if(diff>=5) return{h:2,a:1,winner:home,conf:"Good Confidence"};
+  if(diff>=1) return{h:1,a:0,winner:home,conf:"Slim Win"};
+  if(diff>=-2) return{h:1,a:1,winner:"Draw",conf:"Even Match"};
+  if(diff>=-6) return{h:0,a:1,winner:away,conf:"Away Edge"};
+  return{h:0,a:2,winner:away,conf:"Strong Away Win"};
 }
-renderToday();
-function calcMoney(){let s=parseFloat(document.getElementById('startBal').value)||0;let c=parseFloat(document.getElementById('currBal').value)||0;let p=c-s;document.getElementById('moneyResult').innerHTML=p>=0?"Profit: ₦"+p.toLocaleString()+" ✅":"Loss: ₦"+Math.abs(p).toLocaleString()+" ❌";}
-function predictWinner(){let h=document.getElementById('homeTeam').value.trim();let a=document.getElementById('awayTeam').value.trim();if(!h||!a){document.getElementById('winnerResult').innerText="Please enter both teams";return;}let ch=[h+" Win","Draw",a+" Win"];document.getElementById('winnerResult').innerText=h+" vs "+a+" → Prediction: "+ch[Math.floor(Math.random()*ch.length)];}
-function checkPin(){if(document.getElementById('pinInput').value==="3821"){document.getElementById('privateHub').classList.remove('hidden');document.getElementById('loginCard').classList.add('hidden');window.scrollTo({top:600,behavior:'smooth'});}else{document.getElementById('pinError').innerText="Wrong PIN. Try again.";}}
-function lockHub(){document.getElementById('privateHub').classList.add('hidden');document.getElementById('loginCard').classList.remove('hidden');document.getElementById('pinInput').value="";}
-function checkToday(){let games=window._todayGames;if(!games)return;let score=0;games.forEach((g,i)=>{let hv=document.getElementById('r'+i+'h').value;let av=document.getElementById('r'+i+'a').value;let el=document.getElementById('res'+i);if(hv===""||av===""){el.className="badge pending";el.innerText="WAITING —";return;}hv=parseInt(hv);av=parseInt(av);let win=(hv>av&&g.predH>g.predA)||(hv<av&&g.predH<g.predA)||(hv===av&&g.predH===g.predA);if(win){el.className="badge win";el.innerText="WINNER ✓";score++;}else{el.className="badge miss";el.innerText="MISSED ✗";}});document.getElementById('todayScore').innerText="Score: "+score+" / "+games.length+" Correct";}
+// NOVEMBER & DECEMBER 2026 - FULL CALENDAR - OLD CODE RESTORED + FIXED
+const DAILY = {
+// --- NOVEMBER ---
+"2026-11-24":[
+ {home:"Galatasaray",away:"Aston Villa",time:"6:45 PM",league:"Champions League"},
+ {home:"Arsenal",away:"Dortmund",time:"9:00 PM",league:"Champions League"},
+ {home:"Real Madrid",away:"PSV",time:"9:00 PM",league:"Champions League"},
+ {home:"Man City",away:"Napoli",time:"9:00 PM",league:"Champions League"}],
+"2026-11-25":[
+ {home:"Chelsea",away:"Barcelona",time:"9:00 PM",league:"Champions League"},
+ {home:"Bayern Munich",away:"PSG",time:"9:00 PM",league:"Champions League"},
+ {home:"Liverpool",away:"Benfica",time:"9:00 PM",league:"Champions League"}],
+"2026-11-26":[
+ {home:"Tottenham",away:"Monaco",time:"8:00 PM",league:"Europa League"},
+ {home:"Aston Villa",away:"Feyenoord",time:"8:00 PM",league:"Europa League"}],
+"2026-11-27":[
+ {home:"Newcastle",away:"Marseille",time:"8:00 PM",league:"Europa League"}],
+"2026-11-28":[
+ {home:"Arsenal",away:"Chelsea",time:"1:30 PM",league:"Premier League"},
+ {home:"Man City",away:"Newcastle",time:"4:00 PM",league:"Premier League"},
+ {home:"Liverpool",away:"Tottenham",time:"6:30 PM",league:"Premier League"}],
+"2026-11-29":[
+ {home:"Man United",away:"Crystal Palace",time:"2:00 PM",league:"Premier League"},
+ {home:"Everton",away:"West Ham",time:"4:30 PM",league:"Premier League"},
+ {home:"Real Madrid",away:"Sevilla",time:"8:00 PM",league:"La Liga"}],
+"2026-11-30":[
+ {home:"Inter",away:"Napoli",time:"7:45 PM",league:"Serie A"},
+ {home:"Juventus",away:"AC Milan",time:"7:45 PM",league:"Serie A"}],
+// --- DECEMBER ---
+"2026-12-01":[
+ {home:"Brighton",away:"Brentford",time:"8:00 PM",league:"Premier League"},
+ {home:"Fulham",away:"Bournemouth",time:"8:00 PM",league:"Premier League"}],
+"2026-12-02":[
+ {home:"Leeds",away:"Sunderland",time:"8:00 PM",league:"Premier League"},
+ {home:"Wolves",away:"Burnley",time:"8:00 PM",league:"Premier League"}],
+"2026-12-03":[
+ {home:"Nottingham Forest",away:"Everton",time:"8:00 PM",league:"Premier League"},
+ {home:"Atletico Madrid",away:"Sevilla",time:"8:00 PM",league:"La Liga"}],
+"2026-12-05":[
+ {home:"Arsenal",away:"Man City",time:"5:30 PM",league:"Premier League"},
+ {home:"Chelsea",away:"Liverpool",time:"8:00 PM",league:"Premier League"}],
+"2026-12-06":[
+ {home:"Tottenham",away:"Man United",time:"4:30 PM",league:"Premier League"},
+ {home:"Aston Villa",away:"Newcastle",time:"2:00 PM",league:"Premier League"},
+ {home:"Barcelona",away:"Real Madrid",time:"8:00 PM",league:"La Liga"}],
+"2026-12-07":[
+ {home:"Inter",away:"Juventus",time:"7:45 PM",league:"Serie A"},
+ {home:"AC Milan",away:"Napoli",time:"7:45 PM",league:"Serie A"}],
+"2026-12-09":[
+ {home:"Arsenal",away:"Bayern Munich",time:"9:00 PM",league:"Champions League"},
+ {home:"Real Madrid",away:"Man City",time:"9:00 PM",league:"Champions League"},
+ {home:"PSG",away:"Napoli",time:"9:00 PM",league:"Champions League"}],
+"2026-12-10":[
+ {home:"Liverpool",away:"Dortmund",time:"9:00 PM",league:"Champions League"},
+ {home:"Chelsea",away:"Ajax",time:"9:00 PM",league:"Champions League"}],
+"2026-12-12":[
+ {home:"Man City",away:"Chelsea",time:"5:30 PM",league:"Premier League"},
+ {home:"Arsenal",away:"Brighton",time:"3:00 PM",league:"Premier League"}],
+"2026-12-13":[
+ {home:"Liverpool",away:"Everton",time:"2:00 PM",league:"Premier League"},
+ {home:"Man United",away:"Aston Villa",time:"4:30 PM",league:"Premier League"},
+ {home:"Tottenham",away:"Newcastle",time:"4:30 PM",league:"Premier League"}],
+"2026-12-19":[
+ {home:"Arsenal",away:"Liverpool",time:"5:30 PM",league:"Premier League"},
+ {home:"Chelsea",away:"Man City",time:"8:00 PM",league:"Premier League"}],
+"2026-12-20":[
+ {home:"Real Madrid",away:"Barcelona",time:"8:00 PM",league:"La Liga"},
+ {home:"Inter",away:"AC Milan",time:"7:45 PM",league:"Serie A"}],
+"2026-12-26":[
+ {home:"Arsenal",away:"Tottenham",time:"1:30 PM",league:"Premier League - Boxing Day"},
+ {home:"Man City",away:"Liverpool",time:"4:00 PM",league:"Premier League - Boxing Day"},
+ {home:"Chelsea",away:"Man United",time:"6:30 PM",league:"Premier League - Boxing Day"}],
+"2026-12-27":[
+ {home:"Aston Villa",away:"Chelsea",time:"2:00 PM",league:"Premier League"},
+ {home:"Newcastle",away:"Everton",time:"4:30 PM",league:"Premier League"}],
+"2026-12-28":[
+ {home:"Tottenham",away:"Brighton",time:"2:00 PM",league:"Premier League"},
+ {home:"West Ham",away:"Fulham",time:"4:30 PM",league:"Premier League"}],
+"2026-12-31":[
+ {home:"Arsenal",away:"Aston Villa",time:"4:00 PM",league:"Premier League - New Year Eve"},
+ {home:"Man City",away:"Tottenham",time:"6:30 PM",league:"Premier League - New Year Eve"}]
+};
+function getTodayKey(){
+  const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function fillDates(){
+  const sel=document.getElementById('dateSelect');
+  sel.innerHTML="";
+  Object.keys(DAILY).forEach(k=>{
+    const o=document.createElement('option'); o.value=k; o.text=k + (k===getTodayKey()?" - TODAY":"");
+    if(k===getTodayKey()) o.selected=true;
+    sel.appendChild(o);
+  });
+}
+function renderSelected(){
+  const key=document.getElementById('dateSelect').value;
+  document.getElementById('todayDate').textContent=new Date(key).toDateString();
+  document.getElementById('dateBadge').textContent="Showing: "+key;
+  const list=DAILY[key]||[];
+  const box=document.getElementById('matches'); box.innerHTML="";
+  list.forEach(m=>{
+    const p=calcPrediction(m.home,m.away);
+    box.innerHTML+=`<div class="match"><div><b>${m.home} vs ${m.away}</b><br><span>⏰ ${m.time} • ${m.league} • ${p.conf}</span><br><span class="pred">Prediction: ${p.winner} Win</span></div><div class="score">${p.h} - ${p.a}</div></div>`;
+  });
+  const sorted=Object.entries(RATINGS).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  document.getElementById('indexList').innerHTML=sorted.map(([t,r],i)=>`<div class="match"><div><b>${i+1}. ${t}</b></div><div><b>${r}</b></div></div>`).join('');
+}
+function predictWinner(){
+  const h=document.getElementById('homeTeam').value.trim();
+  const a=document.getElementById('awayTeam').value.trim();
+  if(!h||!a){alert("Enter both teams");return;}
+  const p=calcPrediction(h,a);
+  document.getElementById('toolResult').innerHTML=`Prediction: <b>${p.winner}</b><br>Score: ${p.h} - ${p.a}<br><small>${p.conf} • ${h} (${getRating(h)}) vs ${a} (${getRating(a)})</small>`;
+}
+function checkPin(){
+  const v=document.getElementById('pinInput').value.trim();
+  const el=document.getElementById('pinResult'); el.style.display="block";
+  if(v===CORRECT_PIN){el.innerHTML="✅ Unlocked! Premium Picks:<br>Arsenal Win • Real Madrid Win • Man City Win • Galatasaray 1-1 Aston Villa";}
+  else{el.innerHTML="❌ Wrong PIN. Try again.";}
+}
+fillDates(); renderSelected();
 </script>
 </body>
 </html>
