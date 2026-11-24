@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T13:17:14.668122Z",
+  "updated": "2026-11-24T13:31:00.053500Z",
   "date": "20261124",
   "total": 4,
   "by_league": {
@@ -73,12 +73,5 @@
       "winner": "Man City",
       "confidence": "High Confidence"
     }
-  ],
-  "calendar": {
-    "2026-11-24": "Champions League Day",
-    "2026-11-25": "Champions League Day",
-    "2026-11-28": "Premier League Day",
-    "2026-12-26": "Boxing Day",
-    "2026-12-31": "New Year Eve"
-  }
+  ]
 }
