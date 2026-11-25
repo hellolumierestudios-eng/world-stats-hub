@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-24T23:22:35.221612Z",
-  "date": "20261124",
-  "total": 4,
+  "updated": "2026-11-25T00:15:20.708917Z",
+  "date": "20261125",
+  "total": 0,
   "by_league": {
-    "Champions League": 4,
+    "Champions League": 0,
     "Europa League": 0,
     "Conference League": 0,
     "Premier League": 0,
@@ -16,62 +16,5 @@
     "Championship": 0,
     "Scottish Premiership": 0
   },
-  "matches": [
-    {
-      "home": "Galatasaray",
-      "away": "Aston Villa",
-      "league": "Champions League",
-      "date": "20261124",
-      "time": "6:45 PM",
-      "status": "pre",
-      "homeScore": null,
-      "awayScore": null,
-      "predH": 1,
-      "predA": 1,
-      "winner": "Draw",
-      "confidence": "Even Match"
-    },
-    {
-      "home": "Arsenal",
-      "away": "Dortmund",
-      "league": "Champions League",
-      "date": "20261124",
-      "time": "9:00 PM",
-      "status": "pre",
-      "homeScore": null,
-      "awayScore": null,
-      "predH": 2,
-      "predA": 0,
-      "winner": "Arsenal",
-      "confidence": "High Confidence"
-    },
-    {
-      "home": "Real Madrid",
-      "away": "PSV",
-      "league": "Champions League",
-      "date": "20261124",
-      "time": "9:00 PM",
-      "status": "pre",
-      "homeScore": null,
-      "awayScore": null,
-      "predH": 2,
-      "predA": 0,
-      "winner": "Real Madrid",
-      "confidence": "High Confidence"
-    },
-    {
-      "home": "Man City",
-      "away": "Napoli",
-      "league": "Champions League",
-      "date": "20261124",
-      "time": "9:00 PM",
-      "status": "pre",
-      "homeScore": null,
-      "awayScore": null,
-      "predH": 2,
-      "predA": 0,
-      "winner": "Man City",
-      "confidence": "High Confidence"
-    }
-  ]
+  "matches": []
 }
