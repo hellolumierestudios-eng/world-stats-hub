@@ -3,180 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>World Stats Hub - Live Football Predictions</title>
+<title>World Stats Hub - Locked</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0f172a;color:#fff;min-height:100vh}
+  /* LOCK SCREEN */
+  #lock{position:fixed;inset:0;background:#020617;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
+  #lock h1{font-size:26px;margin-bottom:6px} #lock h1 span{color:#22c55e}
+  #lock p{color:#94a3b8;font-size:13px;margin-bottom:18px}
+  #lock .pinbox{display:flex;gap:8px;justify-content:center;margin-bottom:12px}
+  #lock input{width:100%;max-width:220px;padding:14px;border-radius:12px;border:2px solid #334155;background:#1e293b;color:#fff;font-size:22px;text-align:center;letter-spacing:8px;outline:none}
+  #lock input:focus{border-color:#22c55e}
+  #lock button{width:100%;max-width:220px;padding:14px;border:0;border-radius:12px;background:#22c55e;color:#020617;font-weight:800;font-size:16px;cursor:pointer}
+  #lockError{color:#ef4444;font-size:13px;height:18px;margin-top:10px}
+  /* MAIN SITE - hidden until unlock */
+  #main{filter:blur(12px);pointer-events:none;user-select:none}
+  #main.unlocked{filter:none;pointer-events:auto;user-select:auto}
   header{background:#020617;padding:18px 14px;text-align:center;position:sticky;top:0;z-index:10;border-bottom:1px solid #1e293b}
-  header h1{font-size:22px;letter-spacing:.5px}
-  header h1 span{color:#22c55e}
+  header h1{font-size:22px} header h1 span{color:#22c55e}
   header p{font-size:12px;color:#94a3b8;margin-top:4px}
   .wrap{max-width:900px;margin:0 auto;padding:14px}
   .controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
-  .controls input{flex:1;min-width:160px;padding:11px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#fff;outline:none;font-size:14px}
-  .controls select{padding:11px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#fff;font-size:14px}
+  .controls input{flex:1;min-width:160px;padding:11px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#fff;outline:none}
+  .controls select{padding:11px 12px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#fff}
   .stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
   .stat{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:10px 14px;flex:1;min-width:110px;text-align:center}
-  .stat b{font-size:18px;display:block}
-  .stat span{font-size:11px;color:#94a3b8}
-  .league{margin:18px 0 6px}
-  .league h2{font-size:16px;background:#16a34a;display:inline-block;padding:6px 12px;border-radius:999px}
+  .stat b{font-size:18px;display:block} .stat span{font-size:11px;color:#94a3b8}
+  .league{margin:18px 0 6px} .league h2{font-size:16px;background:#16a34a;display:inline-block;padding:6px 12px;border-radius:999px}
   .card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:14px;margin:10px 0}
-  .card-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:10px}
+  .card-top{display:flex;justify-content:space-between;font-size:12px;color:#94a3b8;margin-bottom:10px}
   .badge{font-size:11px;padding:4px 8px;border-radius:999px;background:#0f172a;border:1px solid #334155}
-  .badge.live{background:#dc2626;color:#fff;border-color:#dc2626}
   .badge.finished{background:#334155;color:#fff}
   .teams{display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:center}
-  .team{flex:1}
-  .team b{font-size:16px;line-height:1.2;display:block}
-  .vs{font-size:12px;color:#94a3b8;white-space:nowrap}
-  .vs b{font-size:20px;color:#fff;display:block}
+  .team{flex:1} .team b{font-size:16px;display:block} .vs{white-space:nowrap} .vs b{font-size:20px;display:block}
   .pred{margin-top:12px;background:#020617;border:1px dashed #22c55e;border-radius:10px;padding:10px;text-align:center}
-  .pred small{color:#94a3b8;font-size:11px;letter-spacing:.5px}
-  .pred b{font-size:17px;color:#22c55e;display:block;margin-top:2px}
-  .pred span{font-size:12px;color:#cbd5e1}
-  .empty{text-align:center;padding:40px 10px;color:#94a3b8}
-  .empty b{color:#fff;font-size:18px;display:block;margin-bottom:6px}
+  .pred small{color:#94a3b8;font-size:11px} .pred b{font-size:17px;color:#22c55e;display:block;margin-top:2px} .pred span{font-size:12px;color:#cbd5e1}
+  .empty{text-align:center;padding:40px 10px;color:#94a3b8} .empty b{color:#fff;font-size:18px;display:block}
   footer{text-align:center;color:#64748b;font-size:11px;padding:20px 0}
-  button.refresh{width:100%;padding:12px;border:0;border-radius:12px;background:#22c55e;color:#020617;font-weight:700;font-size:15px;cursor:pointer;margin-top:8px}
+  button.refresh{width:100%;padding:12px;border:0;border-radius:12px;background:#22c55e;color:#020617;font-weight:700;font-size:15px;cursor:pointer}
+  button.lockbtn{margin-top:10px;width:100%;padding:10px;border:1px solid #334155;border-radius:12px;background:transparent;color:#94a3b8;cursor:pointer}
 </style>
 </head>
 <body>
+
+<!-- PIN LOCK -->
+<div id="lock">
+  <h1>🌍 WORLD STATS <span>HUB</span></h1>
+  <p>Private Predictions • Enter PIN to view</p>
+  <input id="pinInput" type="password" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off">
+  <div style="height:12px"></div>
+  <button onclick="unlock()">🔓 Unlock Predictions</button>
+  <div id="lockError"></div>
+  <p style="margin-top:18px;font-size:11px">Contact owner for access</p>
+</div>
+
+<!-- MAIN SITE -->
+<div id="main">
 <header>
   <h1>🌍 WORLD STATS <span>HUB</span></h1>
-  <p id="updated">Loading predictions...</p>
+  <p id="updated">Loading...</p>
 </header>
-
 <div class="wrap">
   <div class="controls">
-    <input id="search" placeholder="Search team... e.g Juventus, Lyon" oninput="render()">
-    <select id="leagueFilter" onchange="render()">
-      <option value="all">All Leagues</option>
-    </select>
+    <input id="search" placeholder="Search team... e.g Juventus" oninput="render()">
+    <select id="leagueFilter" onchange="render()"><option value="all">All Leagues</option></select>
   </div>
-
   <div class="stats">
     <div class="stat"><b id="totalCount">0</b><span>TOTAL MATCHES</span></div>
     <div class="stat"><b id="leagueCount">0</b><span>LEAGUES</span></div>
     <div class="stat"><b id="dateLabel">-</b><span>DATE</span></div>
   </div>
-
   <button class="refresh" onclick="load(true)">🔄 Refresh Scores</button>
-
   <div id="list"></div>
-
-  <footer>Predictions auto-update every 2 hours from FixtureDownload • Times in GMT (Lagos +1h)</footer>
+  <button class="lockbtn" onclick="lockSite()">🔒 Lock Site</button>
+  <footer>Predictions auto-update every 2 hours • Times in Lagos Time</footer>
+</div>
 </div>
 
 <script>
-let ALL = [];
+const CORRECT_PIN = "3821";
+function unlock(){
+  const v = document.getElementById('pinInput').value.trim();
+  if(v === CORRECT_PIN){
+    document.getElementById('lock').style.display = 'none';
+    document.getElementById('main').classList.add('unlocked');
+    sessionStorage.setItem('wsh_unlocked','1');
+    load();
+  } else {
+    document.getElementById('lockError').textContent = '❌ Wrong PIN. Try again.';
+    document.getElementById('pinInput').value = '';
+    document.getElementById('pinInput').focus();
+  }
+}
+function lockSite(){
+  sessionStorage.removeItem('wsh_unlocked');
+  document.getElementById('lock').style.display = 'flex';
+  document.getElementById('main').classList.remove('unlocked');
+  document.getElementById('pinInput').value='';
+}
+document.getElementById('pinInput').addEventListener('keydown', e=>{ if(e.key==='Enter') unlock(); });
+// If already unlocked in this tab, skip lock
+if(sessionStorage.getItem('wsh_unlocked')==='1'){
+  document.getElementById('lock').style.display='none';
+  document.getElementById('main').classList.add('unlocked');
+}
 
-async function load(force=false){
-  document.getElementById('updated').textContent = 'Updating...';
+let ALL=[];
+async function load(){
+  document.getElementById('updated').textContent='Updating...';
   try{
-    // ?v=Date.now() stops phone from showing cached old games
-    const res = await fetch('scores.json?v=' + Date.now());
-    if(!res.ok) throw new Error('scores.json not found');
+    const res = await fetch('scores.json?v='+Date.now());
     const data = await res.json();
-
-    // Support both formats: {matches:[...]} and {"20261126":[...]}
-    let matches = [];
-    if(data.matches) matches = data.matches;
-    else if(Array.isArray(data)) matches = data;
-    else {
-      const keys = Object.keys(data);
-      for(const k of keys){
-        if(Array.isArray(data[k])) matches = matches.concat(data[k]);
-      }
-    }
-
+    let matches = data.matches || (Array.isArray(data)?data:[]);
     ALL = matches;
-    document.getElementById('updated').textContent =
-      'Updated: ' + (data.generated ? new Date(data.generated).toLocaleString() : new Date().toLocaleString()) +
-      ' • ' + matches.length + ' matches today';
-
-    // Build league dropdown
-    const leagues = [...new Set(matches.map(m=>m.league))].sort();
-    const sel = document.getElementById('leagueFilter');
-    const current = sel.value;
-    sel.innerHTML = '<option value="all">All Leagues</option>' + leagues.map(l=>`<option>${l}</option>`).join('');
-    if(leagues.includes(current)) sel.value = current;
-
+    document.getElementById('updated').textContent='Updated: '+(data.generated?new Date(data.generated).toLocaleString():new Date().toLocaleString())+' • '+matches.length+' matches';
+    const leagues=[...new Set(matches.map(m=>m.league))].sort();
+    const sel=document.getElementById('leagueFilter');
+    const cur=sel.value;
+    sel.innerHTML='<option value="all">All Leagues</option>'+leagues.map(l=>`<option>${l}</option>`).join('');
+    if(leagues.includes(cur)) sel.value=cur;
     render();
   }catch(e){
-    document.getElementById('list').innerHTML = `<div class="empty"><b>No scores yet</b>scores.json not found or empty.<br>Wait 2 mins for GitHub Actions to finish, then press Refresh.</div>`;
-    document.getElementById('updated').textContent = 'Failed to load scores.json';
-    console.log(e);
+    document.getElementById('list').innerHTML=`<div class="empty"><b>No scores yet</b>Wait for GitHub Actions, then Refresh.</div>`;
   }
 }
-
 function render(){
-  const q = document.getElementById('search').value.toLowerCase();
-  const lf = document.getElementById('leagueFilter').value;
-  let filtered = ALL.filter(m=>{
+  const q=document.getElementById('search').value.toLowerCase();
+  const lf=document.getElementById('leagueFilter').value;
+  let filtered=ALL.filter(m=>{
     if(lf!=='all' && m.league!==lf) return false;
-    if(q && !(m.home.toLowerCase().includes(q) || m.away.toLowerCase().includes(q))) return false;
+    if(q && !(m.home.toLowerCase().includes(q)||m.away.toLowerCase().includes(q))) return false;
     return true;
   });
-
-  document.getElementById('totalCount').textContent = filtered.length;
-  document.getElementById('leagueCount').textContent = new Set(filtered.map(m=>m.league)).size;
-  document.getElementById('dateLabel').textContent = filtered[0]?.date || '-';
-
-  if(filtered.length===0){
-    document.getElementById('list').innerHTML = `<div class="empty"><b>No matches found</b>Try clearing search or choose All Leagues.<br>Today may have no games in this league.</div>`;
-    return;
-  }
-
-  // Group by league
-  const byLeague = {};
-  filtered.forEach(m=>{ (byLeague[m.league]=byLeague[m.league]||[]).push(m); });
-
-  let html = '';
+  document.getElementById('totalCount').textContent=filtered.length;
+  document.getElementById('leagueCount').textContent=new Set(filtered.map(m=>m.league)).size;
+  document.getElementById('dateLabel').textContent=filtered[0]?.date||'-';
+  if(filtered.length===0){ document.getElementById('list').innerHTML=`<div class="empty"><b>No matches found</b></div>`; return; }
+  const byLeague={};
+  filtered.forEach(m=>{(byLeague[m.league]=byLeague[m.league]||[]).push(m);});
+  let html='';
   for(const league of Object.keys(byLeague).sort()){
-    html += `<div class="league"><h2>🏆 ${league}</h2></div>`;
+    html+=`<div class="league"><h2>🏆 ${league}</h2></div>`;
     for(const m of byLeague[league]){
-      const isFinished = m.status==='finished' || m.homeScore!==null && m.homeScore!==undefined;
-      const isLive = m.status==='in' || m.status==='live';
-      let badge = `<span class="badge">${m.time || 'TBD'}</span>`;
-      if(isFinished) badge = `<span class="badge finished">FULL TIME</span>`;
-      else if(isLive) badge = `<span class="badge live">● LIVE</span>`;
-
-      let scoreText = 'VS';
-      let scoreSub = '';
-      if(isFinished){
-        scoreText = `${m.homeScore} - ${m.awayScore}`;
-        scoreSub = 'Final Result';
-      } else {
-        scoreSub = 'Kick-off';
-      }
-
-      let winnerText = 'Draw';
-      if(m.winner==='home') winnerText = m.home + ' Win';
-      else if(m.winner==='away') winnerText = m.away + ' Win';
-
-      html += `
-      <div class="card">
-        <div class="card-top"><span>${league}</span>${badge}</div>
-        <div class="teams">
-          <div class="team"><b>${m.home}</b><small>Home</small></div>
-          <div class="vs"><b>${scoreText}</b><span>${scoreSub}</span></div>
-          <div class="team"><b>${m.away}</b><small>Away</small></div>
-        </div>
-        <div class="pred">
-          <small>⚽ PREDICTION</small>
-          <b>${m.predH} - ${m.predA} • ${winnerText}</b>
-          <span>Predicted Score: ${m.home} ${m.predH} - ${m.predA} ${m.away}</span>
-        </div>
-      </div>`;
+      const isFinished=m.status==='finished'||(m.homeScore!==null&&m.homeScore!==undefined);
+      let badge=`<span class="badge">${m.time||'TBD'}</span>`;
+      if(isFinished) badge=`<span class="badge finished">FULL TIME</span>`;
+      let scoreText='VS', scoreSub='Kick-off';
+      if(isFinished){ scoreText=`${m.homeScore} - ${m.awayScore}`; scoreSub='Final Result'; }
+      let winnerText='Draw';
+      if(m.winner==='home') winnerText=m.home+' Win';
+      else if(m.winner==='away') winnerText=m.away+' Win';
+      html+=`<div class="card"><div class="card-top"><span>${league}</span>${badge}</div>
+      <div class="teams"><div class="team"><b>${m.home}</b><small>Home</small></div><div class="vs"><b>${scoreText}</b><span>${scoreSub}</span></div><div class="team"><b>${m.away}</b><small>Away</small></div></div>
+      <div class="pred"><small>⚽ PREDICTION • ${m.conf||65}% CONFIDENCE</small><b>${m.predH} - ${m.predA} • ${winnerText}</b><span>${m.home} ${m.predH} - ${m.predA} ${m.away}</span></div></div>`;
     }
   }
-  document.getElementById('list').innerHTML = html;
+  document.getElementById('list').innerHTML=html;
 }
-
-load();
-// Auto refresh every 5 minutes while page is open
-setInterval(()=>load(), 5*60*1000);
+if(sessionStorage.getItem('wsh_unlocked')==='1') load();
+setInterval(()=>{ if(sessionStorage.getItem('wsh_unlocked')==='1') load(); }, 5*60*1000);
 </script>
 </body>
 </html>
