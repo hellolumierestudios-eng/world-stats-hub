@@ -1,48 +1,49 @@
 import json
 import sys
+import csv
+import io
 import requests
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 LAGOS = ZoneInfo("Africa/Lagos")
 
-# TheSportsDB League IDs - these work on GitHub
+# FixtureDownload - CSV files, no API key, never 403 on GitHub
+# Format: league_code -> (Display Name, fixturedownload slug)
 LEAGUES = {
-    "4328": "Premier League",
-    "4335": "LaLiga",
-    "4331": "Bundesliga",
-    "4332": "Serie A",
-    "4334": "Ligue 1",
-    "4337": "Eredivisie",
-    "4344": "Primeira Liga",
-    "4480": "UEFA Champions League",
-    "4481": "Europa League",
-    "4482": "Conference League",
-    "4329": "Championship",
-    "4330": "Scottish Premiership",
-    "4339": "Super Lig",
-    "4346": "Belgian Pro League",
-    "4347": "Austrian Bundesliga",
+    "epl": "Premier League",
+    "la-liga": "LaLiga",
+    "bundesliga": "Bundesliga",
+    "serie-a": "Serie A",
+    "ligue-1": "Ligue 1",
+    "eredivisie": "Eredivisie",
+    "primeira-liga": "Primeira Liga",
+    "champions-league": "UEFA Champions League",
+    "europa-league": "Europa League",
+    "conference-league": "Conference League",
+    "championship": "Championship",
+    "scottish-premiership": "Scottish Premiership",
 }
 
 RATINGS = {
-    "Arsenal": 89, "Man City": 88, "Liverpool": 87, "Chelsea": 85,
-    "Tottenham Hotspur": 84, "Tottenham": 84, "Man United": 84,
-    "Newcastle": 83, "Aston Villa": 83, "Crystal Palace": 80,
-    "Bournemouth": 80, "Brighton": 80, "Sunderland": 78,
-    "Ipswich Town": 74, "Ipswich": 74,
-    "Real Madrid": 90, "Barcelona": 89, "Atletico Madrid": 87,
-    "Real Sociedad": 78, "Celta Vigo": 78, "Villarreal": 82,
-    "Bayern Munich": 90, "Dortmund": 85, "RB Leipzig": 84,
-    "Leverkusen": 86, "Hoffenheim": 79, "Stuttgart": 82,
-    "Inter": 88, "AC Milan": 86, "Juventus": 84, "Napoli": 86,
-    "PSG": 89, "Marseille": 83, "Monaco": 79, "Lyon": 82, "Lille": 80,
-    "Ajax": 82, "PSV": 83, "Feyenoord": 78,
-    "Porto": 83, "Benfica": 84, "Sporting CP": 84,
+    "Arsenal": 89, "Man City": 88, "Manchester City": 88, "Liverpool": 87, "Chelsea": 85,
+    "Tottenham Hotspur": 84, "Tottenham": 84, "Man United": 84, "Manchester United": 84,
+    "Newcastle United": 83, "Newcastle": 83, "Aston Villa": 83, "Crystal Palace": 80,
+    "Bournemouth": 80, "Brighton": 80, "Sunderland": 78, "Everton": 78,
+    "Real Madrid": 90, "Barcelona": 89, "Atletico Madrid": 87, "Atletico": 87,
+    "Real Sociedad": 78, "Celta Vigo": 78, "Celta": 78, "Villarreal": 82,
+    "Bayern Munich": 90, "Bayern": 90, "Dortmund": 85, "Borussia Dortmund": 85,
+    "RB Leipzig": 84, "Leverkusen": 86, "Bayer Leverkusen": 86, "Hoffenheim": 79,
+    "Inter": 88, "Inter Milan": 88, "AC Milan": 86, "Milan": 86, "Juventus": 84,
+    "Napoli": 86, "Roma": 83, "AS Roma": 83, "Atalanta": 82,
+    "PSG": 89, "Paris Saint-Germain": 89, "Marseille": 83, "Olympique Marseille": 83,
+    "Monaco": 79, "AS Monaco": 79, "Lyon": 82, "Olympique Lyon": 82, "Lille": 80,
+    "Ajax": 82, "PSV": 83, "Feyenoord": 78, "AZ Alkmaar": 78,
+    "Porto": 83, "FC Porto": 83, "Benfica": 84, "Sporting CP": 84, "Sporting": 84,
     "Besiktas": 78, "Galatasaray": 84, "Fenerbahce": 83,
-    "Omonia Nicosia": 68, "Omonia": 68, "Lillestrom": 68,
-    "Levski Sofia": 70, "Hapoel Be'er Sheva": 70,
-    "Sturm Graz": 74, "Ferencvaros": 76, "Celje": 72,
+    "Omonia Nicosia": 68, "Omonia": 68, "Lillestrom": 68, "Lillestrøm": 68,
+    "Levski Sofia": 70, "Levski": 70, "Hapoel Be'er Sheva": 70,
+    "Sturm Graz": 74, "Ferencvaros": 76, "Ferencváros": 76, "Celje": 72,
     "Celtic": 78, "Rangers": 78,
 }
 
@@ -62,79 +63,84 @@ def calc_prediction(home, away):
 
 def main():
     if len(sys.argv) > 1:
-        date_str = sys.argv[1]  # 20261126
+        date_str = sys.argv[1]
     else:
         date_str = datetime.now(LAGOS).strftime("%Y%m%d")
 
-    # TheSportsDB needs YYYY-MM-DD
-    api_date = f"{date_str[0:4]}-{date_str[4:6]}-{date_str[6:8]}"
-    print(f"=== Fetching for {date_str} / {api_date} ===")
+    # Convert 20261126 -> 26/11/2026 for CSV matching
+    target = f"{date_str[6:8]}/{date_str[4:6]}/{date_str[0:4]}"
+    # Also YYYY-MM-DD format
+    target2 = f"{date_str[0:4]}-{date_str[4:6]}-{date_str[6:8]}"
+    print(f"=== Fetching for {date_str} = {target} / {target2} ===")
 
     all_matches = []
     by_league = {}
 
-    # 1. Try TheSportsDB - works on GitHub
-    url = f"https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d={api_date}&s=Soccer"
-    try:
-        r = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
-        print(f"TheSportsDB status: {r.status_code}")
-        data = r.json()
-        events = data.get("events") or []
-        print(f"TheSportsDB returned: {len(events)} events")
-        for ev in events:
-            league = ev.get("strLeague", "Unknown")
-            # Only keep leagues we want
-            if league not in LEAGUES.values() and league not in ["English Premier League", "Spanish La Liga", "German Bundesliga", "Italian Serie A", "French Ligue 1", "UEFA Europa League", "UEFA Champions League", "UEFA Conference League"]:
-                # Map TheSportsDB names to our names
-                mapping = {
-                    "English Premier League": "Premier League",
-                    "Spanish La Liga": "LaLiga",
-                    "German Bundesliga": "Bundesliga",
-                    "Italian Serie A": "Serie A",
-                    "French Ligue 1": "Ligue 1",
-                    "UEFA Europa League": "Europa League",
-                    "UEFA Champions League": "UEFA Champions League",
-                    "UEFA Conference League": "Conference League",
-                    "Dutch Eredivisie": "Eredivisie",
-                    "Portuguese Primeira Liga": "Primeira Liga",
-                }
-                if league in mapping:
-                    league = mapping[league]
-                else:
-                    continue
+    for slug, league_name in LEAGUES.items():
+        # FixtureDownload CSV - no key needed
+        url = f"https://fixturedownload.com/download/{slug}-2026-GMTStandardTime.csv"
+        # Try 2025 season if 2026 fails
+        urls = [url, f"https://fixturedownload.com/download/{slug}-2025-GMTStandardTime.csv"]
+        csv_text = None
+        for u in urls:
+            try:
+                r = requests.get(u, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+                print(f"{league_name}: {u} -> {r.status_code}")
+                if r.status_code == 200 and len(r.text) > 100:
+                    csv_text = r.text
+                    break
+            except Exception as e:
+                print(f"{league_name} error: {e}")
+                continue
+        if not csv_text:
+            continue
 
-            home = ev.get("strHomeTeam", "")
-            away = ev.get("strAwayTeam", "")
-            tm = ev.get("strTime", "TBD") or "TBD"
-            # Convert to Lagos time display - TheSportsDB gives UTC time
-            status = "scheduled"
-            hs = ev.get("intHomeScore")
-            aws = ev.get("intAwayScore")
-            if hs is not None and hs != "":
-                status = "finished"
-            pred = calc_prediction(home, away)
-            all_matches.append({
-                "home": home, "away": away,
-                "date": date_str, "time": tm,
-                "status": status,
-                "homeScore": int(hs) if hs not in (None, "") else None,
-                "awayScore": int(aws) if aws not in (None, "") else None,
-                "predH": pred["h"], "predA": pred["a"],
-                "winner": pred["winner"],
-                "league": league
-            })
-            by_league[league] = by_league.get(league, 0) + 1
-    except Exception as e:
-        print(f"TheSportsDB error: {e}")
+        try:
+            reader = csv.DictReader(io.StringIO(csv_text))
+            # Print first row keys once for debug
+            for row in reader:
+                # CSV columns: Round, Date, Location, Home Team, Away Team, Result
+                d = (row.get("Date") or "").strip()
+                # Date can be 26/11/2026 20:00 or 2026-11-26
+                date_part = d.split(" ")[0]
+                time_part = d.split(" ")[1] if " " in d else "TBD"
+                if date_part not in (target, target2, target.replace("/", "-")):
+                    continue
+                home = (row.get("Home Team") or "").strip()
+                away = (row.get("Away Team") or "").strip()
+                if not home or not away:
+                    continue
+                result = (row.get("Result") or "").strip()
+                hs = None
+                aws = None
+                status = "scheduled"
+                if result and "-" in result:
+                    try:
+                        hs, aws = result.split("-")
+                        hs = int(hs.strip()); aws = int(aws.strip())
+                        status = "finished"
+                    except:
+                        pass
+                pred = calc_prediction(home, away)
+                all_matches.append({
+                    "home": home, "away": away,
+                    "date": date_str, "time": time_part,
+                    "status": status,
+                    "homeScore": hs, "awayScore": aws,
+                    "predH": pred["h"], "predA": pred["a"],
+                    "winner": pred["winner"],
+                    "league": league_name
+                })
+                by_league[league_name] = by_league.get(league_name, 0) + 1
+        except Exception as e:
+            print(f"CSV parse error {league_name}: {e}")
 
     print("=== DONE ===")
     print(by_league)
     print(f"Total matches: {len(all_matches)}")
 
-    # CRITICAL FIX: Don't overwrite with 0 matches!
-    # If API returns 0, keep old scores.json so site doesn't go blank
     if len(all_matches) == 0:
-        print("WARNING: 0 matches found - NOT overwriting scores.json, keeping old file")
+        print("WARNING: 0 matches - NOT overwriting scores.json")
         return
 
     with open("scores.json", "w", encoding="utf-8") as f:
