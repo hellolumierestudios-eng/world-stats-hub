@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27T14:49:52.020671+01:00",
+  "generated": "2026-11-27T15:48:27.209587+01:00",
   "date": "20261127",
   "total": 8,
   "matches": [
@@ -37,7 +37,7 @@
       "alt2": "1-2",
       "league": "LaLiga",
       "formH": -0.9,
-      "formA": -0.1
+      "formA": 0.3
     },
     {
       "home": "SV Werder Bremen",
@@ -50,11 +50,11 @@
       "predH": 2,
       "predA": 1,
       "winner": "home",
-      "conf": 58,
+      "conf": 59,
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Bundesliga",
-      "formH": 0.1,
+      "formH": 0.5,
       "formA": -0.7
     },
     {
@@ -68,12 +68,12 @@
       "predH": 1,
       "predA": 2,
       "winner": "away",
-      "conf": 57,
+      "conf": 58,
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Serie A",
-      "formH": -0.3,
-      "formA": 0.9
+      "formH": -0.9,
+      "formA": 1.1
     },
     {
       "home": "Stade Brestois 29",
@@ -86,12 +86,12 @@
       "predH": 1,
       "predA": 0,
       "winner": "home",
-      "conf": 59,
+      "conf": 58,
       "alt1": "1-1",
       "alt2": "0-0",
       "league": "Ligue 1",
       "formH": 0.5,
-      "formA": 0.3
+      "formA": 0.9
     },
     {
       "home": "FC Groningen",
