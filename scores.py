@@ -11,13 +11,14 @@ LEAGUES = {
     "championship": "Championship", "scottish-premiership": "Scottish Premiership",
 }
 
+# V3.2 RATINGS - bigger gap for big teams, so favourites win properly
 RATINGS = {
-    "Arsenal":91,"Man City":90,"Manchester City":90,"Liverpool":89,"Chelsea":86,
+    "Arsenal":92,"Man City":91,"Manchester City":91,"Liverpool":90,"Chelsea":88,
     "Tottenham Hotspur":84,"Tottenham":84,"Man United":84,"Manchester United":84,
     "Newcastle United":84,"Newcastle":84,"Aston Villa":84,"Crystal Palace":81,
     "Bournemouth":81,"Brighton":82,"Brighton & Hove Albion":82,"Sunderland":79,
     "Everton":79,"Brentford":79,"Fulham":80,"Leeds United":77,"West Ham":77,
-    "Nottingham Forest":80,"Nott'm Forest":80,"Wolves":76,"Burnley":74,
+    "Nottingham Forest":77,"Nott'm Forest":77,"Wolves":73,"Burnley":72,
     "Southampton":78,"Middlesbrough":76,"Leicester City":79,"Leicester":79,"Ipswich Town":79,"Ipswich":79,
     "Coventry City":77,"Coventry":77,"West Brom":76,"West Bromwich Albion":76,"Stoke City":75,"Stoke":75,
     "Sheffield United":76,"Sheffield Utd":76,"Sheffield Wednesday":73,"Norwich City":74,"Norwich":74,
@@ -25,12 +26,12 @@ RATINGS = {
     "Hull City":74,"Hull":74,"Blackburn Rovers":74,"Blackburn":74,"Derby County":73,"Derby":73,
     "Preston North End":73,"Preston":73,"Bristol City":74,"Charlton Athletic":72,"Charlton":72,
     "Oxford United":71,"Oxford":71,"Portsmouth":71,"Wrexham":73,"Birmingham City":75,"Birmingham":75,
-    "Real Madrid":92,"Barcelona":91,"Atletico Madrid":88,"Atletico":88,"Real Sociedad":80,
+    "Real Madrid":93,"Barcelona":91,"Atletico Madrid":88,"Atletico":88,"Real Sociedad":80,
     "Celta Vigo":80,"Celta":80,"Villarreal":84,"Real Betis":82,"Sevilla":79,
     "Athletic Bilbao":82,"Athletic Club":82,"Valencia":78,"Getafe":76,"Osasuna":76,
     "Rayo Vallecano":78,"Levante":76,"Alaves":74,"Elche":74,"Espanyol":76,"Mallorca":75,
     "Girona":78,"Oviedo":72,"Real Oviedo":72,
-    "Bayern Munich":92,"Bayern":92,"Dortmund":86,"Borussia Dortmund":86,"RB Leipzig":85,
+    "Bayern Munich":93,"Bayern":93,"Dortmund":86,"Borussia Dortmund":86,"RB Leipzig":85,
     "Leverkusen":87,"Bayer Leverkusen":87,"Hoffenheim":80,"Stuttgart":83,
     "Eintracht Frankfurt":82,"Frankfurt":82,"Freiburg":81,"Wolfsburg":79,
     "Mönchengladbach":78,"Borussia M'gladbach":78,"Borussia Monchengladbach":78,
@@ -40,7 +41,7 @@ RATINGS = {
     "Roma":84,"AS Roma":84,"Atalanta":84,"Lazio":82,"Fiorentina":82,"Bologna":81,
     "Torino":78,"Como":79,"Cagliari":75,"Parma":76,"Udinese":76,"Genoa":75,"Pisa":73,
     "Lecce":73,"Sassuolo":77,"Verona":72,"Hellas Verona":72,"Venezia":74,"Cremonese":74,
-    "PSG":91,"Paris Saint-Germain":91,"Marseille":84,"Olympique Marseille":84,
+    "PSG":92,"Paris Saint-Germain":92,"Marseille":84,"Olympique Marseille":84,
     "Monaco":81,"AS Monaco":81,"Lyon":83,"Olympique Lyon":83,"Lille":82,"Lens":81,
     "Nice":80,"Rennes":78,"Brest":78,"Stade Brestois":78,"Paris FC":76,"Toulouse":76,
     "Strasbourg":78,"Auxerre":74,"Nantes":74,"Le Havre":73,"Metz":72,"Lorient":74,"Angers":73,
@@ -70,14 +71,12 @@ RATINGS = {
     "Racing Club":76,"Racing":76,"Malmo FF":75,"Malmo":75,"Hacken":72,"BK Hacken":72,
 }
 
-# V3.1 FIX: Normalize names so SV Werder Bremen, Stade Brestois 29, Marítimo M. are found
 def get_rating(t):
     if t in RATINGS:
         return RATINGS[t]
     clean = t.replace("SV ","").replace("FC ","").replace("Stade Brestois 29","Brest").replace("Stade Brestois","Brest").replace("Marítimo M.","Maritimo").replace("Maritimo M.","Maritimo").replace("R. Racing Club","Racing Club").replace("Nott'm Forest","Nottingham Forest").replace("CD Nacional","Nacional").replace("Borussia M'gladbach","Borussia Monchengladbach").replace("Borussia Mönchengladbach","Borussia Monchengladbach")
     if clean in RATINGS:
         return RATINGS[clean]
-    # Fuzzy: if a known name is inside this name
     low = t.lower()
     for k,v in RATINGS.items():
         kl = k.lower()
@@ -94,7 +93,9 @@ def calc_prediction(home, away, date_str, form_h=0, form_a=0):
     exp_h = max(0.15, min(4.2, exp_h)); exp_a = max(0.15, min(3.8, exp_a))
     seed_str = f"{home}-{away}-{date_str}"
     h = int(hashlib.md5(seed_str.encode()).hexdigest()[:8], 16)
-    var_h = ((h % 100) / 100 - 0.5); var_a = (((h // 100) % 100) / 100 - 0.5)
+    # V3.2 FIX: variance reduced from +-0.5 to +-0.3, favourites stay favourites
+    var_h = ((h % 100) / 100 - 0.5) * 0.6
+    var_a = (((h // 100) % 100) / 100 - 0.5) * 0.6
     ph = max(0, min(5, int(round(exp_h + var_h))))
     pa = max(0, min(4, int(round(exp_a + var_a))))
     if ph == 1 and pa == 1 and (h % 3 == 0): ph = 0; pa = 0
@@ -115,7 +116,7 @@ def main():
     date_str = sys.argv[1] if len(sys.argv)>1 else datetime.now(LAGOS).strftime("%Y%m%d")
     target = f"{date_str[6:8]}/{date_str[4:6]}/{date_str[0:4]}"
     target2 = f"{date_str[0:4]}-{date_str[4:6]}-{date_str[6:8]}"
-    print(f"=== V3.1 Fetching for {date_str} ===")
+    print(f"=== V3.2 Fetching for {date_str} ===")
     all_matches=[]; by_league={}
     form_data = {}
     all_rows = []
@@ -148,7 +149,6 @@ def main():
         lst=form_data.get(team,[])[-5:]
         if not lst: return 0
         avg=sum(lst)/len(lst)
-        # V3.1 FIX: was *2.5 (too strong, flipped Chelsea game), now *1.0 = max +/-1.5
         return round((avg-1.5)*1.0,1)
     for league_name, row in all_rows:
         d=(row.get("Date") or "").strip(); date_part=d.split(" ")[0]; time_part=d.split(" ")[1] if " " in d else "TBD"
@@ -170,5 +170,5 @@ def main():
     print(by_league); print(f"Total: {len(all_matches)}")
     if len(all_matches)==0: print("WARNING 0 - NOT overwriting"); return
     with open("scores.json","w",encoding="utf-8") as f: json.dump({"generated":datetime.now(LAGOS).isoformat(),"date":date_str,"total":len(all_matches),"matches":all_matches},f,ensure_ascii=False,indent=2)
-    print("Saved V3.1 scores.json")
+    print("Saved V3.2 scores.json")
 if __name__=="__main__": main()
