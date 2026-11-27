@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27T08:10:03.924066+01:00",
+  "generated": "2026-11-27T08:19:50.391165+01:00",
   "date": "20261127",
   "total": 8,
   "matches": [
@@ -12,11 +12,11 @@
       "homeScore": null,
       "awayScore": null,
       "predH": 1,
-      "predA": 1,
-      "winner": "draw",
-      "conf": 54,
-      "alt1": "2-1",
-      "alt2": "1-2",
+      "predA": 2,
+      "winner": "away",
+      "conf": 60,
+      "alt1": "2-2",
+      "alt2": "1-1",
       "league": "Premier League",
       "formH": -0.7,
       "formA": -0.3
