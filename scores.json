@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27T07:52:55.588232+01:00",
+  "generated": "2026-11-27T08:05:24.999176+01:00",
   "date": "20261127",
   "total": 8,
   "matches": [
@@ -14,12 +14,12 @@
       "predH": 1,
       "predA": 1,
       "winner": "draw",
-      "conf": 55,
+      "conf": 54,
       "alt1": "2-1",
       "alt2": "1-2",
       "league": "Premier League",
-      "formH": -1.8,
-      "formA": -0.8
+      "formH": -0.7,
+      "formA": -0.3
     },
     {
       "home": "Levante UD",
@@ -32,12 +32,12 @@
       "predH": 1,
       "predA": 1,
       "winner": "draw",
-      "conf": 54,
+      "conf": 55,
       "alt1": "2-1",
       "alt2": "1-2",
       "league": "LaLiga",
-      "formH": -2.2,
-      "formA": -0.3
+      "formH": -0.9,
+      "formA": -0.1
     },
     {
       "home": "SV Werder Bremen",
@@ -50,12 +50,12 @@
       "predH": 2,
       "predA": 1,
       "winner": "home",
-      "conf": 55,
+      "conf": 58,
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Bundesliga",
-      "formH": 0.3,
-      "formA": -1.8
+      "formH": 0.1,
+      "formA": -0.7
     },
     {
       "home": "Venezia",
@@ -68,12 +68,12 @@
       "predH": 1,
       "predA": 2,
       "winner": "away",
-      "conf": 59,
+      "conf": 57,
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Serie A",
-      "formH": -0.8,
-      "formA": 2.2
+      "formH": -0.3,
+      "formA": 0.9
     },
     {
       "home": "Stade Brestois 29",
@@ -84,14 +84,14 @@
       "homeScore": null,
       "awayScore": null,
       "predH": 1,
-      "predA": 1,
-      "winner": "draw",
-      "conf": 52,
-      "alt1": "2-1",
-      "alt2": "1-2",
+      "predA": 0,
+      "winner": "home",
+      "conf": 59,
+      "alt1": "1-1",
+      "alt2": "0-0",
       "league": "Ligue 1",
-      "formH": 1.2,
-      "formA": 0.8
+      "formH": 0.5,
+      "formA": 0.3
     },
     {
       "home": "FC Groningen",
@@ -104,12 +104,12 @@
       "predH": 2,
       "predA": 1,
       "winner": "home",
-      "conf": 62,
+      "conf": 61,
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Eredivisie",
-      "formH": -1.2,
-      "formA": -2.8
+      "formH": -0.5,
+      "formA": -1.1
     },
     {
       "home": "Marítimo M.",
@@ -126,8 +126,8 @@
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Primeira Liga",
-      "formH": -3.2,
-      "formA": -0.8
+      "formH": -1.3,
+      "formA": -0.3
     },
     {
       "home": "Southampton",
@@ -144,8 +144,8 @@
       "alt1": "1-1",
       "alt2": "0-0",
       "league": "Championship",
-      "formH": 0.3,
-      "formA": 1.2
+      "formH": 0.1,
+      "formA": 0.5
     }
   ]
 }
