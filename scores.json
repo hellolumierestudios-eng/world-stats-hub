@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28T05:29:53.711551+01:00",
+  "generated": "2026-11-28T06:30:43.491090+01:00",
   "date": "20261128",
   "total": 42,
   "matches": [
@@ -374,12 +374,12 @@
       "predH": 2,
       "predA": 1,
       "winner": "home",
-      "conf": 59,
+      "conf": 57,
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Eredivisie",
-      "formH": 0.1,
-      "formA": -1.1
+      "formH": -0.9,
+      "formA": -0.7
     },
     {
       "home": "PSV",
@@ -414,8 +414,8 @@
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Eredivisie",
-      "formH": -0.5,
-      "formA": -1.1
+      "formH": 0.5,
+      "formA": -0.3
     },
     {
       "home": "FC Arouca",
@@ -678,14 +678,14 @@
       "homeScore": null,
       "awayScore": null,
       "predH": 2,
-      "predA": 1,
+      "predA": 0,
       "winner": "home",
-      "conf": 58,
-      "alt1": "2-2",
-      "alt2": "1-1",
+      "conf": 59,
+      "alt1": "2-1",
+      "alt2": "1-0",
       "league": "Scottish Premiership",
       "formH": -0.9,
-      "formA": -0.1
+      "formA": -0.9
     },
     {
       "home": "Dundee United",
@@ -703,7 +703,7 @@
       "alt2": "0-1",
       "league": "Scottish Premiership",
       "formH": 0.3,
-      "formA": -0.3
+      "formA": -0.5
     },
     {
       "home": "Rangers",
@@ -714,13 +714,13 @@
       "homeScore": null,
       "awayScore": null,
       "predH": 2,
-      "predA": 1,
+      "predA": 0,
       "winner": "home",
       "conf": 64,
-      "alt1": "2-2",
-      "alt2": "1-1",
+      "alt1": "2-1",
+      "alt2": "1-0",
       "league": "Scottish Premiership",
-      "formH": 0.7,
+      "formH": 1.1,
       "formA": 1.5
     },
     {
@@ -739,7 +739,7 @@
       "alt2": "1-1",
       "league": "Scottish Premiership",
       "formH": -0.7,
-      "formA": -0.7
+      "formA": -1.3
     },
     {
       "home": "Motherwell",
@@ -752,12 +752,12 @@
       "predH": 2,
       "predA": 1,
       "winner": "home",
-      "conf": 54,
+      "conf": 53,
       "alt1": "2-2",
       "alt2": "1-1",
       "league": "Scottish Premiership",
       "formH": -0.5,
-      "formA": -0.7
+      "formA": -0.1
     }
   ]
 }
